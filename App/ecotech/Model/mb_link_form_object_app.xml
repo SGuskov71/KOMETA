@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- -->
+<XMLDATA sysname="mb_link_form_object">
+<Id>mb_link_form_object</Id>
+<mb_link_form_objects>
+<mb_link_form_object><sysname>cv_et_job</sysname><code_form>form_et_isp</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_et_project_clerk</sysname><code_form>form_et_project</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ent_enterprise</sysname><code_form>form_ent_enterprise</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ent_person_for_ent</sysname><code_form>form_ent_person</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_spr_mail_method</sysname><code_form>form_spr_mail_method</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_spr_vid_mail</sysname><code_form>form_spr_vid_mail</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_spr_personal_type</sysname><code_form>form_spr_personal_type</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_spr_document_type</sysname><code_form>form_document_type</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ml_mail_input</sysname><code_form>form_ml_mail_input</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ml_mail_output</sysname><code_form>form_ml_mail_output</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_et_staff_projectmanager</sysname><code_form>form_et_staff_projectmanager</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_et_job_isp</sysname><code_form>form_et_isp</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_et_staff</sysname><code_form>form_et_staff</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_et_project_projectmanager</sysname><code_form>form_et_project__boss_project</code_form></mb_link_form_object>
+</mb_link_form_objects>
+</XMLDATA>

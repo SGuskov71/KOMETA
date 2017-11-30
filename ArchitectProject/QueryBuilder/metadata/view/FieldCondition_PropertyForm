@@ -1,0 +1,436 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "bodyBorder": false,
+        "bodyPadding": null,
+        "designer|userClassName": "FieldCondition_PropertyForm",
+        "height": 509,
+        "itemId": "FieldCondition_PropertyForm",
+        "layout": "fit",
+        "title": "Свойства элемента запроса",
+        "width": 636
+    },
+    "name": "container_PropertyForm1",
+    "designerId": "22deef84-d31f-4dac-9bf9-b96da2fd860e",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData",
+                    "record"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.needUpdateTree=false; //нужно для отключения переписывания текста в дереве при присвоении значений текста",
+                    "this.rawData = rawData;",
+                    "this.record = record;",
+                    "var mainContainer = this.findParentByType('#DesignMainContainer');",
+                    "this.down('#Caption').setValue(rawData.Caption);",
+                    "var OperationStoreData=[];",
+                    "var tempData=mainContainer.GetItemConditionListStoreData(mainContainer.GetMasterObjectNode(record), rawData.DataField);",
+                    "var values = Ext.Object.getValues(tempData);",
+                    "var keys = Ext.Object.getKeys(tempData);",
+                    "var length = keys.length;",
+                    "for (var j = 0; j < length; j++) {",
+                    "    OperationStoreData.push({'id':keys[j], 'name':values[j]});",
+                    "}",
+                    "var store = Ext.create('Ext.data.Store', {",
+                    "    fields: ['id', 'name'],",
+                    "    data : OperationStoreData",
+                    "});",
+                    "this.down('#Operation').getStore().destroy();",
+                    "this.down('#Operation').bindStore(store);",
+                    "this.down('#Operation').setValue(rawData.Operation);",
+                    "this.down('#DataField').setValue(rawData.DataField);",
+                    "this.down('#Value').setValue(rawData.Value);",
+                    "this.down('#ParamCode').getStore().destroy();",
+                    "var store1 = Ext.create('Ext.data.Store', {",
+                    "    fields: ['ParamCode', 'ParamDescr'],",
+                    "    data: mainContainer.down('#StructureTree').getRootNode().raw.QueryParams",
+                    "});",
+                    "//this.down('#ParamCode').store=store1;",
+                    "this.down('#ParamCode').bindStore(store1);",
+                    "this.down('#ParamCode').setValue(rawData.ParamCode);",
+                    "this.down('#RB_Value').setValue(false);",
+                    "this.down('#RB_Param').setValue(false);",
+                    "if((this.rawData.DataSource!=undefined)&&(this.rawData.DataSource!='')){",
+                    "    this.down('#'+this.rawData.DataSource).setValue(true);",
+                    "}else{",
+                    "    this.down('#RB_Value').setValue(true);",
+                    "}",
+                    "",
+                    "//this.down('#').setValue(rawData.);",
+                    "",
+                    "this.SetVisibleFields();",
+                    "this.needUpdateTree=true;"
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "67852495-bc0d-4ea6-bd35-fbd52a206641"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SetVisibleFields",
+                "implHandler": [
+                    "this.down('#ParamCode').hide();",
+                    "this.down('#Value').hide();",
+                    "",
+                    "if(this.rawData.DataSource=='RB_Value')",
+                    "    this.down('#Value').show();",
+                    "else if(this.rawData.DataSource=='RB_Param')",
+                    "    this.down('#ParamCode').show();"
+                ]
+            },
+            "name": "SetVisibleFields",
+            "designerId": "8175ce63-2ac1-4772-bd30-7805ab28ce46"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyBorder": null,
+                "bodyPadding": 16,
+                "container|align": "stretch",
+                "dock": null,
+                "layout": "vbox"
+            },
+            "name": "MyForm",
+            "designerId": "ac358c3a-6986-4e1f-b314-6edc27a8e1e3",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Код поля",
+                        "itemId": "DataField",
+                        "labelWidth": 65,
+                        "value": null
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "bb5cfa0f-94a3-42e2-bdd9-2ef114019f04"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Наименование",
+                        "itemId": "Caption",
+                        "layout|flex": null,
+                        "margin": "0 0 10 0",
+                        "maxWidth": 600
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "7fadec76-8c1a-48b6-8da7-ca75a25839c8",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCaptionChange",
+                                "implHandler": [
+                                    "this.rawData.Caption=newValue;",
+                                    "if(this.needUpdateTree==true){",
+                                    "    this.record.set('text', this.rawData.Caption);",
+                                    "    this.record.commit();",
+                                    "    this.rawData.text=this.rawData.Caption;",
+                                    "var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                                    "            DesignMainContainer.modified=true;",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onCaptionChange",
+                            "designerId": "b5d1ccd0-6d51-4e00-abdd-1390c7a31537"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "name",
+                        "editable": false,
+                        "fieldLabel": "Операция сравнения",
+                        "forceSelection": true,
+                        "itemId": "Operation",
+                        "labelWidth": 130,
+                        "layout|flex": null,
+                        "maxWidth": 600,
+                        "queryMode": "local",
+                        "store": null,
+                        "typeAhead": true,
+                        "valueField": "id"
+                    },
+                    "name": "MyComboBox2",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "1acfc17c-15e7-4354-9fac-5ffb2428e467",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onOperationChange",
+                                "implHandler": [
+                                    "this.rawData.Operation=newValue;",
+                                    "var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                                    "            DesignMainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onOperationChange",
+                            "designerId": "74da4744-6093-4792-8332-3220f33c6ba6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Выбрать для сравнения",
+                        "itemId": "RG_DataSource",
+                        "labelWidth": 150,
+                        "layout|flex": null,
+                        "maxWidth": 350
+                    },
+                    "name": "MyRadioGroup",
+                    "designerId": "789194c3-4eef-4d45-9d20-a220bfcfb770",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Значение",
+                                "checked": true,
+                                "fieldLabel": null,
+                                "itemId": "RB_Value"
+                            },
+                            "name": "MyRadio",
+                            "designerId": "9234070a-3bf8-4880-8cb6-fb394a951416",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRB_TextChange",
+                                        "implHandler": [
+                                            "if(newValue==true)",
+                                            "{",
+                                            "    field.ownerCt.down('#RB_Param').setValue(false);",
+                                            "    this.rawData.DataSource=field.itemId;",
+                                            "    var FieldCondition_PropertyForm = field.findParentByType('#FieldCondition_PropertyForm');",
+                                            "    FieldCondition_PropertyForm.SetVisibleFields();",
+                                            "    var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                                            "            DesignMainContainer.modified=true;",
+                                            "",
+                                            "}",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onRB_TextChange",
+                                    "designerId": "ea92dd3e-afe8-409a-ba99-c97b02c119f9"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Параметр",
+                                "fieldLabel": null,
+                                "itemId": "RB_Param"
+                            },
+                            "name": "MyRadio1",
+                            "designerId": "2a6dd8e5-4ad1-4ed5-b8d2-2466ed53e44b",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRB_SQLChange",
+                                        "implHandler": [
+                                            "if(newValue==true)",
+                                            "{",
+                                            "    field.ownerCt.down('#RB_Value').setValue(false);",
+                                            "    this.rawData.DataSource=field.itemId;",
+                                            "    var FieldCondition_PropertyForm = field.findParentByType('#FieldCondition_PropertyForm');",
+                                            "    FieldCondition_PropertyForm.SetVisibleFields();",
+                                            "    var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                                            "            DesignMainContainer.modified=true;",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onRB_SQLChange",
+                                    "designerId": "aa7a3f08-8e21-4b08-9fe9-6d9f6d18bc8e"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "ParamDescr",
+                        "editable": false,
+                        "fieldLabel": "Параметр",
+                        "forceSelection": true,
+                        "itemId": "ParamCode",
+                        "labelWidth": 70,
+                        "layout|flex": null,
+                        "maxWidth": 600,
+                        "queryMode": "local",
+                        "store": null,
+                        "typeAhead": true,
+                        "valueField": "ParamCode"
+                    },
+                    "name": "MyComboBox",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "32c79385-001b-4a52-b7e3-55f31a0014ca",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onComboReportFieldListChange",
+                                "implHandler": [
+                                    "this.rawData.ParamCode=newValue;",
+                                    "var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                                    "DesignMainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onComboReportFieldListChange",
+                            "designerId": "61f02fc2-3b2b-4c91-9605-a740fcb43f2f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Значение",
+                        "height": null,
+                        "itemId": "Value",
+                        "labelWidth": 70,
+                        "maxWidth": 600,
+                        "width": null
+                    },
+                    "name": "MyTextField",
+                    "designerId": "fb37f527-53f6-4bf7-86e1-9a49867d1509",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onValidateConditionChange2",
+                                "implHandler": [
+                                    "this.rawData.Value=newValue;",
+                                    "var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                                    "            DesignMainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onValidateConditionChange2",
+                            "designerId": "f90956b1-72e8-4b5c-9608-ae4f8cab22d6"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

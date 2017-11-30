@@ -1,0 +1,2499 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "bodyPadding": null,
+        "designer|userClassName": "diagram_PropertyForm",
+        "height": 602,
+        "id": "diagram_PropertyForm",
+        "itemId": "diagram_PropertyForm",
+        "title": "",
+        "width": 788
+    },
+    "designerId": "c0ee282d-e4ef-417c-b188-20d00e124a58",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData",
+                    "record"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.needUpdateTree=false; //нужно для отключения переписывания текста в дереве при присвоении значений текста",
+                    "this.rawData=rawData;",
+                    "this.record = record;",
+                    "this.down('#Edt_Code').setValue(rawData.Code);",
+                    "this.down('#Edt_description').setValue(rawData.Description);",
+                    "this.down('#Edt_code_help').setValue(rawData.code_help);",
+                    "this.down('#Edt_label_rotate').setValue(rawData.label_rotate);",
+                    "this.down('#Edt_label_type_visible').setValue(rawData.label_type_visible);",
+                    "this.down('#Edt_legend_position').setValue(rawData.legend_position);",
+                    "this.down('#Edt_legend_font_size').setValue(rawData.legend_font_size);",
+                    "this.down('#Edt_diagram_type').setValue(rawData.diagram_type);",
+                    "//this.down('#Edt_bg_color').setValue(rawData.bg_color);",
+                    "var _color=this.down('#Edt_bg_color');",
+                    "_color.setValue(rawData.bg_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "//_color.inputEl.setStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none'});",
+                    "",
+                    "this.down('#Edt_orientation').setValue(rawData.orientation);",
+                    "this.down('#Edt_x_name').setValue(rawData.x_name);",
+                    "this.down('#Edt_y_name').setValue(rawData.y_name);",
+                    "this.down('#Edt_axes_font_size').setValue(rawData.axes_font_size);",
+                    "this.down('#Edt_axes_label_font_size').setValue(rawData.axes_label_font_size);",
+                    "this.down('#Edt_label_font_size').setValue(rawData.label_font_size);",
+                    "//this.down('#Edt_label_color').setValue(rawData.label_color);",
+                    "_color=this.down('#Edt_label_color');",
+                    "_color.setValue(rawData.label_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "",
+                    "//this.down('#Edt_info_label_color').setValue(rawData.info_label_color);",
+                    "_color=this.down('#Edt_info_label_color');",
+                    "_color.setValue(rawData.info_label_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "//this.down('#Edt_axes_color').setValue(rawData.axes_color);",
+                    "_color=this.down('#Edt_axes_color');",
+                    "_color.setValue(rawData.axes_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "this.down('#Edt_label_display').setValue(rawData.label_display);",
+                    "",
+                    "//this.down('#Edt_legend_box_color').setValue(rawData.legend_box_color);",
+                    "_color=this.down('#Edt_legend_box_color');",
+                    "_color.setValue(rawData.legend_box_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "//this.down('#Edt_legend_label_color').setValue(rawData.legend_label_color);",
+                    "_color=this.down('#Edt_legend_label_color');",
+                    "_color.setValue(rawData.legend_label_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "//this.down('#Edt_axes_color').setValue(rawData.axes_color);",
+                    "_color=this.down('#Edt_axes_color');",
+                    "_color.setValue(rawData.axes_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "this.down('#Edt_groupGutter').setValue(rawData.groupGutter);",
+                    "this.down('#Edt_gutter').setValue(rawData.gutter);",
+                    "",
+                    "this.down('#ChkShowGrid_x').setValue(rawData.ShowGrid_x);",
+                    "this.down('#ChkShowGrid_y').setValue(rawData.ShowGrid_y);",
+                    "",
+                    "//this.down('#Edt_header_text_color').setValue(rawData.header_text_color);",
+                    "_color=this.down('#Edt_header_text_color');",
+                    "_color.setValue(rawData.header_text_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "//this.down('#Edt_header_fill_color').setValue(rawData.header_fill_color);",
+                    "_color=this.down('#Edt_header_fill_color');",
+                    "_color.setValue(rawData.header_fill_color);",
+                    "_color.setFieldStyle({backgroundColor: '#' +_color.getValue(), backgroundImage: 'none',color:'#' +invert(_color.getValue())});",
+                    "",
+                    "this.down('#Edt_header_font_size').setValue(rawData.header_font_size);",
+                    "",
+                    "this.down('#Edt_func_class_name').setValue(rawData.func_class_name);",
+                    "this.down('#Edt_func_name').setValue(rawData.func_name);",
+                    "this.down('#Edt_param_list').setValue(rawData.param_list);",
+                    "",
+                    "",
+                    "this.down('#Edt_diagram_width').setValue(rawData.diagram_width);",
+                    "this.down('#Edt_diagram_height').setValue(rawData.diagram_height);",
+                    "this.down('#ChkShowError').setValue(rawData.ShowError);",
+                    "",
+                    "this.down('#ChkShowEmptyMessage').setValue(rawData.ShowEmptyMessage);",
+                    "this.needUpdateTree=true;",
+                    ""
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "9cad489b-de34-483e-b202-912e11f9e2c5"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Свойства диаграммы"
+            },
+            "name": "MyPanel6",
+            "designerId": "4f0be7ea-b036-4684-a031-1059474e60ec",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "column"
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "d7af0967-4507-48cb-8252-1f58a885496d",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Код диаграммы",
+                                "itemId": "Edt_Code",
+                                "layout|columnWidth": 0.6,
+                                "margin": 3
+                            },
+                            "name": "MyTextField1",
+                            "designerId": "5e7db67b-2057-45d0-ae5f-081c93bf9558",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange1",
+                                        "implHandler": [
+                                            "this.rawData.Code=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange1",
+                                    "designerId": "ecdb35cf-032c-473a-93fc-9caf976e0503"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Код справки",
+                                "itemId": "Edt_code_help",
+                                "labelWidth": 80,
+                                "layout|columnWidth": 0.4,
+                                "margin": 3
+                            },
+                            "name": "MyTextField2",
+                            "designerId": "784b5832-f12f-41f1-b7a4-071da6c4fc7b",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange11",
+                                        "implHandler": [
+                                            "this.rawData.code_help=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange11",
+                                    "designerId": "e5e6073f-a542-493b-b338-2ad1697f63bc"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 2,
+                        "container|align": "stretch",
+                        "layout": "vbox",
+                        "margin": "0 3 0 3",
+                        "title": "Заголовок"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "c1c90dec-17f3-460c-9f00-57b442e817b8",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Наименование",
+                                "itemId": "Edt_description",
+                                "margin": "0 3 3 3"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "6319f29b-17b2-44fc-ab51-dbce2ca5eaaf",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange",
+                                        "implHandler": [
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            "",
+                                            "this.rawData.Description=newValue;",
+                                            "if(this.needUpdateTree==true){",
+                                            "    if(trim(this.rawData.Description)=='')",
+                                            "        this.record.set('text', mainContainer.MICaption_Diagram);",
+                                            "    else",
+                                            "        this.record.set('text', this.rawData.Description);",
+                                            "    this.record.commit();",
+                                            "    this.rawData.text=this.rawData.Description;",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange",
+                                    "designerId": "a831c1d0-4003-4406-85a4-2be742ba20e7"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": 0,
+                                "designer|displayName": "Header_Design",
+                                "layout": "column",
+                                "layout|flex": 1,
+                                "padding": 0,
+                                "title": null
+                            },
+                            "name": "MyFieldSet2",
+                            "designerId": "5af2f5e4-a181-4ecb-b030-3c54d88cf966",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Trigger",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|createAlias": null,
+                                        "emptyText": "Выбор цвета",
+                                        "fieldLabel": "Цвет фона",
+                                        "itemId": "Edt_header_fill_color",
+                                        "labelWidth": 80,
+                                        "layout|columnWidth": 0.35,
+                                        "margin": "0 3 3 1",
+                                        "padding": 0,
+                                        "regex": "/^[0-9a-f]{3,6}$/i",
+                                        "selectOnFocus": true,
+                                        "trigger2Cls": null,
+                                        "triggerBaseCls": null,
+                                        "triggerCls": "x-form-search-trigger"
+                                    },
+                                    "name": "MyTriggerField7",
+                                    "designerId": "a814be2f-f6ca-470e-8b18-7429bdda0ad9",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "trigger2Cls",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "processcfgfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "config"
+                                                ],
+                                                "fn": "processEdt_header_fill_color",
+                                                "implHandler": [
+                                                    "config.onTriggerClick = function (evnt) {",
+                                                    "    if(this.disabled){",
+                                                    "        return;",
+                                                    "    }",
+                                                    "    var me = this;",
+                                                    "    this.menu = new Ext.menu.ColorPicker({",
+                                                    "        shadow: true,",
+                                                    "        autoShow : true,",
+                                                    "        listeners: {",
+                                                    "            scope:this,",
+                                                    "            select: function(field, value, opts){",
+                                                    "                me.setValue(value);",
+                                                    "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                                    "                me.menu.hide();",
+                                                    "            },",
+                                                    "            show: function(field,opts){",
+                                                    "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                                    "            }",
+                                                    "        }",
+                                                    "    });",
+                                                    "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                                    "    this.menu.doLayout();",
+                                                    "",
+                                                    "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                                    "        scope:this",
+                                                    "    }));",
+                                                    "",
+                                                    "    this.menu.show(this.inputEl);",
+                                                    "",
+                                                    "};",
+                                                    "return config;"
+                                                ]
+                                            },
+                                            "name": "processEdt_header_fill_color",
+                                            "designerId": "8d2defb9-3296-4253-a91a-9b6baca5e6a6"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_BackgrColorChange113",
+                                                "implHandler": [
+                                                    "        this.rawData.header_fill_color=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_BackgrColorChange113",
+                                            "designerId": "3e917135-cb6c-4ee9-b378-f60ae93f0fa4"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Trigger",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|createAlias": null,
+                                        "emptyText": "Выбор цвета",
+                                        "fieldLabel": "Цвет текста",
+                                        "itemId": "Edt_header_text_color",
+                                        "labelWidth": 80,
+                                        "layout|columnWidth": 0.35,
+                                        "margin": "0 3 3 3",
+                                        "padding": 0,
+                                        "regex": "/^[0-9a-f]{3,6}$/i",
+                                        "selectOnFocus": true,
+                                        "trigger2Cls": null,
+                                        "triggerBaseCls": null,
+                                        "triggerCls": "x-form-search-trigger",
+                                        "width": null
+                                    },
+                                    "name": "MyTriggerField8",
+                                    "designerId": "671ee79b-68a4-44ed-936f-32451bbd2126",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "trigger2Cls",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "processcfgfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "config"
+                                                ],
+                                                "fn": "processEdt_header_text_color",
+                                                "implHandler": [
+                                                    "config.onTriggerClick = function (evnt) {",
+                                                    "    if(this.disabled){",
+                                                    "        return;",
+                                                    "    }",
+                                                    "    var me = this;",
+                                                    "    this.menu = new Ext.menu.ColorPicker({",
+                                                    "        shadow: true,",
+                                                    "        autoShow : true,",
+                                                    "        listeners: {",
+                                                    "            scope:this,",
+                                                    "            select: function(field, value, opts){",
+                                                    "                me.setValue(value);",
+                                                    "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                                    "                me.menu.hide();",
+                                                    "            },",
+                                                    "            show: function(field,opts){",
+                                                    "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                                    "            }",
+                                                    "        }",
+                                                    "    });",
+                                                    "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                                    "    this.menu.doLayout();",
+                                                    "",
+                                                    "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                                    "        scope:this",
+                                                    "    }));",
+                                                    "",
+                                                    "    this.menu.show(this.inputEl);",
+                                                    "",
+                                                    "};",
+                                                    "return config;"
+                                                ]
+                                            },
+                                            "name": "processEdt_header_text_color",
+                                            "designerId": "b8c9c99e-e85f-4ee2-b33e-60bcf1b13966"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_BackgrColorChange1121",
+                                                "implHandler": [
+                                                    "        this.rawData.header_text_color=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_BackgrColorChange1121",
+                                            "designerId": "609bec54-be8a-4953-ab57-6b5e29fe4c59"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "emptyText": "12px",
+                                        "fieldLabel": "Размер шрифта",
+                                        "itemId": "Edt_header_font_size",
+                                        "layout|columnWidth": 0.3,
+                                        "margin": "0 1 3 3",
+                                        "width": null
+                                    },
+                                    "name": "MyTextField10",
+                                    "designerId": "376d4bc8-4046-46e9-90da-fdcee71308ed",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange111212121",
+                                                "implHandler": [
+                                                    "this.rawData.header_font_size=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange111212121",
+                                            "designerId": "61a8c527-8be4-44b8-97d3-fc5a19a97626"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 2,
+                        "cls": "",
+                        "layout": "column",
+                        "margin": "3 3 0 3",
+                        "padding": "3 6 3 6",
+                        "title": "Область диаграммы"
+                    },
+                    "name": "MyFieldSet1",
+                    "designerId": "de3a7d17-6d68-4715-90bb-99b4d6228fd7",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "container|padding": 3,
+                                "designer|displayName": "Size",
+                                "layout": "vbox",
+                                "layout|columnWidth": 0.2,
+                                "margin": 0,
+                                "padding": null,
+                                "title": ""
+                            },
+                            "name": "MyFieldSet3",
+                            "designerId": "6e1abc74-6c59-4006-bf0d-87ea864bbf13",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Ширина",
+                                        "itemId": "Edt_diagram_width",
+                                        "labelWidth": 50,
+                                        "margin": null,
+                                        "padding": null
+                                    },
+                                    "name": "MyNumberField",
+                                    "designerId": "248a2a18-1ff3-4c29-9517-630e5641fe78",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange11121111",
+                                                "implHandler": [
+                                                    "this.rawData.diagram_width=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange11121111",
+                                            "designerId": "0b8137e0-f327-4186-8ced-591d4d6f001a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Высота",
+                                        "itemId": "Edt_diagram_height",
+                                        "labelWidth": 50,
+                                        "margin": 0,
+                                        "padding": null
+                                    },
+                                    "name": "MyNumberField1",
+                                    "designerId": "65b882a6-026b-417c-bcd1-217b38a8bd83",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange111211111",
+                                                "implHandler": [
+                                                    "this.rawData.diagram_height=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange111211111",
+                                            "designerId": "e6783777-2507-49cf-babd-c35c2b2fb5a0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "container|padding": 3,
+                                "designer|displayName": "Type",
+                                "layout": "vbox",
+                                "layout|columnWidth": 0.4,
+                                "padding": null,
+                                "title": null
+                            },
+                            "name": "MyFieldSet4",
+                            "designerId": "f5b1017f-4444-45fa-8ba8-10b17a5d4afc",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "name",
+                                        "editable": false,
+                                        "fieldLabel": "Тип",
+                                        "itemId": "Edt_diagram_type",
+                                        "labelWidth": 30,
+                                        "padding": null,
+                                        "store": [
+                                            "[['1','Круговая'],['2', 'Гистограмма (раздельные столбцы)'], ['3', 'Гистограмма (общие столбцы)'], ['4', 'Линейный график'], ['5', 'График-радар (с заливкой)'], ['6', 'Линейный с областями'], ['7', 'График-радар (без заливки)'], ['8', 'Датчик']]"
+                                        ],
+                                        "valueField": "id",
+                                        "width": null
+                                    },
+                                    "name": "MyComboBox1",
+                                    "configAlternates": {
+                                        "store": "array"
+                                    },
+                                    "designerId": "c94a431d-e90c-49d6-9ed2-1bce153b78e2",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange1111",
+                                                "implHandler": [
+                                                    "this.rawData.diagram_type=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange1111",
+                                            "designerId": "33c10e4a-5e55-41fe-af39-5c16b5760894"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "name",
+                                        "editable": false,
+                                        "fieldLabel": "Ориентация",
+                                        "itemId": "Edt_orientation",
+                                        "labelWidth": 80,
+                                        "margin": 0,
+                                        "padding": null,
+                                        "store": [
+                                            "[['0','Книжная'],['1', 'Альбомная']]"
+                                        ],
+                                        "valueField": "id",
+                                        "width": null
+                                    },
+                                    "name": "MyComboBox4",
+                                    "configAlternates": {
+                                        "store": "array"
+                                    },
+                                    "designerId": "896da32a-c38a-4652-a062-b1bcf99eb7a9",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange11112",
+                                                "implHandler": [
+                                                    "this.rawData.orientation=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange11112",
+                                            "designerId": "6b67fced-5654-45c3-a289-eff6a9e7318e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "container|padding": 3,
+                                "designer|displayName": "Design",
+                                "layout": "vbox",
+                                "layout|columnWidth": 0.4,
+                                "margin": 0,
+                                "padding": null,
+                                "title": null
+                            },
+                            "name": "MyFieldSet5",
+                            "designerId": "adf10416-239b-4a91-a271-b1423c4f50e6",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Trigger",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|createAlias": null,
+                                        "emptyText": "Выбор цвета",
+                                        "fieldLabel": "Цвет фона",
+                                        "itemId": "Edt_bg_color",
+                                        "labelWidth": 70,
+                                        "layout|flex": 1,
+                                        "padding": null,
+                                        "regex": "/^[0-9a-f]{3,6}$/i",
+                                        "selectOnFocus": true,
+                                        "trigger2Cls": null,
+                                        "triggerBaseCls": null,
+                                        "triggerCls": "x-form-search-trigger"
+                                    },
+                                    "name": "MyTriggerField4",
+                                    "designerId": "84a9a547-ec0d-4ff2-acf1-77f5e5e0e737",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "trigger2Cls",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "processcfgfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "config"
+                                                ],
+                                                "fn": "processEdt_bg_color",
+                                                "implHandler": [
+                                                    "config.onTriggerClick = function (evnt) {",
+                                                    "    if(this.disabled){",
+                                                    "        return;",
+                                                    "    }",
+                                                    "    var me = this;",
+                                                    "    this.menu = new Ext.menu.ColorPicker({",
+                                                    "        shadow: true,",
+                                                    "        autoShow : true,",
+                                                    "        listeners: {",
+                                                    "            scope:this,",
+                                                    "            select: function(field, value, opts){",
+                                                    "                me.setValue(value);",
+                                                    "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                                    "                me.menu.hide();",
+                                                    "            },",
+                                                    "            show: function(field,opts){",
+                                                    "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                                    "            }",
+                                                    "        }",
+                                                    "    });",
+                                                    "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                                    "    this.menu.doLayout();",
+                                                    "",
+                                                    "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                                    "        scope:this",
+                                                    "    }));",
+                                                    "",
+                                                    "    this.menu.show(this.inputEl);",
+                                                    "",
+                                                    "};",
+                                                    "return config;"
+                                                ]
+                                            },
+                                            "name": "processEdt_bg_color",
+                                            "designerId": "8254469d-3c29-406f-9c02-a38ebb10f3bc"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_BackgrColorChange",
+                                                "implHandler": [
+                                                    "        this.rawData.bg_color=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_BackgrColorChange",
+                                            "designerId": "21a29051-dc96-46db-8469-d361a7e2fb16"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "name",
+                                        "editable": false,
+                                        "fieldLabel": "Тема",
+                                        "itemId": "Edt_diagram_theme",
+                                        "labelWidth": 35,
+                                        "margin": 0,
+                                        "padding": null,
+                                        "store": [
+                                            "[['Base','Базовая'],['Green', 'Зеленая'], ['Sky', 'Голубая'], ['Red', 'Красная'], ['Purple', 'Пурпурная'], ['Blue', 'Синяя'], ['Yellow', 'Желтая'], ['Category1', 'Тема 1'], ['Category2', 'Тема 2'], ['Category3', 'Тема 3'], ['Category4', 'Тема 4'], ['Category5', 'Тема 5'], ['Category6', 'Тема 6']]"
+                                        ],
+                                        "valueField": "id",
+                                        "width": null
+                                    },
+                                    "name": "MyComboBox3",
+                                    "configAlternates": {
+                                        "store": "array"
+                                    },
+                                    "designerId": "ba2db633-8af6-40ec-9b53-520a69fd5622",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange11111",
+                                                "implHandler": [
+                                                    "this.rawData.diagram_theme=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange11111",
+                                            "designerId": "574db428-50f7-42bc-a217-f63babd64464"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "column",
+                        "title": "Ряды данных"
+                    },
+                    "name": "MyFieldSet9",
+                    "designerId": "4f05e8ad-a4ae-4b50-9951-c26a5a620701",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Расстояние между рядами данных (%)",
+                                "inputType": "number",
+                                "itemId": "Edt_gutter",
+                                "labelWidth": 230,
+                                "layout|columnWidth": 0.5,
+                                "margin": "0 3 3 0",
+                                "width": null
+                            },
+                            "name": "MyTextField11",
+                            "designerId": "2d9b4898-26fb-435b-9653-6f28711daa30",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange1112",
+                                        "implHandler": [
+                                            "this.rawData.gutter=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange1112",
+                                    "designerId": "61219b92-270c-4fd9-807c-47b8393b3298"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Расстояние между элементами ряда (%)",
+                                "inputType": "number",
+                                "itemId": "Edt_groupGutter",
+                                "labelWidth": 245,
+                                "layout|columnWidth": 0.5,
+                                "margin": "0 0 3 3",
+                                "width": null
+                            },
+                            "name": "MyTextField12",
+                            "designerId": "4e329148-53ec-4322-a4a1-7dd1643ac69c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange11122",
+                                        "implHandler": [
+                                            "this.rawData.groupGutter=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange11122",
+                                    "designerId": "0a674540-0193-4357-8529-a8656cdfd36c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 2,
+                        "designer|displayName": "Signature",
+                        "layout": "column",
+                        "margin": 3,
+                        "padding": "3 6 3 6",
+                        "title": "Подписи на диагрмме"
+                    },
+                    "name": "MyFieldSet6",
+                    "designerId": "351bad22-8ae2-474e-8f0e-f1b7109a93b6",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "name",
+                                "editable": false,
+                                "fieldLabel": "Расположение подписи",
+                                "itemId": "Edt_label_display",
+                                "labelWidth": 90,
+                                "layout|columnWidth": 0.3,
+                                "margin": "0 0 0 3",
+                                "store": [
+                                    "",
+                                    "[['none','Не отображать'],['insideStart','Внизу внутри'],['insideEnd', 'Вверху внутри'], ['outside', 'Снаружи']]"
+                                ],
+                                "valueField": "id"
+                            },
+                            "name": "MyComboBox5",
+                            "configAlternates": {
+                                "store": "array"
+                            },
+                            "designerId": "02632d60-6cfe-4627-a140-f648c8acd12c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange11111_12",
+                                        "implHandler": [
+                                            "this.rawData.label_display=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange11111_12",
+                                    "designerId": "60aa370f-789d-4df4-8d24-d5c0c18871a9"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "name",
+                                "editable": false,
+                                "fieldLabel": "Направление текста",
+                                "itemId": "Edt_label_type_visible",
+                                "labelWidth": 80,
+                                "layout|columnWidth": 0.3,
+                                "margin": "0 0 0 6",
+                                "store": [
+                                    "[['horizontal', 'Горизонтально'], ['vertical', 'Вертикально']]"
+                                ],
+                                "valueField": "id"
+                            },
+                            "name": "MyComboBox",
+                            "configAlternates": {
+                                "store": "array"
+                            },
+                            "designerId": "5d065e90-9908-455e-8992-0f46446c1426",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange11111_1",
+                                        "implHandler": [
+                                            "this.rawData.label_type_visible=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange11111_1",
+                                    "designerId": "12425add-a8fd-49ca-bea7-7fa7074b3871"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Trigger",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|createAlias": null,
+                                "emptyText": "Выбор цвета",
+                                "fieldLabel": "Цвет шрифта",
+                                "itemId": "Edt_info_label_color",
+                                "labelWidth": 50,
+                                "layout|columnWidth": 0.2,
+                                "margin": "0 0 0 6",
+                                "padding": 0,
+                                "regex": "/^[0-9a-f]{3,6}$/i",
+                                "selectOnFocus": true,
+                                "trigger2Cls": null,
+                                "triggerBaseCls": null,
+                                "triggerCls": "x-form-search-trigger"
+                            },
+                            "name": "MyTriggerField5",
+                            "designerId": "7edd87df-8a26-49ff-b4a4-a694938f0187",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "trigger2Cls",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "processcfgfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "config"
+                                        ],
+                                        "fn": "processEdt_info_label_color",
+                                        "implHandler": [
+                                            "config.onTriggerClick = function (evnt) {",
+                                            "    if(this.disabled){",
+                                            "        return;",
+                                            "    }",
+                                            "    var me = this;",
+                                            "    this.menu = new Ext.menu.ColorPicker({",
+                                            "        shadow: true,",
+                                            "        autoShow : true,",
+                                            "        listeners: {",
+                                            "            scope:this,",
+                                            "            select: function(field, value, opts){",
+                                            "                me.setValue(value);",
+                                            "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                            "                me.menu.hide();",
+                                            "            },",
+                                            "            show: function(field,opts){",
+                                            "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                            "            }",
+                                            "        }",
+                                            "    });",
+                                            "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                            "    this.menu.doLayout();",
+                                            "",
+                                            "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                            "        scope:this",
+                                            "    }));",
+                                            "",
+                                            "    this.menu.show(this.inputEl);",
+                                            "",
+                                            "};",
+                                            "return config;"
+                                        ]
+                                    },
+                                    "name": "processEdt_info_label_color",
+                                    "designerId": "a2844e1a-a6d0-4f16-a085-ab9b4f8d53f4"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_BackgrColorChange111",
+                                        "implHandler": [
+                                            "        this.rawData.info_label_color=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_BackgrColorChange111",
+                                    "designerId": "695417ac-3dd3-47c9-b055-77283fdf6b3b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "emptyText": "12px",
+                                "fieldLabel": "Размер шрифта",
+                                "itemId": "Edt_label_font_size",
+                                "labelWidth": 50,
+                                "layout|columnWidth": 0.2,
+                                "margin": "0 3 0 6"
+                            },
+                            "name": "MyTextField6",
+                            "designerId": "3f60774e-fddd-40e2-88d6-94a946eb7716",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange11121211",
+                                        "implHandler": [
+                                            "this.rawData.label_font_size=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange11121211",
+                                    "designerId": "cf7a41f3-027c-4caa-9bdf-199c5eec1e34"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 2,
+                        "container|align": "stretch",
+                        "container|padding": 3,
+                        "height": 51,
+                        "itemId": "ChartClick",
+                        "layout": "hbox",
+                        "margin": 3,
+                        "title": "Выполнить при нажатии на график"
+                    },
+                    "name": "MyFieldSet10",
+                    "designerId": "ba5411fc-af48-433d-a893-505cb8f6fc33",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Класс функций",
+                                "itemId": "Edt_func_class_name",
+                                "labelWidth": 90,
+                                "margin": "0 3 3 0"
+                            },
+                            "name": "MyTextField13",
+                            "configAlternates": {
+                                "store": "array"
+                            },
+                            "designerId": "40217d44-0187-4ef9-a4c5-35a5edf811b2",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange11111_111",
+                                        "implHandler": [
+                                            "this.rawData.func_class_name=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange11111_111",
+                                    "designerId": "a13f6e36-0e80-4d19-b53a-7b5563dd206f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Функция",
+                                "itemId": "Edt_func_name",
+                                "labelWidth": 55,
+                                "margin": "0 3 3 0"
+                            },
+                            "name": "MyTextField14",
+                            "configAlternates": {
+                                "store": "array"
+                            },
+                            "designerId": "b7d1d9b1-03f1-4d71-ba4f-1ff020c34da8",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange11111_1111",
+                                        "implHandler": [
+                                            "this.rawData.func_name=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange11111_1111",
+                                    "designerId": "f14713e4-764b-40a6-ba76-3abfbfebef32"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "emptyText": "{code:'',ParamValuesArray:{ModalWindow:true}}",
+                                "fieldLabel": "Параметры",
+                                "itemId": "Edt_param_list",
+                                "labelWidth": 70,
+                                "layout|flex": 1,
+                                "margin": "0 0 3 0",
+                                "width": ""
+                            },
+                            "name": "MyTextField5",
+                            "designerId": "1bacf1e0-059f-4666-aaff-0513cb5922ee",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_descriptionChange1112122",
+                                        "implHandler": [
+                                            "this.rawData.param_list=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_descriptionChange1112122",
+                                    "designerId": "4f157984-1476-4556-942e-d3b0859da448"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 0,
+                "container|align": "stretch",
+                "layout": "vbox",
+                "title": "Оси"
+            },
+            "name": "MyPanel5",
+            "designerId": "4d9065a6-814f-4d29-babd-bdf445e68fc3",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": 0,
+                        "layout": "column",
+                        "layout|flex": 1,
+                        "margin": 3
+                    },
+                    "name": "MyContainer5",
+                    "designerId": "8ff4343f-5bae-4fa3-9b8a-a782912a2a18",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": 2,
+                                "container|align": "stretch",
+                                "designer|displayName": "Names",
+                                "layout": "vbox",
+                                "layout|columnWidth": 0.6,
+                                "margin": "0 0 0 3",
+                                "padding": null,
+                                "title": "Наименование осей"
+                            },
+                            "name": "MyFieldSet8",
+                            "designerId": "4e3d5362-9894-46c8-9e8e-e4e351b953f0",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Ось абсцисс",
+                                        "itemId": "Edt_x_name",
+                                        "labelWidth": 80,
+                                        "layout|flex": 2,
+                                        "margin": "3 0 3 0"
+                                    },
+                                    "name": "MyTextField7",
+                                    "designerId": "6fc2d12b-fc39-4332-ab3f-7f6c5379526b",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange11121",
+                                                "implHandler": [
+                                                    "this.rawData.x_name=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange11121",
+                                            "designerId": "e0c60f00-2cd1-4093-8cf0-392b5b295e1c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Ось ординат",
+                                        "itemId": "Edt_y_name",
+                                        "labelWidth": 80,
+                                        "layout|flex": 2,
+                                        "margin": "3 0 3 0"
+                                    },
+                                    "name": "MyTextField9",
+                                    "designerId": "6af4e58e-3f68-495e-9d7d-81b44e610c29",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange111211",
+                                                "implHandler": [
+                                                    "this.rawData.y_name=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange111211",
+                                            "designerId": "b78f6126-79ba-4cad-a386-19ab92ee3576"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.container.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout": "column",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyContainer1",
+                                    "designerId": "15282d09-38c3-4882-b30d-5d16580707b7",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Trigger",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|createAlias": null,
+                                                "emptyText": "Выбор цвета",
+                                                "fieldLabel": "Цвет текста",
+                                                "itemId": "Edt_axes_color",
+                                                "labelWidth": 80,
+                                                "layout|columnWidth": 0.6,
+                                                "margin": "3 3 3 0",
+                                                "padding": null,
+                                                "regex": "/^[0-9a-f]{3,6}$/i",
+                                                "selectOnFocus": true,
+                                                "trigger2Cls": null,
+                                                "triggerBaseCls": null,
+                                                "triggerCls": "x-form-search-trigger"
+                                            },
+                                            "name": "MyTriggerField2",
+                                            "designerId": "94761ec4-d659-4af2-802f-941dd56548d6",
+                                            "customConfigs": [
+                                                {
+                                                    "group": "(Custom Properties)",
+                                                    "name": "trigger2Cls",
+                                                    "type": "string"
+                                                }
+                                            ],
+                                            "cn": [
+                                                {
+                                                    "type": "processcfgfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "config"
+                                                        ],
+                                                        "fn": "processEdt_axes_color",
+                                                        "implHandler": [
+                                                            "config.onTriggerClick = function (evnt) {",
+                                                            "    if(this.disabled){",
+                                                            "        return;",
+                                                            "    }",
+                                                            "    var me = this;",
+                                                            "    this.menu = new Ext.menu.ColorPicker({",
+                                                            "        shadow: true,",
+                                                            "        autoShow : true,",
+                                                            "        listeners: {",
+                                                            "            scope:this,",
+                                                            "            select: function(field, value, opts){",
+                                                            "                me.setValue(value);",
+                                                            "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                                            "                me.menu.hide();",
+                                                            "            },",
+                                                            "            show: function(field,opts){",
+                                                            "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                                            "            }",
+                                                            "        }",
+                                                            "    });",
+                                                            "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                                            "    this.menu.doLayout();",
+                                                            "",
+                                                            "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                                            "        scope:this",
+                                                            "    }));",
+                                                            "",
+                                                            "    this.menu.show(this.inputEl);",
+                                                            "",
+                                                            "};",
+                                                            "return config;"
+                                                        ]
+                                                    },
+                                                    "name": "processEdt_axes_color",
+                                                    "designerId": "aa8cea6e-ca56-4df7-9e09-38fc21688476"
+                                                },
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEdt_BackgrColorChange2",
+                                                        "implHandler": [
+                                                            "        this.rawData.axes_color=newValue;",
+                                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                            "mainContainer.modified=true;"
+                                                        ],
+                                                        "name": "change",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onEdt_BackgrColorChange2",
+                                                    "designerId": "d6c596d9-bf2c-4138-b643-aaf0988802b7"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "emptyText": "12px",
+                                                "fieldLabel": "Размер шрифта",
+                                                "itemId": "Edt_axes_font_size",
+                                                "labelWidth": 95,
+                                                "layout|columnWidth": 0.4,
+                                                "margin": "3 0 3 3"
+                                            },
+                                            "name": "MyTextField4",
+                                            "designerId": "9e0ac36a-d398-4c9e-a9fe-73b7c4d951bf",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onEdt_descriptionChange1112121",
+                                                        "implHandler": [
+                                                            "this.rawData.axes_font_size=newValue;",
+                                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                            "mainContainer.modified=true;"
+                                                        ],
+                                                        "name": "change",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onEdt_descriptionChange1112121",
+                                                    "designerId": "f0b6d2c6-d080-4d31-a36a-debe5c7a20a4"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": "2 2 2 0",
+                                "container|align": "stretch",
+                                "layout": "vbox",
+                                "layout|columnWidth": 0.4,
+                                "margin": "0 3 0 0",
+                                "padding": null,
+                                "title": "Подписи осей"
+                            },
+                            "name": "MyFieldSet7",
+                            "designerId": "bfd3a163-ce50-4693-a387-f49d94cc6fa9",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Trigger",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|createAlias": null,
+                                        "emptyText": "Выбор цвета",
+                                        "fieldLabel": "Цвет текста",
+                                        "itemId": "Edt_label_color",
+                                        "labelWidth": 80,
+                                        "margin": "3 3 3 0",
+                                        "padding": 0,
+                                        "regex": "/^[0-9a-f]{3,6}$/i",
+                                        "selectOnFocus": true,
+                                        "trigger2Cls": null,
+                                        "triggerBaseCls": null,
+                                        "triggerCls": "x-form-search-trigger"
+                                    },
+                                    "name": "MyTriggerField1",
+                                    "designerId": "589bfbbc-61b4-41a1-a14b-1e485783d729",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "trigger2Cls",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "processcfgfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "config"
+                                                ],
+                                                "fn": "processEdt_label_color",
+                                                "implHandler": [
+                                                    "config.onTriggerClick = function (evnt) {",
+                                                    "    if(this.disabled){",
+                                                    "        return;",
+                                                    "    }",
+                                                    "    var me = this;",
+                                                    "    this.menu = new Ext.menu.ColorPicker({",
+                                                    "        shadow: true,",
+                                                    "        autoShow : true,",
+                                                    "        listeners: {",
+                                                    "            scope:this,",
+                                                    "            select: function(field, value, opts){",
+                                                    "                me.setValue(value);",
+                                                    "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                                    "                me.menu.hide();",
+                                                    "            },",
+                                                    "            show: function(field,opts){",
+                                                    "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                                    "            }",
+                                                    "        }",
+                                                    "    });",
+                                                    "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                                    "    this.menu.doLayout();",
+                                                    "",
+                                                    "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                                    "        scope:this",
+                                                    "    }));",
+                                                    "",
+                                                    "    this.menu.show(this.inputEl);",
+                                                    "",
+                                                    "};",
+                                                    "return config;"
+                                                ]
+                                            },
+                                            "name": "processEdt_label_color",
+                                            "designerId": "585c7068-fc7c-43a7-9d8d-f5d2e10d91ae"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_BackgrColorChange1",
+                                                "implHandler": [
+                                                    "        this.rawData.label_color=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_BackgrColorChange1",
+                                            "designerId": "a5dfc2a8-1dea-4906-b052-60f3b0fc2162"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "emptyText": "12px",
+                                        "fieldLabel": "Размер шрифта",
+                                        "itemId": "Edt_axes_label_font_size",
+                                        "labelWidth": 95,
+                                        "margin": "3 3 3 0",
+                                        "width": null
+                                    },
+                                    "name": "MyTextField8",
+                                    "designerId": "509c8adf-ab69-48cc-b21d-7a2637d955db",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange11121212",
+                                                "implHandler": [
+                                                    "this.rawData.axes_label_font_size=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange11121212",
+                                            "designerId": "f2893724-8a19-4520-b299-64695a55b431"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Угол поворота",
+                                        "inputType": "number",
+                                        "itemId": "Edt_label_rotate",
+                                        "labelWidth": 90,
+                                        "margin": "3 0 1 0",
+                                        "width": null
+                                    },
+                                    "name": "MyTextField3",
+                                    "designerId": "abf056aa-2431-44b4-8973-e1d73f882ede",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onEdt_descriptionChange111",
+                                                "implHandler": [
+                                                    "this.rawData.label_rotate=newValue;",
+                                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                                    "mainContainer.modified=true;"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onEdt_descriptionChange111",
+                                            "designerId": "8e2b4a18-ceb2-4cb9-9493-4eb6909ee590"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Показать сетку",
+                        "layout|flex": null,
+                        "margin": "3 200 3 10",
+                        "maxWidth": 370,
+                        "width": null
+                    },
+                    "name": "MyCheckboxGroup",
+                    "designerId": "912314a9-725e-4108-a67e-6d3f74647e36",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Для оси абсцисс",
+                                "fieldLabel": "",
+                                "itemId": "ChkShowGrid_y",
+                                "margin": "0 3 3 3"
+                            },
+                            "name": "MyCheckbox3",
+                            "designerId": "7117c80a-9240-42da-8aa2-ed4beb7d8cf1",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onChkShowErrorChange11",
+                                        "implHandler": [
+                                            "this.rawData.ShowGrid_y=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onChkShowErrorChange11",
+                                    "designerId": "d75711f8-7d2a-4fb7-9d56-f2879000e360"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Для оси ординат",
+                                "fieldLabel": "",
+                                "itemId": "ChkShowGrid_x",
+                                "margin": "0 3 3 6",
+                                "maxWidth": null,
+                                "width": ""
+                            },
+                            "name": "MyCheckbox2",
+                            "designerId": "54c1b102-11a8-438f-a701-ce1111a07271",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onChkShowErrorChange1",
+                                        "implHandler": [
+                                            "this.rawData.ShowGrid_x=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                            "mainContainer.modified=true;"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onChkShowErrorChange1",
+                                    "designerId": "6ca65edc-3224-4ae9-98be-3fec5a695c61"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "",
+                "itemId": "legend",
+                "layout": "column",
+                "title": "Легенда"
+            },
+            "name": "MyPanel4",
+            "designerId": "a5d5c576-39a4-4a7c-9097-8c656b142d30",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "name",
+                        "editable": false,
+                        "fieldLabel": "Положение",
+                        "itemId": "Edt_legend_position",
+                        "labelWidth": 70,
+                        "layout|columnWidth": 0.25,
+                        "margin": "3 3 3 6",
+                        "store": [
+                            "[['0','Не показывать'],['1','Внизу'],['2', 'Слева'], ['3', 'Справа'], ['4', 'Сверху']]"
+                        ],
+                        "valueField": "id"
+                    },
+                    "name": "MyComboBox2",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "ee79ce20-8090-46aa-8829-1e110bc94833",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_descriptionChange11111_11",
+                                "implHandler": [
+                                    "this.rawData.legend_position=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                    "mainContainer.modified=true;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_descriptionChange11111_11",
+                            "designerId": "e97b89c0-a529-4046-8498-6ef1c0515265"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Trigger",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|createAlias": null,
+                        "emptyText": "Выбор цвета",
+                        "fieldLabel": "Цвет фона",
+                        "itemId": "Edt_legend_box_color",
+                        "labelWidth": 70,
+                        "layout|columnWidth": 0.25,
+                        "margin": 3,
+                        "padding": 0,
+                        "regex": "/^[0-9a-f]{3,6}$/i",
+                        "selectOnFocus": true,
+                        "trigger2Cls": null,
+                        "triggerBaseCls": null,
+                        "triggerCls": "x-form-search-trigger"
+                    },
+                    "name": "MyTriggerField3",
+                    "designerId": "3a009c3d-d90b-4f18-bc63-0063af4d17e5",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "trigger2Cls",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processEdt_legend_box_color",
+                                "implHandler": [
+                                    "config.onTriggerClick = function (evnt) {",
+                                    "    if(this.disabled){",
+                                    "        return;",
+                                    "    }",
+                                    "    var me = this;",
+                                    "    this.menu = new Ext.menu.ColorPicker({",
+                                    "        shadow: true,",
+                                    "        autoShow : true,",
+                                    "        listeners: {",
+                                    "            scope:this,",
+                                    "            select: function(field, value, opts){",
+                                    "                me.setValue(value);",
+                                    "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                    "                me.menu.hide();",
+                                    "            },",
+                                    "            show: function(field,opts){",
+                                    "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                    "            }",
+                                    "        }",
+                                    "    });",
+                                    "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                    "    this.menu.doLayout();",
+                                    "",
+                                    "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                    "        scope:this",
+                                    "    }));",
+                                    "",
+                                    "    this.menu.show(this.inputEl);",
+                                    "",
+                                    "};",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processEdt_legend_box_color",
+                            "designerId": "17979e9b-658c-432e-a313-9410cd7384e0"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_BackgrColorChange11",
+                                "implHandler": [
+                                    "        this.rawData.legend_box_color=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                    "mainContainer.modified=true;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_BackgrColorChange11",
+                            "designerId": "b17e9119-fc6f-4fb3-b74c-beec5a135fb2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Trigger",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|createAlias": null,
+                        "emptyText": "Выбор цвета",
+                        "fieldLabel": "Цвет текста",
+                        "itemId": "Edt_legend_label_color",
+                        "labelWidth": 80,
+                        "layout|columnWidth": 0.25,
+                        "margin": 3,
+                        "padding": 0,
+                        "regex": "/^[0-9a-f]{3,6}$/i",
+                        "selectOnFocus": true,
+                        "trigger2Cls": null,
+                        "triggerBaseCls": null,
+                        "triggerCls": "x-form-search-trigger"
+                    },
+                    "name": "MyTriggerField6",
+                    "designerId": "d4ba0b35-6937-44d6-9b4b-8beac919ffe7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "trigger2Cls",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "fn": "processEdt_legend_label_color",
+                                "implHandler": [
+                                    "config.onTriggerClick = function (evnt) {",
+                                    "    if(this.disabled){",
+                                    "        return;",
+                                    "    }",
+                                    "    var me = this;",
+                                    "    this.menu = new Ext.menu.ColorPicker({",
+                                    "        shadow: true,",
+                                    "        autoShow : true,",
+                                    "        listeners: {",
+                                    "            scope:this,",
+                                    "            select: function(field, value, opts){",
+                                    "                me.setValue(value);",
+                                    "                me.inputEl.setStyle({backgroundColor: '#' +me.getValue(), backgroundImage: 'none',color:'#' +invert(me.getValue())});",
+                                    "                me.menu.hide();",
+                                    "            },",
+                                    "            show: function(field,opts){",
+                                    "                field.getEl().monitorMouseLeave(500, field.hide, field);",
+                                    "            }",
+                                    "        }",
+                                    "    });",
+                                    "    this.menu.alignTo(this.inputEl, 'tl-bl?');",
+                                    "    this.menu.doLayout();",
+                                    "",
+                                    "    this.menu.on(Ext.apply({}, this.menuListeners, {",
+                                    "        scope:this",
+                                    "    }));",
+                                    "",
+                                    "    this.menu.show(this.inputEl);",
+                                    "",
+                                    "};",
+                                    "return config;"
+                                ]
+                            },
+                            "name": "processEdt_legend_label_color",
+                            "designerId": "9017a4df-632e-4cef-bde4-bfa198a69ddf"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_BackgrColorChange112",
+                                "implHandler": [
+                                    "        this.rawData.legend_label_color=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                    "mainContainer.modified=true;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_BackgrColorChange112",
+                            "designerId": "3fedcd0e-f28f-403a-8a76-4bd5c2614fda"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "12px",
+                        "fieldLabel": "Размер шрифта",
+                        "itemId": "Edt_legend_font_size",
+                        "layout|columnWidth": 0.25,
+                        "margin": 3,
+                        "width": null
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "1a980124-0054-4242-9565-3a36558178ad",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_descriptionChange111212",
+                                "implHandler": [
+                                    "this.rawData.legend_font_size=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                    "mainContainer.modified=true;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_descriptionChange111212",
+                            "designerId": "1ec97fcf-e735-440d-9a8c-09e78459d9d6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.CheckboxGroup",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Вывод сообщений",
+                "labelWidth": 110,
+                "margin": "3 3 0 6",
+                "maxWidth": 650
+            },
+            "name": "MyCheckboxGroup1",
+            "designerId": "db49ed33-a643-4511-9d78-366bc8afcb9a",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Об ошибке выполнения запроса",
+                        "fieldLabel": "",
+                        "itemId": "ChkShowError",
+                        "margin": null
+                    },
+                    "name": "MyCheckbox",
+                    "designerId": "3d561bb7-a1df-4dbb-bc9c-2f06e9b4a738",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onChkShowErrorChange",
+                                "implHandler": [
+                                    "this.rawData.ShowError=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                    "mainContainer.modified=true;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onChkShowErrorChange",
+                            "designerId": "7d5dbf7f-0bc9-4968-b909-ab255b888840"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "О пустом результате выполнения запроса",
+                        "fieldLabel": "",
+                        "itemId": "ChkShowEmptyMessage",
+                        "margin": null
+                    },
+                    "name": "MyCheckbox1",
+                    "designerId": "2c111012-34f7-43d4-990c-8ea5f46f4d86",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onChkShowEmptyMessageChange",
+                                "implHandler": [
+                                    "this.rawData.ShowEmptyMessage=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignDiagramMainContainer');",
+                                    "mainContainer.modified=true;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onChkShowEmptyMessageChange",
+                            "designerId": "75f93581-e3ef-4ffe-a047-a4a79092d497"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

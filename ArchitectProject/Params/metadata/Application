@@ -1,0 +1,17 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "Params",
+        "views": [
+            "EditParams",
+            "InputInterractiveParams"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

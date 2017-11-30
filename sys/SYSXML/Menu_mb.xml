@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<Tasks>
+<Task>
+<ShortName><![CDATA[Администрирование]]></ShortName>
+<FullName><![CDATA[Администрирование]]></FullName>
+<code>database</code>
+<Order>-2</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Импорт]]></ShortName>
+<FullName><![CDATA[Импорт]]></FullName>
+<code>case_27</code>
+<Order>3</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Импорт информационных ресурсов]]></ShortName>
+<FullName><![CDATA[Импорт информационных ресурсов]]></FullName>
+<code>import</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Metabase_operation]]></func_class_name>
+<func_name><![CDATA[ImportFiles_Grid]]></func_name>
+<param_list><![CDATA[]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Загрузка файлов в файловое хранилище]]></ShortName>
+<FullName><![CDATA[Загрузка файлов в файловое хранилище]]></FullName>
+<code>import2</code>
+<Order>3</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbf_store"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Источники информации]]></ShortName>
+<FullName><![CDATA[Источники информации]]></FullName>
+<code>import3</code>
+<Order>4</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbs_source"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Настройка импорта]]></ShortName>
+<FullName><![CDATA[Настройка импорта]]></FullName>
+<code>case_28</code>
+<Order>6</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Загрузка схем импорта информационных ресурсов]]></ShortName>
+<FullName><![CDATA[Загрузка схем импорта информационных ресурсов]]></FullName>
+<code>tuning_import</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Metabase_operation]]></func_class_name>
+<func_name><![CDATA[ImportXSD]]></func_name>
+<param_list><![CDATA[]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Список схем импорта информационных ресурсов]]></ShortName>
+<FullName><![CDATA[Список схем импорта информационных ресурсов]]></FullName>
+<code>list_import_schema</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbi_schema"}]]></param_list>
+</Task>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Экспорт]]></ShortName>
+<FullName><![CDATA[Экспорт]]></FullName>
+<code>case_26</code>
+<Order>4</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Настройка экспорта информационных ресурсов]]></ShortName>
+<FullName><![CDATA[Настройка экспорта информационных ресурсов]]></FullName>
+<code>export</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbo_schema"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Экспорт (метабаза)]]></ShortName>
+<FullName><![CDATA[Экспорт (метабаза)]]></FullName>
+<code>mb_export_run</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbo_schema_run_mb"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Экспорт (предметная область)]]></ShortName>
+<FullName><![CDATA[Экспорт (предметная область)]]></FullName>
+<code>exp_app</code>
+<Order>3</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbo_schema_run_app"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Получатели информации]]></ShortName>
+<FullName><![CDATA[Получатели информации]]></FullName>
+<code>export4</code>
+<Order>4</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbs_receive"}]]></param_list>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Структура главного меню]]></ShortName>
+<FullName><![CDATA[Структура главного меню]]></FullName>
+<code>tuning2</code>
+<Order>7</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Загрузка системного меню]]></ShortName>
+<FullName><![CDATA[Загрузка системного меню]]></FullName>
+<code>tuning_interface3</code>
+<Order>3</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Metabase_operation]]></func_class_name>
+<func_name><![CDATA[ImportSysTask]]></func_name>
+<param_list><![CDATA[]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Загрузка пользовательского меню]]></ShortName>
+<FullName><![CDATA[Загрузка пользовательского меню]]></FullName>
+<code>tuning_interface2</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Metabase_operation]]></func_class_name>
+<func_name><![CDATA[ImportAppTask]]></func_name>
+<param_list><![CDATA[]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Настройка интерфейсов]]></ShortName>
+<FullName><![CDATA[Настройка интерфейсов]]></FullName>
+<code>tuning_interface</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mb_task"}]]></param_list>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Настройка доступа]]></ShortName>
+<FullName><![CDATA[Настройка доступа]]></FullName>
+<code>tuning_access</code>
+<Order>5</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Пользователи]]></ShortName>
+<FullName><![CDATA[Пользователи]]></FullName>
+<code>tuning_access_user</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mba_users"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Группы пользователей]]></ShortName>
+<FullName><![CDATA[Группы пользователей]]></FullName>
+<code>tuning_access_group</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mba_group"}]]></param_list>
+</Task>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Разработка приложения]]></ShortName>
+<FullName><![CDATA[Разработка приложения]]></FullName>
+<code>tuning</code>
+<Order>-1</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Загрузка метаописания]]></ShortName>
+<FullName><![CDATA[Загрузка метаописания]]></FullName>
+<code>import_metadefinition</code>
+<Order>6</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Metabase_operation]]></func_class_name>
+<func_name><![CDATA[ImportMetaDefinition]]></func_name>
+<param_list><![CDATA[]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Список сводных таблииц]]></ShortName>
+<FullName><![CDATA[Список сводных таблииц]]></FullName>
+<code>browse_cross_tablle</code>
+<Order></Order>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mb_pivot_storage"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Список форм ввода]]></ShortName>
+<FullName><![CDATA[Список форм ввода]]></FullName>
+<code>browse_mb_form</code>
+<Order>7</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mb_form"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Список диаграмм]]></ShortName>
+<FullName><![CDATA[Список диаграмм]]></FullName>
+<code>chart_list</code>
+<Order>8</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbg_diagram_template"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Подготовка справочной системы]]></ShortName>
+<FullName><![CDATA[Подготовка справочной системы]]></FullName>
+<code>build_help</code>
+<Order>10</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[URL_operation]]></func_class_name>
+<func_name><![CDATA[OpenURL]]></func_name>
+<param_list><![CDATA[{"URL":"help/ParseHelp2DB.php","absolute_path":false}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Просмотр и обработка информационных объектов]]></ShortName>
+<FullName><![CDATA[Просмотр и обработка информационных объектов]]></FullName>
+<code>browse_objects</code>
+<Order>1</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Просмотр и обработка информационных объектов]]></ShortName>
+<FullName><![CDATA[Просмотр и обработка информационных объектов]]></FullName>
+<code>browse_objects_visible</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowObjectGroupWindow]]></func_name>
+<param_list><![CDATA[{"type_view":1}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Просмотр и обработка информационных объектов метаописания]]></ShortName>
+<FullName><![CDATA[Просмотр и обработка информационных объектов метаописания]]></FullName>
+<code>browse_metadefinition</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowObjectGroupWindow]]></func_name>
+<param_list><![CDATA[{"type_view":3}]]></param_list>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Список панелей визуализации]]></ShortName>
+<FullName><![CDATA[Список панелей визуализации]]></FullName>
+<code>browse_visual_panel</code>
+<Order></Order>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbv_viewpanel"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Список отчетов]]></ShortName>
+<FullName><![CDATA[Список отчетов]]></FullName>
+<code>report_list</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mbr_report_template"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Список запросов]]></ShortName>
+<FullName><![CDATA[Список запросов]]></FullName>
+<code>query_list_</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mb_stored_query"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Список сводный таблиц]]></ShortName>
+<FullName><![CDATA[Список сводный таблиц]]></FullName>
+<code>cross_table_list</code>
+<Order>8</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"sv_mb_pivot_storage"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Загрузка системных файлов]]></ShortName>
+<FullName><![CDATA[Загрузка системных файлов]]></FullName>
+<code>import_sysfiles</code>
+<Order>6</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Metabase_operation]]></func_class_name>
+<func_name><![CDATA[ImportSysFiles]]></func_name>
+<param_list><![CDATA[]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Загрузка файлов приложения]]></ShortName>
+<FullName><![CDATA[Загрузка файлов приложения]]></FullName>
+<code>import_app_files</code>
+<Order>6</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Metabase_operation]]></func_class_name>
+<func_name><![CDATA[ImportAppFiles]]></func_name>
+<param_list><![CDATA[]]></param_list>
+</Task>
+</Task>
+<grant_tasks>
+<id>grant_task</id>
+</grant_tasks>
+</Tasks>

@@ -1,0 +1,64 @@
+{
+    "name": "Report",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://127.0.0.1/Projects/GG_JS/ODT_Report/ArchitectProject/ODTReport",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "displayfield-ExtBox1-1374-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1280-inputEl": "Not Installed",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1113-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.5.0",
+    "xdsBuild": 279,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "87b2bec1-4542-45e2-b5f8-8a152119a07d",
+            "c0ee282d-e4ef-417c-b188-20d00e124a58",
+            "ce026b5e-3ba2-4869-a642-77ef69dc9552",
+            "f320ced6-8502-44aa-8277-7d314779e3b3",
+            "a2874461-4136-45f1-b146-042171d4794b",
+            "3baf7230-1eb2-4094-99eb-3314cfdd9d39",
+            "e90407f6-5ffc-42cb-bfb1-a4022bdac819",
+            "bbab97d3-c236-4611-be8c-b06d826fd6e5",
+            "43e59dc0-b1b0-409f-a63a-4918554e8567",
+            "df9049e7-71eb-46a8-b9ec-32f0b6d9381e",
+            "2355feb4-5fd3-4b93-b91d-af6551c30819",
+            "6e993d11-eddf-486c-8702-f3d9ee43405b",
+            "c85d0d72-0612-421b-9358-b1af35006e6a"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "e7b9eb05-95fa-4a29-ab84-ccad04c8889c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

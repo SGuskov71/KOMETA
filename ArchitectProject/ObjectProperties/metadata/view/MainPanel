@@ -1,0 +1,61 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MainPanel",
+        "height": 647,
+        "layout": "border",
+        "title": "My Panel",
+        "width": 871
+    },
+    "name": "MyPanel",
+    "designerId": "05fbf521-a919-4fd5-8bdc-fbc4ddedfff0",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "title": "My Panel"
+            },
+            "name": "MyPanel1",
+            "designerId": "d6291bc7-4210-45ae-85f3-f4954f765f6c"
+        },
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "title": "My Tree Panel",
+                "width": 150
+            },
+            "name": "MyTreePanel",
+            "designerId": "703c624e-867b-4cb9-832c-ebe1c5123078",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTreeView",
+                    "designerId": "cc1d11ef-d02f-4900-9145-8857affe28ed"
+                }
+            ]
+        }
+    ]
+}

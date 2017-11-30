@@ -1,0 +1,16 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "SQLEditor",
+        "views": [
+            "EditSQLWindow"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

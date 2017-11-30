@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- -->
+<XMLDATA sysname="mb_link_form_object">
+<Id>mb_link_form_object</Id>
+<mb_link_form_objects>
+<mb_link_form_object><sysname>sv_mb_object_link</sysname><code_form>_form_mb_object_link</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mba_grant_task</sysname><code_form>_form_mba_grant_task</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>csv_mba_users</sysname><code_form>_form_mba_user</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object</sysname><code_form>_form_mb_object</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_field</sysname><code_form>form_mb_object_field</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_link_field</sysname><code_form>_form_mb_object_link_field</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_table</sysname><code_form>_form_mb_object</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_link_form_object</sysname><code_form>_form_mb_link_form_object</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_view</sysname><code_form>_form_mb_object</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_link_view_form</sysname><code_form>_form_mb_link_form_object</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_operation</sysname><code_form>_form_mb_link_operation_object</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbo_schema_run_mb</sysname><code_form>_form_mbo_schema</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbs_month</sysname><code_form>form_mbs_month</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbs_source</sysname><code_form>_form_mbs_source</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbs_receive</sysname><code_form>_form_mbs_receive</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_group</sysname><code_form>_form_mb_object_group</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_field_pivot</sysname><code_form>form_mb_object_field</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_object_fields_gr_oper</sysname><code_form>form_mb_object_field</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbi_schema</sysname><code_form>_form_mbi_schema</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbi_xml</sysname><code_form>_form_mbi_xml</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbi_schema_joirn</sysname><code_form>_form_mbi_schema</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbo_xml</sysname><code_form>_form_mbo_xml</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbo_schema</sysname><code_form>_form_mbo_schema</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbo_schema_run_app</sysname><code_form>_form_mbo_schema</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_task</sysname><code_form>_form_mb_task</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mba_users</sysname><code_form>_form_mba_user</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mba_accessory_user_group</sysname><code_form>_form_mba_user_group</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mba_user_group</sysname><code_form>_form_mba_user_group</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mba_group</sysname><code_form>_form_mba_group</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mba_grant_object</sysname><code_form>_form_mba_grant_object</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbf_type</sysname><code_form>_form_mbf_type</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mbf_store</sysname><code_form>_form_mbf_store</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>sv_mb_field_type</sysname><code_form>_form_mb_field_type</code_form></mb_link_form_object>
+</mb_link_form_objects>
+</XMLDATA>

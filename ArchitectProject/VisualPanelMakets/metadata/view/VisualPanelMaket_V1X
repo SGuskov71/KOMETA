@@ -1,0 +1,123 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "VisualPanelDescription": "Вертикальный сплит 1Х1",
+        "VisualPanelMaket": null,
+        "designer|userClassName": "VisualPanelMaket_V1X",
+        "height": 451,
+        "layout": "border",
+        "width": 729
+    },
+    "name": "VisualPanelMaket_V1X1",
+    "configAlternates": {
+        "VisualPanelMaket": "boolean"
+    },
+    "designerId": "a5471867-7753-4d7c-b582-0340dcb581cf",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "VisualPanelDescription",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "VisualPanelMaket",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit",
+                "layout|region": "center"
+            },
+            "name": "MyContainer1",
+            "designerId": "79855adc-a150-4e32-8553-4cd9cfcea497",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "autoScroll": true,
+                        "itemId": "VisualPanelItem1",
+                        "layout": "fit",
+                        "title": "Выберите представление"
+                    },
+                    "name": "MyPanel",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "69eed345-2317-4676-b0a6-2fc2fe6540cc",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "50%",
+                "layout": "fit",
+                "layout|region": "south",
+                "layout|split": true
+            },
+            "name": "MyContainer2",
+            "designerId": "89891c8a-01c2-413a-adfd-5f7c96e6c591",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "autoScroll": true,
+                        "itemId": "VisualPanelItem2",
+                        "layout": "fit",
+                        "title": "Выберите представление"
+                    },
+                    "name": "MyPanel1",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "0e2d2424-23c1-47e1-8bbd-1d6a57708d07",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

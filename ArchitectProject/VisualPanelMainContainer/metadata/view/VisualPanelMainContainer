@@ -1,0 +1,406 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "VisualPanelMainContainer",
+        "height": 406,
+        "itemId": "VisualPanelMainContainer",
+        "layout": "border",
+        "width": 652
+    },
+    "designerId": "3622c1e6-202e-4fb4-8276-82ea7b24b9e3",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyPadding": 10,
+                "height": 123,
+                "itemId": "PropertyPanel",
+                "layout|region": "north",
+                "layout|split": true,
+                "title": "Настройка свойств панели визуализации"
+            },
+            "name": "MyForm",
+            "designerId": "8df7e312-7e7e-4a65-9cd9-e097ff956db2",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Описание панели визуализации",
+                        "itemId": "VisualPanelDescription",
+                        "labelWidth": 200,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "938c3f3a-42d9-411c-9e46-5649b375687c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onVisualPanelDescriptionChange",
+                                "implHandler": [
+                                    "this.ConfigObject.Description=newValue;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onVisualPanelDescriptionChange",
+                            "designerId": "6b63c769-d4d1-4d33-9c99-b706bb763af0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Код панели визуализации",
+                        "itemId": "VisualPanelCode",
+                        "labelWidth": 200,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "38a36ee6-4055-4ebc-a359-ee1f2338750c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onVisualPanelCodeChange",
+                                "implHandler": [
+                                    " this.ConfigObject.Code=newValue;"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onVisualPanelCodeChange",
+                            "designerId": "13bd91fc-750f-4617-9ba5-2ce0979d50d5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyContainer1",
+                    "designerId": "7824fdf5-272d-415e-a58d-7fbce77d4d0d",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "0 10 0 0",
+                                "text": "Редактировать параметры панели визуализации"
+                            },
+                            "name": "MyButton",
+                            "designerId": "687ba08b-9617-4c4b-b748-78f738d9448d",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var VisualPanelMainContainer=button.findParentByType('#VisualPanelMainContainer');",
+                                            "var w=  Ext.create(\"Params.view.EditParams\", {Params: VisualPanelMainContainer.ConfigObject.VisualPanelParams});",
+                                            "w.mainContainer= VisualPanelMainContainer;",
+                                            "w.addEvents('BtnOk');",
+                                            "w.show();",
+                                            "w.addListener('BtnOk', function(VisualPanelParams) {",
+                                            "    VisualPanelMainContainer.ConfigObject.VisualPanelParams=VisualPanelParams;",
+                                            "    CloseWindow(w);",
+                                            "});"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "335212be-9f6c-4b3d-ade9-cd9cdd2df823"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "btnPreview",
+                                "margin": "0 10 0 0 ",
+                                "padding": "",
+                                "text": "Предпросмотр"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "3109abec-0803-4b4e-85c0-8415151e20a8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var VisualPanelMainContainer=button.findParentByType('#VisualPanelMainContainer');",
+                                            "VisualPanelMainContainer.SaveVisualPanel(function() {",
+                                            "    //alert('!!!');",
+                                            "    ShowVisualPanel(VisualPanelMainContainer.VisualPanelListGrid, VisualPanelMainContainer.ConfigObject.Code, false, false, VisualPanelMainContainer.HelpContext);",
+                                            "});"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "8c5fb161-53c6-454e-832d-d8c7962ccbf0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "MaketPanel",
+                "layout": "fit",
+                "layout|flex": 1,
+                "layout|region": "center",
+                "title": "Настройка макета панели визуализации"
+            },
+            "name": "MyPanel",
+            "designerId": "f8954e8c-e073-432b-90fb-832232aad8cf",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "MaketContainer",
+                        "layout": "fit"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "302fefd3-410a-466d-922c-05d2a204b89e"
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "tool_VisualPanelMaket",
+                        "tooltip": "Выбор макета панели отображения",
+                        "type": "gear"
+                    },
+                    "name": "MyTool",
+                    "designerId": "4b7dadd5-1704-4420-b51f-b9e4c10e80c4",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "event",
+                                    "toolEl",
+                                    "owner",
+                                    "tool"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var w = ShowList_viewpanel_maket(null);",
+                                    "w.addListener('viewpanel_maket_Select', function ( MaketCode) {",
+                                    "    var p = owner.up('panel');",
+                                    "    me.ConfigObject.MaketCode = MaketCode;",
+                                    "    LoadVisualPanelMaket(p, MaketCode, true);",
+                                    "});"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "03c35a29-303a-4668-887c-974d02d11b6b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "callBack"
+                ],
+                "fn": "SaveVisualPanel",
+                "implHandler": [
+                    "var VisualPanelMainContainer=this;//button.findParentByType('#VisualPanelMainContainer');",
+                    "if (VisualPanelMainContainer.ConfigObject.VisualPanelParams == undefined) {",
+                    "    Ext.MessageBox.alert('Ошибка', \"Не выбран набор параметров\");",
+                    "    return false;",
+                    "}",
+                    "if (VisualPanelMainContainer.ConfigObject.MaketCode == undefined) {",
+                    "    Ext.MessageBox.alert('Ошибка', \"Не выбран макет панелей\");",
+                    "    return false;",
+                    "}",
+                    "Ext.MessageBox.wait({",
+                    "    msg: 'Сохранение, ждите... ждите...',",
+                    "    width: 300,",
+                    "    wait: true,",
+                    "    waitConfig: {interval: 100}",
+                    "});",
+                    "var MaketContainer = Ext.ComponentQuery.query('MaketContainer', VisualPanelMainContainer);",
+                    "MaketContainer = MaketContainer[0];",
+                    "var panelList = Ext.ComponentQuery.query('panel[VisualPanelItem= true]', MaketContainer);",
+                    "var MaketContainerObject = [];",
+                    "Ext.Array.each(panelList, function (_Panel) {",
+                    "    MaketContainerObject[_Panel.itemId] = {};",
+                    "    MaketContainerObject[_Panel.itemId].itemId = _Panel.itemId;",
+                    "    MaketContainerObject[_Panel.itemId].VisualPanelItemTypes = _Panel.VisualPanelItemTypes;",
+                    "    MaketContainerObject[_Panel.itemId].keyObjectId = _Panel.keyObjectId;",
+                    "    MaketContainerObject[_Panel.itemId].name_type_view = _Panel.name_type_view;",
+                    "    MaketContainerObject[_Panel.itemId].code_object_Descr = _Panel.code_object_Descr;",
+                    "    MaketContainerObject[_Panel.itemId].title = _Panel.title;",
+                    "    MaketContainerObject.push(MaketContainerObject[_Panel.itemId]);",
+                    "});",
+                    "VisualPanelMainContainer.ConfigObject.MaketContainerObject=MaketContainerObject;",
+                    "VisualPanel_class.SaveVisualPanel(VisualPanelMainContainer.ConfigObject,",
+                    "                                   function (result) {",
+                    "                                       Ext.MessageBox.hide();",
+                    "                                       if ((result.success === false) && (result.result == 're_connect')) {",
+                    "                                           alert(result.msg);",
+                    "            window.onbeforeunload = null;    ",
+                    "                                           findFirstWindow().window.location.href = __first_page;",
+                    "                                           return false;",
+                    "                                       }",
+                    "                                       if (result.success == true) {",
+                    "                                           if((VisualPanelMainContainer.VisualPanelListGrid)&&",
+                    "                                              (VisualPanelMainContainer.VisualPanelListGrid!=undefined)&&",
+                    "                                              (VisualPanelMainContainer.VisualPanelListGrid!=null)){",
+                    "                                               VisualPanelMainContainer.VisualPanelListGrid.getStore().load();",
+                    "                                           }",
+                    "                                           VisualPanelMainContainer.fireEvent('GridRefresh', VisualPanelMainContainer);",
+                    "                                           VisualPanelMainContainer.ConfigObject.isNew=false;",
+                    "                                           VisualPanelMainContainer.ConfigObject.id_viewpanel=result.result.id_viewpanel;",
+                    "                                           VisualPanelMainContainer.ConfigObject.Code=result.result.code;",
+                    "                                           VisualPanelMainContainer.down('#VisualPanelCode').setValue(VisualPanelMainContainer.ConfigObject.Code);",
+                    "                                           if(callBack){",
+                    "                                               Ext.MessageBox.hide();",
+                    "                                               callBack();",
+                    "                                           }else{",
+                    "                                               Ext.MessageBox.alert(\"Результат выполнения \", result.msg);",
+                    "                                           }",
+                    "                                           return true;",
+                    "                                       } else {",
+                    "                                           Ext.MessageBox.alert('Ошибка', \"Ошибка сохранения: \" + result.msg);",
+                    "                                           return false;",
+                    "                                       }",
+                    "                                   });"
+                ]
+            },
+            "name": "SaveVisualPanel",
+            "designerId": "187f6ab4-d468-4552-95df-38c9f79c1545"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "DisplayVisualPanelProps",
+                "implHandler": [
+                    "this.down('#VisualPanelDescription').setValue(this.ConfigObject.Description);",
+                    "this.down('#VisualPanelCode').setValue(this.ConfigObject.Code);",
+                    ""
+                ]
+            },
+            "name": "DisplayVisualPanelProps",
+            "designerId": "503079a5-9047-453a-9790-20531b9aaed8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SetVisualPanelProps",
+                "implHandler": [
+                    "me=this;",
+                    "SetParamValuesAndRun(me.ConfigObject.VisualPanelParams, {}, me.ConfigObject.Code,",
+                    "                     function (FuncPar){",
+                    "                         var MaketContainerObject = me.down('#MaketContainer');",
+                    "                         ShowVisualPanelContents(MaketContainerObject, me.ConfigObject, FuncPar.ParamValuesArray, false);",
+                    "                     });"
+                ]
+            },
+            "name": "SetVisualPanelProps",
+            "designerId": "5de58634-4913-4491-b369-a6ab6ebe07c7"
+        }
+    ]
+}

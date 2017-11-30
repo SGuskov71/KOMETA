@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<XMLDATA>
+<attributes>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Больше</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Больше или равно</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Доступность групповой операции</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Меньше</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Меньше или равно</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Начинается с</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Не начинается с</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Не пусто</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Не равно</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Не содержит</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Пусто</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Равно</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Содержит</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Тип данных ExtJS</attr_name>
+</attribute>
+<attribute>
+<metaclass>PhysicalDomain</metaclass>
+<attr_name>Условие проверки при вводе</attr_name>
+</attribute>
+<attribute>
+<metaclass>Table</metaclass>
+<attr_name>Код файла помощи</attr_name>
+</attribute>
+<attribute>
+<metaclass>Table</metaclass>
+<attr_name>Связка для характеризующих полей</attr_name>
+</attribute>
+<attribute>
+<metaclass>Table</metaclass>
+<attr_name>Temporary</attr_name>
+</attribute>
+<attribute>
+<metaclass>View</metaclass>
+<attr_name>Дополнительное условие</attr_name>
+</attribute>
+<attribute>
+<metaclass>View</metaclass>
+<attr_name>Код файла помощи</attr_name>
+</attribute>
+<attribute>
+<metaclass>View</metaclass>
+<attr_name>Объект для редактирования</attr_name>
+</attribute>
+<attribute>
+<metaclass>View</metaclass>
+<attr_name>Связка для характеризующих полей</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>ReadOnly</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Архив</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Возможность множественного выбора</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Иерархия</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Имя поля для стиля</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Ключевое поле</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Кодовое поле</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Максимум</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Минимум</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Признак использования в фильтре</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Словарный объект</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Способ ввода для фильтра</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Способ отображения поля</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Среднее</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Сумма</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Характеризующее поле</attr_name>
+</attribute>
+<attribute>
+<metaclass>Column</metaclass>
+<attr_name>Шаблон для отображения</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Domain</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>ReadOnly</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Архив</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Возможность множественного выбора</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Иерархия</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Имя поля для стиля</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Ключевое поле</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Кодовое поле</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Максимум</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Минимум</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Признак использования в фильтре</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Словарный объект</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Способ ввода для фильтра</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Способ отображения поля</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Среднее</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Сумма</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Характеризующее поле</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewColumn</metaclass>
+<attr_name>Шаблон для отображения</attr_name>
+</attribute>
+<attribute>
+<metaclass>Reference</metaclass>
+<attr_name>Наименование</attr_name>
+</attribute>
+<attribute>
+<metaclass>Reference</metaclass>
+<attr_name>Порядок отображения</attr_name>
+</attribute>
+<attribute>
+<metaclass>Reference</metaclass>
+<attr_name>Deferrable</attr_name>
+</attribute>
+<attribute>
+<metaclass>Reference</metaclass>
+<attr_name>ForeignKeyConstraintDeferred</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewReference</metaclass>
+<attr_name>Наименование</attr_name>
+</attribute>
+<attribute>
+<metaclass>ViewReference</metaclass>
+<attr_name>Порядок отображения</attr_name>
+</attribute>
+</attributes>
+</XMLDATA>

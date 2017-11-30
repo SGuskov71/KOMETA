@@ -1,0 +1,191 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "bodyPadding": 10,
+        "designer|userClassName": "Query_PropertyForm",
+        "height": 399,
+        "itemId": "Query_PropertyForm",
+        "title": "Свойства запроса",
+        "width": 608
+    },
+    "designerId": "f320ced6-8502-44aa-8277-7d314779e3b3",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData",
+                    "record"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.needUpdateTree=false; //нужно для отключения переписывания текста в дереве при присвоении значений текста",
+                    "this.rawData = rawData;",
+                    "this.record = record;",
+                    "var mainContainer = this.findParentByType('#DesignMainContainer');",
+                    "this.down('#Description').setValue(rawData.Description);",
+                    "this.down('#id_objectDescription').setValue(rawData.id_objectDescription);",
+                    "this.down('#Code').setValue(rawData.Code);",
+                    "this.down('#GroupCondition').setValue(rawData.GroupCondition);",
+                    "this.needUpdateTree=true;"
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "5426ba0a-dc3b-4ea1-a752-5c8e0e5a70a3"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Код объекта",
+                "itemId": "id_objectDescription",
+                "layout|anchor": "100%",
+                "value": null
+            },
+            "name": "MyDisplayField",
+            "designerId": "6b6cf175-13d4-4348-9f22-f57f9f81fe97"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Код запроса",
+                "itemId": "Code",
+                "layout|anchor": "100%"
+            },
+            "name": "MyTextField",
+            "designerId": "a6b9f2dc-a2b6-4a64-b51b-19fd393fdc18",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onEdt_TextBlockChange2",
+                        "implHandler": [
+                            "this.rawData.Code=newValue;",
+                            "var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                            "            DesignMainContainer.modified=true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onEdt_TextBlockChange2",
+                    "designerId": "fb81a886-a5b6-4ca4-8641-1743361af7e8"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Наименование",
+                "itemId": "Description",
+                "layout|anchor": "100%"
+            },
+            "name": "MyTextField1",
+            "designerId": "77d78d03-88a0-4277-a356-ec637eca8fc4",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onEdt_TextBlockChange",
+                        "implHandler": [
+                            "this.rawData.Description=newValue;",
+                            "if(this.needUpdateTree==true){",
+                            "    this.record.set('text', this.rawData.Description);",
+                            "    this.record.commit();",
+                            "    this.rawData.text=this.rawData.Description;",
+                            "    var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                            "            DesignMainContainer.modified=true;",
+                            "",
+                            "}"
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onEdt_TextBlockChange",
+                    "designerId": "a33e410c-662e-4856-9356-7f3caa4a6c2b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "editable": false,
+                "fieldLabel": "Операция для связи условий",
+                "itemId": "GroupCondition",
+                "labelWidth": 180,
+                "layout|anchor": "100%",
+                "store": [
+                    "['and', 'or', 'exists' ]"
+                ]
+            },
+            "name": "MyComboBox",
+            "configAlternates": {
+                "store": "array"
+            },
+            "designerId": "42470a04-d269-40c6-8336-715b6e14a3d9",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onConditionChange1",
+                        "implHandler": [
+                            " this.rawData.GroupCondition=newValue;",
+                            "var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                            "            DesignMainContainer.modified=true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onConditionChange1",
+                    "designerId": "7fdae777-b68c-4b6a-8057-8bfce7b224e8"
+                }
+            ]
+        }
+    ]
+}

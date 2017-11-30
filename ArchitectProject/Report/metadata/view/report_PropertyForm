@@ -1,0 +1,990 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userClassName": "report_PropertyForm",
+        "height": null,
+        "itemId": "report_PropertyForm",
+        "layout": "vbox",
+        "title": "Свойства шаблона",
+        "width": null
+    },
+    "designerId": "c0ee282d-e4ef-417c-b188-20d00e124a58",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.rawData=rawData;",
+                    "this.down('#Edt_Code').setValue(rawData.Code);",
+                    "this.down('#Edt_description').setValue(rawData.description);",
+                    "this.down('#EdtSQL').setValue(rawData.SQL);",
+                    "this.down('#EdtSQLConditions').setValue(rawData.SQLConditions);",
+                    "this.down('#ChkShowError').setValue(rawData.ShowError);",
+                    "this.down('#ChkShowEmptyMessage').setValue(rawData.ShowEmptyMessage);",
+                    "this.down('#ShowPAGE_NUMBER').setValue(rawData.ShowPAGE_NUMBER);",
+                    "this.down('#PageStartNumber').setValue(rawData.PageStartNumber);",
+                    "this.down('#FirstPageNumber').setValue(rawData.FirstPageNumber);",
+                    "this.down('#PageSizeWidth').setValue(rawData.PageSizeWidth);",
+                    "this.down('#PageSizeHeight').setValue(rawData.PageSizeHeight);",
+                    "this.down('#MarginLeft').setValue(rawData.MarginLeft);",
+                    "this.down('#MarginRight').setValue(rawData.MarginRight);",
+                    "this.down('#MarginTop').setValue(rawData.MarginTop);",
+                    "this.down('#MarginBottom').setValue(rawData.MarginBottom);",
+                    "this.down('#RB_PORTRAIT').setValue(false);",
+                    "this.down('#RB_LANDSCAPE').setValue(false);",
+                    "if((this.rawData.PageOrientation!=undefined)&&(this.rawData.PageOrientation!='')){",
+                    "    this.down('#'+this.rawData.PageOrientation).setValue(true);",
+                    "}else{",
+                    "    this.down('#RB_PORTRAIT').setValue(true);",
+                    "}"
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "9cad489b-de34-483e-b202-912e11f9e2c5"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Наименование",
+                "itemId": "Edt_description"
+            },
+            "name": "MyTextField",
+            "designerId": "6319f29b-17b2-44fc-ab51-dbce2ca5eaaf",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onEdt_descriptionChange",
+                        "implHandler": [
+                            "this.rawData.description=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onEdt_descriptionChange",
+                    "designerId": "a831c1d0-4003-4406-85a4-2be742ba20e7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Код шаблона",
+                "itemId": "Edt_Code",
+                "width": 150
+            },
+            "name": "MyTextField1",
+            "designerId": "5e7db67b-2057-45d0-ae5f-081c93bf9558",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onEdt_descriptionChange1",
+                        "implHandler": [
+                            "this.rawData.Code=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onEdt_descriptionChange1",
+                    "designerId": "ecdb35cf-032c-473a-93fc-9caf976e0503"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "PanelSQL",
+                "layout": "fit",
+                "layout|flex": 1,
+                "title": "Текст SQL-запроса"
+            },
+            "name": "MyPanel2",
+            "designerId": "667a9962-05e2-48fd-909e-226a24e68ee3",
+            "cn": [
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "",
+                        "itemId": "EdtSQL",
+                        "rows": 6,
+                        "width": 150
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "9c129781-51b5-465f-b9f3-0a4296d1311b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdtSQLBlur",
+                                "implHandler": [
+                                    "this.rawData.SQL=component.value;",
+                                    "    var mainContainer = component.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "              Report_class.GetSQLFieldsList(SQLText, function(response, options) {",
+                                    "                  Ext.MessageBox.hide();",
+                                    "                  var result = response;",
+                                    "                  if ((result.success === false) && (result.result == 're_connect')) {",
+                                    "                      Ext.MessageBox.alert('Подключение',result.msg);",
+                    "            window.onbeforeunload = null;    ",
+                                    "                      findFirstWindow().window.location.href = __first_page;",
+                                    "                      return;",
+                                    "                  }",
+                                    "                  if (result.success) {",
+                                    "                      var mainContainer= component.findParentByType('#DesignReportMainContainer');",
+                                    "                      mainContainer.ComboReportFieldListStoreData= result.result;// сохраняю список полей отчета для выбора из комбо",
+                                    "                      //report_PropertyForm.rawData.SQL=SQLText;",
+                                    "                  } else {",
+                                    "                      Ext.MessageBox.alert(\"Ошибка выполнения SQL запроса : \" , result.msg);",
+                                    "                  }",
+                                    "              });",
+                                    ""
+                                ],
+                                "name": "blur",
+                                "scope": "me"
+                            },
+                            "name": "onEdtSQLBlur",
+                            "designerId": "2bdb5fee-4464-4b80-bb7c-5ca3914788b4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "tooltip": "Открыть текст запроса в отдельном окне",
+                        "type": "maximize"
+                    },
+                    "name": "MyTool1",
+                    "designerId": "e980ddca-e4f2-4b9f-8d96-df4e70853ae3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onToolClick",
+                                "implHandler": [
+                                    "var report_PropertyForm=tool.findParentByType('#report_PropertyForm');",
+                                    "",
+                                    "SQLEditor(report_PropertyForm.down('#EdtSQL').getValue(),function(SQLText)",
+                                    "          {",
+                                    "                                    report_PropertyForm.down('#EdtSQL').setValue(SQLText);",
+                                    "    var mainContainer = tool.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "",
+                                    "          }",
+                                    "         );"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onToolClick",
+                            "designerId": "4e7a3a9d-ee0e-4e80-a4a8-89f52932d6f2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Дополнительные условия запроса",
+                "height": null,
+                "itemId": "EdtSQLConditions",
+                "labelWidth": 110,
+                "rows": 6
+            },
+            "name": "MyTextArea3",
+            "designerId": "27a81420-6227-4e00-9a05-1f0852ef0780",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onEdtSQLConditionsChange1",
+                        "implHandler": [
+                            "this.rawData.SQLConditions=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onEdtSQLConditionsChange1",
+                    "designerId": "a0f8c6c3-d909-4be0-8f82-e98a93baf7ad"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 102,
+                "layout": "column",
+                "title": "Параметры страницы"
+            },
+            "name": "MyFieldSet3",
+            "designerId": "75f20902-3051-4786-a95c-1cb455f1f4f6",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Ориентация",
+                        "layout|columnWidth": 0.15,
+                        "padding": null,
+                        "title": "Ориентация"
+                    },
+                    "name": "MyFieldSet5",
+                    "designerId": "96b34789-ecf0-49f3-98c3-e72f6acd6569",
+                    "cn": [
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "fieldLabel": null,
+                                "labelWidth": 80,
+                                "layout": "vbox",
+                                "width": 300
+                            },
+                            "name": "MyRadioGroup1",
+                            "designerId": "1af45595-42e1-4dde-a249-4b26120ec429",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Книжная",
+                                        "fieldLabel": null,
+                                        "itemId": "RB_PORTRAIT",
+                                        "margin": null
+                                    },
+                                    "name": "MyRadio2",
+                                    "designerId": "fdb4c372-ea91-4f80-bb88-6b1ef3d1a590",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onRB_PORTRAITChange",
+                                                "implHandler": [
+                                                    "if(newValue==true)",
+                                                    "{",
+                                                    "    field.ownerCt.down('#RB_LANDSCAPE').setValue(false);",
+                                                    "    this.rawData.PageOrientation=field.itemId;",
+                                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                                    "    mainContainer.modified = true;",
+                                                    "}"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onRB_PORTRAITChange",
+                                            "designerId": "5a22500e-dd6d-45e7-b914-0fecc143aa71"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Альбомная",
+                                        "fieldLabel": null,
+                                        "itemId": "RB_LANDSCAPE",
+                                        "layout|margins": null,
+                                        "margin": null
+                                    },
+                                    "name": "MyRadio3",
+                                    "designerId": "66e29e5d-374c-427a-810d-95ef7dd13c9d",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onRB_LANDSCAPEChange",
+                                                "implHandler": [
+                                                    "if(newValue==true)",
+                                                    "{",
+                                                    "    field.ownerCt.down('#RB_PORTRAIT').setValue(false);",
+                                                    "    this.rawData.PageOrientation=field.itemId;",
+                                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                                    "    mainContainer.modified = true;",
+                                                    "}"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onRB_LANDSCAPEChange",
+                                            "designerId": "041686dc-ab85-4967-b371-01ab86ec85b4"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretchmax",
+                        "layout": "vbox",
+                        "layout|columnWidth": 0.25,
+                        "title": "Размер бумаги (см)"
+                    },
+                    "name": "MyFieldSet2",
+                    "designerId": "13673e83-8a78-42b0-a949-536cf137ef83",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": 4,
+                                "decimalPrecision": 1,
+                                "fieldLabel": "Ширина",
+                                "itemId": "PageSizeWidth",
+                                "labelWidth": 49,
+                                "layout|flex": 1,
+                                "margin": 3,
+                                "step": 0.1
+                            },
+                            "name": "MyNumberField7",
+                            "designerId": "5444d243-70ce-45a5-b2fa-d0524628e41c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onPageSizeWidthChange",
+                                        "implHandler": [
+                                            "this.rawData.PageSizeWidth=newValue;",
+                                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                            "    mainContainer.modified = true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onPageSizeWidthChange",
+                                    "designerId": "fe00f7bf-6a5b-4443-84a0-256439a51b96"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": 4,
+                                "decimalPrecision": 1,
+                                "fieldLabel": "Высота",
+                                "itemId": "PageSizeHeight",
+                                "labelWidth": 49,
+                                "layout|flex": 1,
+                                "margin": "3 3 6 3 ",
+                                "step": 0.1
+                            },
+                            "name": "MyNumberField8",
+                            "designerId": "32d6cf3c-c6e5-4b97-bccf-178ebbb682f3",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onPageSizeHeightChange",
+                                        "implHandler": [
+                                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                            "    mainContainer.modified = true;",
+                                            "this.rawData.PageSizeHeight=newValue;"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onPageSizeHeightChange",
+                                    "designerId": "38f48ed3-fa60-46bb-b05e-742440d82399"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretchmax",
+                        "layout": "vbox",
+                        "layout|columnWidth": 0.35,
+                        "title": "Поля (см)"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "25e9ffad-35f4-4d48-8745-d3b5f3850050",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "layout": "hbox",
+                                "layout|flex": 1
+                            },
+                            "name": "MyContainer6",
+                            "designerId": "87403632-007f-41a7-8291-e56b082433f7",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "border": 4,
+                                        "decimalPrecision": 1,
+                                        "fieldLabel": "Слева",
+                                        "itemId": "MarginLeft",
+                                        "labelWidth": 42,
+                                        "layout|flex": 1,
+                                        "margin": 3,
+                                        "step": 0.1,
+                                        "width": 142
+                                    },
+                                    "name": "MyNumberField",
+                                    "designerId": "3361885f-778a-4d26-82f6-b3bf21f05dae",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMarginLeftChange",
+                                                "implHandler": [
+                                                    "this.rawData.MarginLeft=newValue;",
+                                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                                    "    mainContainer.modified = true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onMarginLeftChange",
+                                            "designerId": "f09203cf-598e-450f-a579-59750f332e1c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "border": 4,
+                                        "decimalPrecision": 1,
+                                        "fieldLabel": "Справа",
+                                        "itemId": "MarginRight",
+                                        "labelWidth": 49,
+                                        "layout|flex": 1,
+                                        "margin": 3,
+                                        "step": 0.1,
+                                        "width": 149
+                                    },
+                                    "name": "MyNumberField10",
+                                    "designerId": "5c78f1cd-7de2-40f8-8621-267efe5f8075",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMarginRightChange",
+                                                "implHandler": [
+                                                    "this.rawData.MarginRight=newValue;",
+                                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                                    "    mainContainer.modified = true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onMarginRightChange",
+                                            "designerId": "0a644be4-4017-4b5f-975a-92f3c4d2e1e4"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "layout": "hbox",
+                                "layout|flex": 1
+                            },
+                            "name": "MyContainer8",
+                            "designerId": "3f4eea7d-654e-4e39-b177-5107715dd589",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "border": 4,
+                                        "decimalPrecision": 1,
+                                        "fieldLabel": "Сверху",
+                                        "itemId": "MarginTop",
+                                        "labelWidth": 49,
+                                        "layout|flex": 1,
+                                        "margin": "3 3 6 3",
+                                        "step": 0.1,
+                                        "width": 149
+                                    },
+                                    "name": "MyNumberField9",
+                                    "designerId": "8675dc84-4ef6-4734-ac2f-1a455c578150",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMarginTopChange",
+                                                "implHandler": [
+                                                    "this.rawData.MarginTop=newValue;",
+                                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                                    "    mainContainer.modified = true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onMarginTopChange",
+                                            "designerId": "21f834be-c07e-4b63-8d2c-a1ef34593f0b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "border": 4,
+                                        "decimalPrecision": 1,
+                                        "fieldLabel": "Снизу",
+                                        "itemId": "MarginBottom",
+                                        "labelWidth": 42,
+                                        "layout|flex": 1,
+                                        "margin": "3 3 6 3",
+                                        "step": 0.1,
+                                        "width": 142
+                                    },
+                                    "name": "MyNumberField1",
+                                    "designerId": "fc798820-f621-461a-b391-a62012da4901",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "marg",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onMarginBottomChange",
+                                                "implHandler": [
+                                                    "this.rawData.MarginBottom=newValue;",
+                                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                                    "    mainContainer.modified = true;",
+                                                    ""
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onMarginBottomChange",
+                                            "designerId": "5384fb7a-9346-424d-95b8-adeae8fcabbf"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretchmax",
+                        "layout": "vbox",
+                        "layout|columnWidth": 0.25,
+                        "title": "Нумерация страниц"
+                    },
+                    "name": "MyFieldSet4",
+                    "designerId": "2a65e5f6-0f65-4812-a221-03832f09abd8",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Добавить нумерацию страниц",
+                                "fieldLabel": "",
+                                "itemId": "ShowPAGE_NUMBER",
+                                "margin": 3
+                            },
+                            "name": "MyCheckbox2",
+                            "designerId": "4ed2cfc1-a781-49e1-a799-b40a1f9b119d",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onShowPAGE_NUMBERChange",
+                                        "implHandler": [
+                                            "this.rawData.ShowPAGE_NUMBER=newValue;",
+                                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                            "    mainContainer.modified = true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onShowPAGE_NUMBERChange",
+                                    "designerId": "52a5a0cf-2eca-4846-a5ab-a20c29218cbe"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Номер на первой странице",
+                                "fieldLabel": "",
+                                "itemId": "FirstPageNumber",
+                                "margin": "3 3 6 3"
+                            },
+                            "name": "MyCheckbox3",
+                            "designerId": "17e42a06-dbb2-4e8f-acd6-18b9777e8bf5",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onShowPAGE_NUMBERChange1",
+                                        "implHandler": [
+                                            "this.rawData.FirstPageNumber=newValue;",
+                                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                            "    mainContainer.modified = true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onShowPAGE_NUMBERChange1",
+                                    "designerId": "5ff59e84-7284-4c09-8f48-3d583e36bbbf"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowDecimals": false,
+                                "allowExponential": false,
+                                "decimalPrecision": 0,
+                                "fieldLabel": "Начинать нумерацию с (не работает)",
+                                "hidden": true,
+                                "itemId": "PageStartNumber",
+                                "labelWidth": 400,
+                                "step": null
+                            },
+                            "name": "MyNumberField6",
+                            "designerId": "3ad67971-255f-40e8-b227-d8e363b0bc2e",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onNumberfieldChange",
+                                        "implHandler": [
+                                            "this.rawData.PageStartNumber=newValue;",
+                                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                            "    mainContainer.modified = true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onNumberfieldChange",
+                                    "designerId": "5d46b125-4fe8-4fb2-8a1f-8c810bdb56d1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Выводить сообщение об ошибке выполнения запроса",
+                "fieldLabel": "",
+                "height": null,
+                "itemId": "ChkShowError"
+            },
+            "name": "MyCheckbox",
+            "designerId": "3d561bb7-a1df-4dbb-bc9c-2f06e9b4a738",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onChkShowErrorChange",
+                        "implHandler": [
+                            "this.rawData.ShowError=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onChkShowErrorChange",
+                    "designerId": "7d5dbf7f-0bc9-4968-b909-ab255b888840"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Выводить сообщение о пустом результате выполнения запроса",
+                "fieldLabel": "",
+                "height": null,
+                "itemId": "ChkShowEmptyMessage"
+            },
+            "name": "MyCheckbox1",
+            "designerId": "2c111012-34f7-43d4-990c-8ea5f46f4d86",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onChkShowEmptyMessageChange",
+                        "implHandler": [
+                            "this.rawData.ShowEmptyMessage=newValue;",
+                            "var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onChkShowEmptyMessageChange",
+                    "designerId": "75f93581-e3ef-4ffe-a047-a4a79092d497"
+                }
+            ]
+        }
+    ]
+}

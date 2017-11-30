@@ -1,0 +1,34 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EditSQLWindow",
+        "height": "",
+        "id": "EditSQLWindow",
+        "itemId": "EditSQLWindow",
+        "layout": "fit",
+        "width": ""
+    },
+    "designerId": "26dc5517-4282-4e0c-8b8d-45d994196410",
+    "cn": [
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "",
+                "hideLabel": true,
+                "itemId": "EdtSQL"
+            },
+            "name": "MyTextArea9",
+            "designerId": "e889c864-c395-4752-b19c-f5f8c8bbf2c1"
+        }
+    ]
+}

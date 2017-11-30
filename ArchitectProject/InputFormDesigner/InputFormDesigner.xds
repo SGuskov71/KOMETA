@@ -1,0 +1,57 @@
+{
+    "name": "InputFormDesigner",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://127.0.0.1/InputFormDesigner/",
+        "exportPath": "",
+        "spacesToIndent": 2,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "projectHasEnabledWebServer": true,
+        "lockUrlPrefix": true,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1113-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1109-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1169-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.5.1",
+    "xdsBuild": 348,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "2355feb4-5fd3-4b93-b91d-af6551c30819",
+            "87b2bec1-4542-45e2-b5f8-8a152119a07d",
+            "f320ced6-8502-44aa-8277-7d314779e3b3",
+            "6d978874-76b6-4cd5-9c67-430d7b67053e",
+            "ddbc05eb-9c99-478c-8c66-275e3672b816",
+            "22deef84-d31f-4dac-9bf9-b96da2fd860e"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "f0f96314-407c-4a4f-9169-925bda40d08d"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

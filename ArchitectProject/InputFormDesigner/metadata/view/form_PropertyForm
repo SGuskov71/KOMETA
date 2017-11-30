@@ -1,0 +1,561 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": null,
+        "container|align": "stretch",
+        "designer|userClassName": "form_PropertyForm",
+        "height": 499,
+        "id": "form_PropertyForm",
+        "itemId": "form_PropertyForm",
+        "layout": "vbox",
+        "title": "Свойства формы",
+        "width": 785
+    },
+    "designerId": "f320ced6-8502-44aa-8277-7d314779e3b3",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData",
+                    "record"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.needUpdateTree=false; //нужно для отключения переписывания текста в дереве при присвоении значений текста",
+                    "this.rawData = rawData;",
+                    "this.record = record;",
+                    "var mainContainer = this.findParentByType('#DesignMainContainer');",
+                    "this.down('#Description').setValue(rawData.Description);",
+                    "this.down('#id_objectDescription').setValue(rawData.id_objectDescription);",
+                    "this.down('#Layout').setValue(rawData.Layout);",
+                    "this.down('#Code').setValue(rawData.Code);",
+                    "this.down('#ShowOrder').setValue(rawData.ShowOrder);",
+                    "this.down('#form_width').setValue(rawData.form_width);",
+                    "this.down('#form_height').setValue(rawData.form_height);",
+                    "this.down('#form_validator').setValue(rawData.form_validator);",
+                    "this.down('#ExpressionBeforeShow').setValue(rawData.ExpressionBeforeShow);",
+                    "this.down('#ComboFormLayouts').setValue(rawData.FormLayouts);",
+                    "this.needUpdateTree=true;",
+                    "var ContainerProps=mainContainer.down('#ContainerProps');",
+                    "if((rawData.ContainerProps!=undefined)||(mainContainer.AdditionalContainerDefaultProps!=undefined)){",
+                    "  //При открытии формы ввода добавить в \"Дополнительные свойства\" те которые определены для этого элемента ввода и удалить те которых нет.",
+                    "  var TempObj={};",
+                    "  for(var key in mainContainer.AdditionalContainerDefaultProps){",
+                    "    if((rawData.ContainerProps!=undefined)&&(rawData.ContainerProps[key]!=undefined)){",
+                    "      TempObj[key]=rawData.ContainerProps[key];",
+                    "    }else{",
+                    "      TempObj[key]=mainContainer.AdditionalContainerDefaultProps[key];",
+                    "    }",
+                    "  }",
+                    "  rawData.ContainerProps=TempObj;",
+                    "  ContainerProps.setSource(rawData.ContainerProps);",
+                    "}else{",
+                    "  ContainerProps.setSource({});",
+                    "}"
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "5426ba0a-dc3b-4ea1-a752-5c8e0e5a70a3"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyPadding": 7,
+                "container|align": "stretch",
+                "height": null,
+                "layout": "vbox",
+                "title": null
+            },
+            "name": "MyForm",
+            "designerId": "eabc5f45-82f6-42c8-82c9-f42f842a6825",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Объект",
+                        "itemId": "id_objectDescription",
+                        "labelWidth": 95,
+                        "value": null
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "6b6cf175-13d4-4348-9f22-f57f9f81fe97"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Наименование",
+                        "itemId": "Description",
+                        "labelWidth": 95
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "77d78d03-88a0-4277-a356-ec637eca8fc4",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_TextBlockChange",
+                                "implHandler": [
+                                    "this.rawData.Description=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    "",
+                                    "if(this.needUpdateTree==true){",
+                                    "  this.record.set('text', this.rawData.Description);",
+                                    "  this.record.commit();",
+                                    "  this.rawData.text=this.rawData.Description;",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_TextBlockChange",
+                            "designerId": "a33e410c-662e-4856-9356-7f3caa4a6c2b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Код формы",
+                        "itemId": "Code",
+                        "labelWidth": 95
+                    },
+                    "name": "MyTextField",
+                    "designerId": "a6b9f2dc-a2b6-4a64-b51b-19fd393fdc18",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_TextBlockChange2",
+                                "implHandler": [
+                                    "this.rawData.Code=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_TextBlockChange2",
+                            "designerId": "fb81a886-a5b6-4ca4-8641-1743361af7e8"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": false,
+                        "container|align": "stretchmax",
+                        "layout": "hbox",
+                        "title": ""
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "7331d672-8d96-4e4d-9b01-deb74d637053",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Порядок отображения формы",
+                                "itemId": "ShowOrder",
+                                "labelWidth": 180,
+                                "margin": "3 3 3 0"
+                            },
+                            "name": "MyNumberField",
+                            "designerId": "5a3cc939-6f0b-4bb2-a717-d5009b0a1580",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_TextBlockChange21",
+                                        "implHandler": [
+                                            "this.rawData.ShowOrder=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_TextBlockChange21",
+                                    "designerId": "f823d8af-5962-49fa-8b71-f9f9f586fd49"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Ширина формы",
+                                "itemId": "form_width",
+                                "labelWidth": 98,
+                                "margin": 3
+                            },
+                            "name": "MyNumberField1",
+                            "designerId": "4ccc06d7-4a05-495c-9fbf-663eb53d5269",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_TextBlockChange211",
+                                        "implHandler": [
+                                            "this.rawData.form_width=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_TextBlockChange211",
+                                    "designerId": "273f4252-81b5-4fcf-a352-0e1a45e483e3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Высота формы",
+                                "itemId": "form_height",
+                                "labelWidth": 98,
+                                "margin": 3
+                            },
+                            "name": "MyNumberField2",
+                            "designerId": "5f6057ac-464d-4497-8a4d-81a72e75ca65",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_TextBlockChange2111",
+                                        "implHandler": [
+                                            "this.rawData.form_height=newValue;",
+                                            "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                            "mainContainer.modified=true;",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_TextBlockChange2111",
+                                    "designerId": "e7a95a60-cb4b-4ec6-9ca8-fccbc4db7ed5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Способ размещения объектов внутри контейнера",
+                        "hidden": true,
+                        "itemId": "Layout",
+                        "labelWidth": 200,
+                        "readOnly": true,
+                        "readOnlyCls": "x-item-disabled-readonly",
+                        "store": [
+                            "['auto','border','column','fit','hbox','vbox']"
+                        ]
+                    },
+                    "name": "MyComboBox3",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "ac3fc2f9-14bf-45ce-b80c-28b1d8f98227",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLayoutChange1",
+                                "implHandler": [
+                                    "    this.rawData.Layout=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onLayoutChange1",
+                            "designerId": "5d937cfc-6438-4e03-ba4e-d1cd3319e8e0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "caption",
+                        "editable": false,
+                        "fieldLabel": "Шаблон размещения объектов внутри контейнера",
+                        "itemId": "ComboFormLayouts",
+                        "labelWidth": 200,
+                        "queryMode": "local",
+                        "store": null,
+                        "valueField": "code",
+                        "width": 150
+                    },
+                    "name": "MyComboBox2",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "be966f7a-95d4-4e42-8b69-ae8ab539965c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLayoutChange11",
+                                "implHandler": [
+                                    "    this.rawData.FormLayouts=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onLayoutChange11",
+                            "designerId": "42882156-9eb1-4224-801a-c2c137ed883a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Выражение для проверки правильности заполнения формы",
+                        "itemId": "form_validator",
+                        "labelWidth": 150,
+                        "rows": 3
+                    },
+                    "name": "MyTextArea1",
+                    "designerId": "414df45f-4e43-481b-92c1-d44f95a606f9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_TextBlockChange1",
+                                "implHandler": [
+                                    "this.rawData.form_validator=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_TextBlockChange1",
+                            "designerId": "2ad98474-1e7f-4fd3-806d-f07d123b925f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Вычисление перед отображением формы",
+                        "height": null,
+                        "itemId": "ExpressionBeforeShow",
+                        "labelWidth": 150,
+                        "rows": 3
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "ebaf72f0-bbe5-4497-adf6-6222a9b4da05",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_TextBlockChange11",
+                                "implHandler": [
+                                    "this.rawData.ExpressionBeforeShow=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_TextBlockChange11",
+                            "designerId": "10762a2c-09e7-4803-abeb-18cab13f6abe"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.property.Grid",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyBorder": false,
+                "height": 194,
+                "itemId": "ContainerProps",
+                "layout|flex": 1,
+                "nameColumnWidth": 200,
+                "source": null,
+                "title": "Дополнительные свойства контейнера"
+            },
+            "name": "MyPropertyGrid",
+            "designerId": "fb654717-d49d-4522-82e7-eb8d493203c6",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPropertygridBeforeRender11",
+                        "implHandler": [
+                            "var cols = component.getView().getHeaderCt().getGridColumns();",
+                            "cols[0].setText(\"Свойство\");",
+                            "cols[1].setText(\"Значение\");"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onPropertygridBeforeRender11",
+                    "designerId": "b2f1b239-27dd-49c3-9673-6844796fbaca"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onControlPropsPropertyChange11",
+                        "implHandler": [
+                            "this.rawData.ContainerProps[recordId]=value;",
+                            "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                            "mainContainer.modified=true;",
+                            ""
+                        ],
+                        "name": "propertychange",
+                        "scope": "me"
+                    },
+                    "name": "onControlPropsPropertyChange11",
+                    "designerId": "b5ba1044-58cc-4ac2-acea-83c67d6a80ff"
+                }
+            ]
+        }
+    ]
+}

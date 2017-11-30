@@ -1,0 +1,735 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EditParams",
+        "height": 429,
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "title": "Редактор параметров",
+        "width": 606
+    },
+    "designerId": "7011614b-8bf3-49f5-95dc-9fed733de7a8",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "",
+                "layout": "border"
+            },
+            "name": "MyContainer6",
+            "designerId": "e3acfb52-edf7-4570-8b26-2db41fefab88",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hideHeaders": true,
+                        "itemId": "GridParamList",
+                        "layout|region": "west",
+                        "layout|split": true,
+                        "title": "Список параметров",
+                        "width": 150
+                    },
+                    "name": "MyGridPanel1",
+                    "designerId": "8c3b3007-ceb7-41ef-a460-06e314025b99",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "ParamCode",
+                                "detachOnRemove": false,
+                                "draggable": false,
+                                "enableColumnHide": false,
+                                "flex": 1,
+                                "hideable": false,
+                                "resizable": false,
+                                "text": "Код параметра"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "c712682e-8652-486f-aadd-0ce970a07267"
+                        },
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": ""
+                            },
+                            "name": "MyGridView1",
+                            "designerId": "45af4ffb-90fd-490b-9a01-58a181e69afb"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGridParamListSelectionChange",
+                                "implHandler": [
+                                    "var win=model.view.panel.findParentByType('window');",
+                                    "var ContainerParamProps = win.down('#ContainerParamProps');",
+                                    "var Btn_Delete = model.view.panel.down('#Btn_Delete');",
+                                    "if (selected.length > 0) {",
+                                    "    Btn_Delete.enable();",
+                                    "    ContainerParamProps.show();",
+                                    " //выставляю значения компонентов",
+                                    "    win.down('#Edt_ParamCode').setValue(selected[0].data.ParamCode);",
+                                    "    win.down('#Edt_ParamDescr').setValue(selected[0].data.ParamDescr);",
+                                    "    win.down('#Edt_ParamTypeInput').setValue(selected[0].data.ParamTypeInput);",
+                                    "    win.down('#Edt_ParamSlv').setValue(selected[0].data.ParamSlvDescr);",
+                                    "    win.down('#Edt_ParamInterractive').setValue(selected[0].data.ParamInterractive);",
+                                    "    win.down('#Edt_ParamMandatory').setValue(selected[0].data.ParamMandatory);",
+                                    "    win.down('#Edt_ParamCheckInput').setValue(selected[0].data.ParamCheckInput);",
+                                    "    win.down('#Edt_ParamCheckInputExpression').setValue(selected[0].data.ParamCheckInputExpression);",
+                                    "    win.down('#Edt_ParamDefaultValue').setValue(selected[0].data.ParamDefaultValue);",
+                                    "} else {",
+                                    "    Btn_Delete.disable();",
+                                    "    ContainerParamProps.hide();",
+                                    "}"
+                                ],
+                                "name": "selectionchange",
+                                "scope": "me"
+                            },
+                            "name": "onGridParamListSelectionChange",
+                            "designerId": "0f473936-a39e-4630-ab15-23e9168cfded"
+                        },
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top"
+                            },
+                            "name": "MyToolbar",
+                            "designerId": "d60e47a4-457b-4dd3-97cb-bf89123871c4",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "cls_add",
+                                        "itemId": "Btn_Add",
+                                        "layout|flex": null,
+                                        "text": "",
+                                        "tooltip": "Добавить"
+                                    },
+                                    "name": "MyButton20",
+                                    "configAlternates": {
+                                        "tooltip": "string"
+                                    },
+                                    "designerId": "423eda06-2305-4b09-ab7f-38729467401d",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var grd=button.findParentByType('gridpanel');",
+                                                    "var count = grd.getStore().getCount();",
+                                                    "var newIndex = count+1;",
+                                                    "var inst= grd.getStore().add({ParamCode:'Param'+ newIndex.toString(), ParamDescr:'Параметр '+ newIndex.toString(),",
+                                                    "                              ParamTypeInput:0, ParamSlv: null, ParamSlvDescr: '',",
+                                                    "                              ParamInterractive:true,  ParamMandatory:true,",
+                                                    "                    ParamCheckInput:false, ParamCheckInputExpression:'', ParamDefaultValue:''});",
+                                                    "grd.getSelectionModel().select(inst, true, false);",
+                                                    "grd.getStore().sync();"
+                                                ]
+                                            },
+                                            "name": "handler",
+                                            "designerId": "595e05d0-0b55-419e-a0d7-414f742a68d8"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "iconCls": "cls_del",
+                                        "itemId": "Btn_Delete",
+                                        "layout|flex": null,
+                                        "text": "",
+                                        "tooltip": "Удалить"
+                                    },
+                                    "name": "MyButton21",
+                                    "configAlternates": {
+                                        "tooltip": "string"
+                                    },
+                                    "designerId": "4bb69630-0a6f-4870-8467-7ac39b9a9815",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var GridParamList=button.findParentByType('gridpanel');",
+                                                    "",
+                                                    "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                                    "if (selection) {",
+                                                    "    GridParamList.getStore().remove(selection);",
+                                                    "}"
+                                                ]
+                                            },
+                                            "name": "handler",
+                                            "designerId": "03ced8fe-b931-463c-9680-c15999621a1c"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "border": 1,
+                        "container|align": "stretch",
+                        "container|defaultMargins": [
+                            "{\"top\":0,\"right\":0,\"bottom\":0,\"left\":0}"
+                        ],
+                        "itemId": "ContainerParamProps",
+                        "layout": "vbox",
+                        "layout|margins": null,
+                        "layout|region": "center",
+                        "margin": null,
+                        "title": "Свойства параметра"
+                    },
+                    "name": "MyFieldSet3",
+                    "designerId": "9c34db9c-58d4-48a4-a203-313c0c1dd379",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Код параметра",
+                                "itemId": "Edt_ParamCode",
+                                "layout|flex": null
+                            },
+                            "name": "MyTextField10",
+                            "designerId": "ebeb94da-aea4-4188-a0b1-74328f0df406",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamCodeChange",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "    selection.set('ParamCode', newValue);",
+                                            "    selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamCodeChange",
+                                    "designerId": "1e65bc5c-1a69-4643-ad3e-af323509cf1c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Описание",
+                                "itemId": "Edt_ParamDescr",
+                                "layout|flex": null
+                            },
+                            "name": "MyTextField11",
+                            "designerId": "49e5504e-ec56-4be3-b62e-7e08b4152d62",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamCodeChange1",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "    selection.set('ParamDescr', newValue);",
+                                            "    selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamCodeChange1",
+                                    "designerId": "cf13b7ba-0bdc-4b0b-b709-d8611a4cba1e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "editable": false,
+                                "fieldLabel": "Тип ввода параметра",
+                                "itemId": "Edt_ParamTypeInput",
+                                "layout|flex": null,
+                                "queryMode": "local",
+                                "store": [
+                                    "[[0 , 'простой'], [1 , 'дата'], [2 , 'словарь выпадающий'], [3 , 'число'], [6 , 'словарь в отдельном окне']]"
+                                ],
+                                "valueField": "id"
+                            },
+                            "name": "MyComboBox6",
+                            "configAlternates": {
+                                "store": "array"
+                            },
+                            "designerId": "61543021-e2f2-422a-946e-2719805e4f13",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamTypeInputChange",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "    selection.set('ParamTypeInput', newValue);",
+                                            "    selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamTypeInputChange",
+                                    "designerId": "fc2f0525-9a68-453e-92bf-52e041d36b2c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "editable": false,
+                                "fieldLabel": "Словарь",
+                                "itemId": "Edt_ParamSlv",
+                                "layout|flex": null,
+                                "triggerCls": "x-form-search-trigger"
+                            },
+                            "name": "MyComboBox7",
+                            "designerId": "b92a976c-f63c-4d63-8155-1fe82a4ae997",
+                            "cn": [
+                                {
+                                    "type": "basicfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "evnt"
+                                        ],
+                                        "fn": "onTriggerClick",
+                                        "implHandler": [
+                                            "var me = this;",
+                                            "var win = SelectValSlv({sysname: 'sv_mb_object_select', ExtFilterWhereCond: ' and id_object_type=1 ', object_Caption: 'Выбор объекта для создания формы ввода', HelpContext: ''});",
+                                            "win.addListener('ValSlvSelected', function (context, SelID, SelDescr) {",
+                                            "  Common_class.get_sysname(SelID.id_object, function (response, option) {",
+                                            "    var sysname = response;",
+                                            "    var win = me.findParentByType('window');",
+                                            "    var GridParamList = win.down('#GridParamList');",
+                                            "    var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "    if (selection) {",
+                                            "      selection.set('ParamSlv', sysname);",
+                                            "      selection.set('ParamSlvDescr', SelDescr);",
+                                            "      selection.commit();",
+                                            "    }",
+                                            "    me.setValue(SelDescr);",
+                                            "  });",
+                                            "});",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "onTriggerClick",
+                                    "designerId": "34e300aa-53aa-4df5-8798-7696156dd453"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": null,
+                                "fieldLabel": "Интеррактивный",
+                                "itemId": "Edt_ParamInterractive",
+                                "layout|flex": null
+                            },
+                            "name": "MyCheckbox7",
+                            "designerId": "98e88a6d-f06a-41b0-910d-b6f0bbfa32f3",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamInterractiveChange",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "    selection.set('ParamInterractive', newValue);",
+                                            "    selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamInterractiveChange",
+                                    "designerId": "2974d237-3892-46ef-b881-83b9ba956fe5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": null,
+                                "fieldLabel": "Обязательный",
+                                "itemId": "Edt_ParamMandatory",
+                                "layout|flex": null
+                            },
+                            "name": "MyCheckbox8",
+                            "designerId": "11ac7a5e-d8b2-48c0-8309-78fa49d0822d",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamMandatoryChange",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "    selection.set('ParamMandatory', newValue);",
+                                            "    selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamMandatoryChange",
+                                    "designerId": "fb0a392a-ef84-4703-917d-3774edc5300c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": null,
+                                "fieldLabel": "Проверка при вводе",
+                                "itemId": "Edt_ParamCheckInput",
+                                "layout|flex": null
+                            },
+                            "name": "MyCheckbox9",
+                            "designerId": "75cdaeda-6ea0-4bc8-910a-9a0c741be85c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamCheckInputChange",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "  selection.set('ParamCheckInput', newValue);",
+                                            "  selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamCheckInputChange",
+                                    "designerId": "4b965eac-468f-499c-8756-e5508d11e856"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Выражение для проверки",
+                                "itemId": "Edt_ParamCheckInputExpression",
+                                "layout|flex": null
+                            },
+                            "name": "MyTextField12",
+                            "designerId": "37983b6c-aff5-418e-95e1-d100d46f02f2",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamCheckInputExpressionChange",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "    selection.set('ParamCheckInputExpression', newValue);",
+                                            "    selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamCheckInputExpressionChange",
+                                    "designerId": "1441302b-7082-478a-84ef-098cf0f7d53c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Значение по умолчанию",
+                                "itemId": "Edt_ParamDefaultValue",
+                                "layout|flex": null
+                            },
+                            "name": "MyTextField13",
+                            "designerId": "055910de-5bd8-4e6b-8de6-7f3c56e0c3c1",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEdt_ParamDefaultValueChange",
+                                        "implHandler": [
+                                            "var win=field.findParentByType('window');",
+                                            "var GridParamList = win.down('#GridParamList');",
+                                            "var selection = GridParamList.getView().getSelectionModel().getSelection()[0];",
+                                            "if (selection) {",
+                                            "    selection.set('ParamDefaultValue', newValue);",
+                                            "    selection.commit();",
+                                            "}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEdt_ParamDefaultValueChange",
+                                    "designerId": "ff1c3372-735a-4597-8412-f6a9d7d293d9"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowShow",
+                "implHandler": [
+                    "var ContainerParamProps = component.down('#ContainerParamProps');",
+                    "ContainerParamProps.hide();",
+                    "",
+                    "//var Edt_ParamTypeInput = component.down('#Edt_ParamTypeInput');",
+                    "//Edt_ParamTypeInput.store= component.mainContainer.Store_ParamTypeInput;",
+                    "//  Edt_ParamTypeInput.bindStore(component.mainContainer.Store_ParamTypeInput);",
+                    "",
+                    "var store = Ext.create('Ext.data.Store', {",
+                    "  fields: ['ParamCode', 'ParamDescr',",
+                    "           'ParamTypeInput', 'ParamSlv', 'ParamSlvDescr',",
+                    "           'ParamInterractive','ParamMandatory','ParamCheckInput', 'ParamCheckInputExpression', 'ParamDefaultValue'],",
+                    "  data: component.Params",
+                    "});",
+                    "",
+                    "var GridParamList = component.down('#GridParamList');",
+                    "GridParamList.store=store;",
+                    "GridParamList.bindStore(store);"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onWindowShow",
+            "designerId": "07bb16c3-93ca-4369-b59e-ce33bd602406"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "tooltip": "Схранить и выйти",
+                "type": "save"
+            },
+            "name": "MyTool",
+            "designerId": "71b78fca-d1c9-43c9-8ebc-23446a22d17f",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onToolClick",
+                        "implHandler": [
+                            "var win=tool.findParentByType('window');",
+                            "var GridParamList = win.down('#GridParamList');",
+                            "var datastore= GridParamList.getStore();",
+                            "new_data = [];",
+                            "Ext.each(datastore.getRange(), function (rec) {",
+                            "  rec.commit();",
+                            "  new_data.push(rec.data);",
+                            "});",
+                            "win.fireEvent('BtnOk', new_data);"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "name": "onToolClick",
+                    "designerId": "e28002dc-a83e-4731-890f-f5c8c1782e09"
+                }
+            ]
+        }
+    ]
+}

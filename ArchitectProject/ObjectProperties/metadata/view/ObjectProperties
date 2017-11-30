@@ -1,0 +1,81 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ObjectProperties",
+        "height": 261,
+        "itemId": "ObjectProperties",
+        "title": "Объекты (таблицы/ представления)",
+        "width": 490
+    },
+    "designerId": "35949775-237f-43f9-831f-594f1d568379",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Объект для редактирования",
+                "labelWidth": 180,
+                "margin": 10,
+                "width": 450
+            },
+            "name": "MyComboBox",
+            "designerId": "bf58dcd5-a2e0-4f72-8e6c-89b88f017700"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Дополнительное условие",
+                "margin": "0 10 10 10",
+                "width": 450
+            },
+            "name": "MyTextArea",
+            "designerId": "b0471128-0f85-4707-a7ed-0abfb79150b1"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Связка для характеризующих полей",
+                "labelWidth": 230,
+                "margin": "0 10 10 10",
+                "width": 450
+            },
+            "name": "MyTextField",
+            "designerId": "18b88d01-5164-4c3b-88fc-cf7598b55f52"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Код файла помощи",
+                "labelWidth": 130,
+                "margin": "0 10 10 10",
+                "width": 450
+            },
+            "name": "MyTextField3",
+            "designerId": "d88a889d-47a0-4c47-9150-36d883dc3969"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "name": "VisualPanelMainContainer",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "",
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Small",
+                "builtIn": true,
+                "height": 600,
+                "width": 800
+            }
+        }
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 339,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "3622c1e6-202e-4fb4-8276-82ea7b24b9e3"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "efa473db-38da-4851-8e4f-f651da42ceba"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

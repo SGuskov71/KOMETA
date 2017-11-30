@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IN_XSDs>
+  <!-- -->
+  <IN_XSD>
+    <ID_XSD>-1</ID_XSD>
+    <XSDNAME>object_operation</XSDNAME>
+    <SYSNAME>mb_object_operation</SYSNAME>
+    <OBJECT_ROW_TAG>object_operation</OBJECT_ROW_TAG>
+    <PRIORITY>1</PRIORITY>
+    <DEFINITION>Операции над обектами</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-2</ID_XSD>
+    <XSDNAME>link_operation_object</XSDNAME>
+    <SYSNAME>mb_link_operation_object</SYSNAME>
+    <OBJECT_ROW_TAG>link_operation_object</OBJECT_ROW_TAG>
+    <PRIORITY>2</PRIORITY>
+    <DEFINITION>Связь Операции над обектами с объектами</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	id_object=>select id_object from mb_object where sysname=':sysname:';
+	id_object_operation=>select id_object_operation from mb_object_operation where code=':code_oper:';
+	code=>select ':code_oper:_:sysname:' as code;
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+<!--  <IN_XSD>
+    <ID_XSD>-3</ID_XSD>
+    <XSDNAME>grant_object_operation</XSDNAME>
+    <SYSNAME>mba_grant_object_operation</SYSNAME>
+    <OBJECT_ROW_TAG>grant_object_operation</OBJECT_ROW_TAG>
+    <PRIORITY>3</PRIORITY>
+    <DEFINITION>Права на операции над обектами</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	id_grant_operation=>SELECT COALESCE((SELECT id_grant_operation from mba_grant_object_operation 
+	                 where id_group=(select id_group from mba_group where code=':code_group:')
+					   and id_link_operation_object=(select id_link_operation_object from mb_link_operation_object,mb_object,mb_object_operation 
+         	where mb_link_operation_object.id_object=mb_object.id_object and mb_object.sysname=':sysname:'
+	              and mb_link_operation_object.id_object_operation=mb_object_operation.id_object_operation and mb_object_operation.code=':code_object_operation:')
+				  ),nextval('sq_mba_grant_object_operation')) as id_grant_operation;
+	id_group=>select id_group from mba_group where code=':code_group:';
+    id_link_operation_object=>select id_link_operation_object from mb_link_operation_object,mb_object,mb_object_operation 
+         	where mb_link_operation_object.id_object=mb_object.id_object and mb_object.sysname=':sysname:'
+	              and mb_link_operation_object.id_object_operation=mb_object_operation.id_object_operation and mb_object_operation.code=':code_object_operation:';
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>-->
+  <IN_XSD>
+    <ID_XSD>-4</ID_XSD>
+    <XSDNAME>mbs_css_style</XSDNAME>
+    <SYSNAME>mbs_css_style</SYSNAME>
+    <OBJECT_ROW_TAG>mbs_css_style</OBJECT_ROW_TAG>
+    <PRIORITY>1</PRIORITY>
+    <DEFINITION>Стили css</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-5</ID_XSD>
+    <XSDNAME>mbr_report</XSDNAME>
+    <SYSNAME>mbr_report</SYSNAME>
+    <PRIORITY>1</PRIORITY>
+    <DEFINITION>Шаблоны HTML отчетов</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <OBJECT_ROW_TAG>mbr_report</OBJECT_ROW_TAG>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+    <LOADER>../sys/stdImport.php</LOADER>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-6</ID_XSD>
+    <XSDNAME>mbg_diagram_template</XSDNAME>
+    <SYSNAME>mbg_diagram_template</SYSNAME>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Диаграммы</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	
+	]]></SUBSTITUTION>
+
+    <OBJECT_ROW_TAG>mbg_diagram_template</OBJECT_ROW_TAG>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-7</ID_XSD>
+    <XSDNAME>mba_user</XSDNAME>
+    <SYSNAME>mba_user</SYSNAME>
+    <OBJECT_ROW_TAG>mba_user</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Пользователи системы</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-8</ID_XSD>
+    <XSDNAME>mba_grant_object</XSDNAME>
+    <SYSNAME>mba_grant_object</SYSNAME>
+    <OBJECT_ROW_TAG>mba_grant_object</OBJECT_ROW_TAG>
+    <PRIORITY>12</PRIORITY>
+    <DEFINITION>Доступ на объекты пользователям системы</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	id_grant_object=>SELECT COALESCE((SELECT id_grant_object from mba_grant_object where
+										id_object=(SELECT id_object FROM mb_object where sysname=':sysname:')
+										and id_group=(select id_group from mba_group where code=':code_group:')
+	                                  )
+	                                 ,nextval('sq_mba_grant_object')) as id_grant_object;
+	id_object=>SELECT id_object FROM mb_object where sysname=':sysname:';
+	id_group=>select id_group from mba_group where code=':code_group:';
+	code=>select ':sysname:_:code_group:' as code; 
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-9</ID_XSD>
+    <XSDNAME>mba_user_group</XSDNAME>
+    <SYSNAME>mba_user_group</SYSNAME>
+    <OBJECT_ROW_TAG>mba_user_group</OBJECT_ROW_TAG>
+    <PRIORITY>12</PRIORITY>
+    <DEFINITION>Включение пользователей в группы</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	id_user_group=>SELECT COALESCE((SELECT id_user_group from mba_user_group where
+										id_user=(SELECT id_user FROM mba_user where login=':login:')
+										and id_group=(select id_group from mba_group where code=':code_group:')
+	                                  )
+	                                 ,nextval('sq_mba_user_group')) as id_user_group;
+	id_user=>SELECT id_user FROM mba_user where login=':login:';
+	id_group=>select id_group from mba_group where code=':code_group:';
+	code=>select ':login:_:code_group:' as code; 
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-11</ID_XSD>
+    <XSDNAME>mbs_receive</XSDNAME>
+    <SYSNAME>mbs_receive</SYSNAME>
+    <OBJECT_ROW_TAG>mbs_receive</OBJECT_ROW_TAG>
+    <PRIORITY>0</PRIORITY>
+    <DEFINITION>Получатели  информации</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-12</ID_XSD>
+    <XSDNAME>mb_form</XSDNAME>
+    <SYSNAME>mb_form</SYSNAME>
+    <OBJECT_ROW_TAG>mb_form</OBJECT_ROW_TAG>
+    <PRIORITY>1</PRIORITY>
+    <DEFINITION>Формы ввода</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	id_object=>SELECT id_object from mb_object where sysname=':sysname:';
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-13</ID_XSD>
+    <XSDNAME>mbs_source</XSDNAME>
+    <SYSNAME>mbs_source</SYSNAME>
+    <OBJECT_ROW_TAG>mbs_source</OBJECT_ROW_TAG>
+    <PRIORITY>-1</PRIORITY>
+    <DEFINITION>Источники информации</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-14</ID_XSD>
+    <XSDNAME>mba_group</XSDNAME>
+    <SYSNAME>mba_group</SYSNAME>
+    <OBJECT_ROW_TAG>mba_group</OBJECT_ROW_TAG>
+    <PRIORITY>0</PRIORITY>
+    <DEFINITION>Группы пользователей</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-15</ID_XSD>
+    <XSDNAME>grant_task</XSDNAME>
+    <SYSNAME>mba_grant_task</SYSNAME>
+    <OBJECT_ROW_TAG>grant_task</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Права на задачи</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	id_grant_task=>SELECT COALESCE((SELECT id_grant_task from mba_grant_task where
+										id_task=(SELECT id_task FROM mb_task where code=':code_task:')
+										and id_group=(select id_group from mba_group where code=':code_group:')
+	                                  )
+	                                 ,nextval('sq_mba_grant_task')) as id_grant_task;
+	id_task=>SELECT id_task FROM mb_task where code=':code_task:';
+	id_group=>select id_group from mba_group where code=':code_group:';
+	code=>SELECT ':code_task:_:code_group:' as code
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-18</ID_XSD>
+    <XSDNAME>mbv_viewpanel_params</XSDNAME>
+    <SYSNAME>mbv_viewpanel_params</SYSNAME>
+    <OBJECT_ROW_TAG>mbv_viewpanel_params</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Шаблоны параметров для панелей просмора</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-19</ID_XSD>
+    <XSDNAME>mbv_viewpanel_maket</XSDNAME>
+    <SYSNAME>mbv_viewpanel_maket</SYSNAME>
+    <OBJECT_ROW_TAG>mbv_viewpanel_maket</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Макеты панелей просмора</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-20</ID_XSD>
+    <XSDNAME>mbr_report_template</XSDNAME>
+    <SYSNAME>mbr_report_template</SYSNAME>
+    <OBJECT_ROW_TAG>mbr_report_template</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Шаблоны отчетов</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-21</ID_XSD>
+    <XSDNAME>mb_image_map</XSDNAME>
+    <SYSNAME>mb_image_map</SYSNAME>
+    <OBJECT_ROW_TAG>mb_image_map</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Описание карты</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-22</ID_XSD>
+    <XSDNAME>mbo_schema</XSDNAME>
+    <SYSNAME>mbo_schema</SYSNAME>
+    <OBJECT_ROW_TAG>mbo_schema</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Схемы выгрузки</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  <IN_XSD>
+    <ID_XSD>-23</ID_XSD>
+    <XSDNAME>mb_link_form_object</XSDNAME>
+    <SYSNAME>mb_link_form_object</SYSNAME>
+    <OBJECT_ROW_TAG>mb_link_form_object</OBJECT_ROW_TAG>
+    <PRIORITY>11</PRIORITY>
+    <DEFINITION>Привязка форм к объектам</DEFINITION>
+    <ID_SOURCE>0</ID_SOURCE>
+    <XSD><![CDATA[
+	]]></XSD>
+    <SUBSTITUTION><![CDATA[
+	id_form=>SELECT id_form FROM mb_form where code=':code_form:';
+	id_object=>SELECT id_object FROM mb_object where sysname=':sysname:';
+	id_link_form_object=>SELECT id_link_form_object FROM mb_link_form_object join  mb_form on mb_link_form_object.id_form = mb_form.id_form and mb_form.code=':code_form:' join mb_object on mb_link_form_object.id_object = mb_object.id_object and mb_object.sysname=':sysname:';
+	]]></SUBSTITUTION>
+    <ID_PERIODICITY>1</ID_PERIODICITY>
+    <LOADER>../sys/stdImport.php</LOADER>
+    <ID_VID_INPUT>1</ID_VID_INPUT>
+  </IN_XSD>
+  
+</IN_XSDs>

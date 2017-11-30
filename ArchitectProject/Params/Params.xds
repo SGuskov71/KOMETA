@@ -1,0 +1,45 @@
+{
+    "name": "Params",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "",
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 2,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Small",
+                "builtIn": true,
+                "height": 600,
+                "width": 800
+            }
+        },
+        "displayfield-ExtBox1-1109-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.5.0",
+    "xdsBuild": 279,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "7011614b-8bf3-49f5-95dc-9fed733de7a8",
+            "2b5a8440-d347-4df6-8133-1fbcd267877e"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "5d3cd492-9fc2-4bc5-adb0-8c1ae9059b82"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

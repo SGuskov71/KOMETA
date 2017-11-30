@@ -1,0 +1,260 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SelectFieldWindow",
+        "height": 325,
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "title": "Список полей объекта",
+        "width": 531
+    },
+    "designerId": "2355feb4-5fd3-4b93-b91d-af6551c30819",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "end",
+                "dock": "bottom"
+            },
+            "name": "MyToolbar3",
+            "designerId": "123eda2c-5642-46ff-a5aa-3b1abec22936",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "itemId": "BtnSelect",
+                        "layout|flex": null,
+                        "text": "Выбрать"
+                    },
+                    "name": "MyButton16",
+                    "designerId": "e1e70ad0-f580-4c24-803e-4cbcb09b979a",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonSelectClick",
+                                "implHandler": [
+                                    "var win=button.findParentByType('window');",
+                                    "var _grid_ListAnalPanel=win.down('#GridList');",
+                                    "win.fireEvent('BtnOk',",
+                                    "              _grid_ListAnalPanel.getSelectionModel().getSelection());"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onButtonSelectClick",
+                            "designerId": "df29a592-6d3e-41b2-9e96-42c27f0262e2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "name": "MySeparator1",
+                    "designerId": "d447da66-fa44-4bf5-ab09-135973f65bb1"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Закрыть"
+                    },
+                    "name": "MyButton17",
+                    "designerId": "cb76d3cd-0bb1-43e0-9806-9fd4feede5ad",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCloseButtonClick",
+                                "implHandler": [
+                                    "CloseWindow(button.findParentByType('window'));"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onCloseButtonClick",
+                            "designerId": "94936794-1c88-4a4d-8422-d79c33e3367e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "GridList",
+                "overlapHeader": false,
+                "title": null
+            },
+            "name": "MyGridPanel",
+            "designerId": "24600d2d-1ab6-4021-849b-8d01cae3a3b1",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "field_descr",
+                        "flex": 1,
+                        "text": "Наименование поля"
+                    },
+                    "name": "MyColumn",
+                    "designerId": "bbe997a0-76c6-409d-a81b-48e43d2f0736"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "field_code",
+                        "flex": null,
+                        "text": "Код поля",
+                        "width": 150
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "26f0f495-4ac6-4249-9f29-500657228207"
+                },
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView",
+                    "designerId": "81d08a78-4b46-4716-9628-1b89266730fd"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridListReportSelectionChange",
+                        "implHandler": [
+                            "if (selected.length > 0) {",
+                            "    this.down('#BtnSelect').enable();",
+                            "} else {",
+                            "    this.down('#BtnSelect').disable();",
+                            "}"
+                        ],
+                        "name": "selectionchange",
+                        "scope": "me"
+                    },
+                    "name": "onGridListReportSelectionChange",
+                    "designerId": "cbc07a9a-2b6b-407c-96e5-4bb7e1e24942"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridListReportItemDblClick",
+                        "implHandler": [
+                            " this.onButtonSelectClick(this.down('#BtnSelect'));"
+                        ],
+                        "name": "itemdblclick",
+                        "scope": "me"
+                    },
+                    "name": "onGridListReportItemDblClick",
+                    "designerId": "443fa930-e41b-4811-9976-4f1761429341"
+                },
+                {
+                    "type": "Ext.selection.CheckboxModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.CheckboxModel",
+                    "name": "MyCheckboxSelectionModel",
+                    "designerId": "7f07bcee-9ced-4e78-813c-359211f20edf"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowShow",
+                "implHandler": [
+                    "var store_ListReportTemplate = new Ext.data.ArrayStore({",
+                    "    fields: [",
+                    "        {name: 'field_descr', type: 'string', mapping:'field_descr'},",
+                    "        {name: 'field_code', type: 'string', mapping:'field_code'}",
+                    "    ],",
+                    "    data:component.StoreData,",
+                    "    viewConfig:{",
+                    "        forceFit:true,",
+                    "        emptyText:'Нет данных'",
+                    "    }",
+                    "});",
+                    "var grid=this.down('#GridList');",
+                    "grid.getView().bindStore(store_ListReportTemplate);"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onWindowShow",
+            "designerId": "ddd9742c-c465-4b0e-835e-bd144a995083"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+php_value session.auto_start 1
+php_value session.entropy_length 0
+php_value session.gc_probability 1
+php_flag html_errors off
+php_flag magic_quotes_gpc off
+php_value disable_functions exec,system,shell_exec,passthru
+php_flag expose_php Off
+php_flag display_errors Off
+php_flag track_errors Off
+

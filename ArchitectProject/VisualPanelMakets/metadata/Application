@@ -1,0 +1,19 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "VisualPanelMakets",
+        "views": [
+            "VisualPanelMaket_H1X1",
+            "VisualPanelMaket_V4",
+            "VisualPanelMaket_V1X",
+            "VisualPanelMaket_H2V2"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

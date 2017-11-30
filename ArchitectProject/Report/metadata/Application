@@ -1,0 +1,26 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "Report",
+        "views": [
+            "DesignReportMainContainer",
+            "text_PropertyForm",
+            "paragraph_PropertyForm",
+            "hyperlink_PropertyForm",
+            "images_PropertyForm",
+            "list_PropertyForm",
+            "linebreak_PropertyForm",
+            "SelectReportTemplateWindow",
+            "embedded_report_PropertyForm",
+            "EditReportStylesWindow",
+            "tableColumn_PropertyForm"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

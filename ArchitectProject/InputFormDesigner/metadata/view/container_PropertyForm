@@ -1,0 +1,330 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": null,
+        "designer|userClassName": "container_PropertyForm",
+        "height": 441,
+        "id": "container_PropertyForm",
+        "itemId": "container_PropertyForm",
+        "layout": "auto",
+        "title": "Свойства контейнера",
+        "width": 615
+    },
+    "name": "form_PropertyForm1",
+    "designerId": "6d978874-76b6-4cd5-9c67-430d7b67053e",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData",
+                    "record"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.needUpdateTree=false; //нужно для отключения переписывания текста в дереве при присвоении значений текста",
+                    "this.rawData = rawData;",
+                    "this.record = record;",
+                    "var mainContainer = this.findParentByType('#DesignMainContainer');",
+                    "this.down('#Edt_Caption').setValue(rawData.Caption);",
+                    "this.down('#Layout').setValue(rawData.Layout);",
+                    "this.down('#ComboInputContainerLayouts').setValue(rawData.InputContainerLayouts);",
+                    "this.down('#ShowBorder').setValue(rawData.ShowBorder);",
+                    "var ContainerProps=mainContainer.down('#ContainerProps');",
+                    "if((rawData.ContainerProps!=undefined)||(mainContainer.AdditionalContainerDefaultProps!=undefined)){",
+                    "  //При открытии формы ввода добавить в \"Дополнительные свойства\" те которые определены для этого элемента ввода и удалить те которых нет.",
+                    "  var TempObj={};",
+                    "  for(var key in mainContainer.AdditionalContainerDefaultProps){",
+                    "    if((rawData.ContainerProps!=undefined)&&(rawData.ContainerProps[key]!=undefined)){",
+                    "      TempObj[key]=rawData.ContainerProps[key];",
+                    "    }else{",
+                    "      TempObj[key]=mainContainer.AdditionalContainerDefaultProps[key];",
+                    "    }",
+                    "  }",
+                    "  rawData.ContainerProps=TempObj;",
+                    "  ContainerProps.setSource(rawData.ContainerProps);",
+                    "}else{",
+                    "  ContainerProps.setSource({});",
+                    "}",
+                    "this.needUpdateTree=true;"
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "99656501-190d-4d26-b9bc-0a392ba783e3"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyPadding": 7,
+                "container|align": "stretch",
+                "height": 80,
+                "layout": "vbox",
+                "padding": null,
+                "title": null
+            },
+            "name": "MyForm1",
+            "designerId": "c955a440-2bd2-4050-a5f4-3acd5ae67104",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Заголовок",
+                        "itemId": "Edt_Caption"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "7d1be12c-4096-4137-b677-62554b6a7edf",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_TextBlockChange",
+                                "implHandler": [
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    "",
+                                    "this.rawData.Caption=newValue;",
+                                    "if(this.needUpdateTree==true){",
+                                    "  if(trim(this.rawData.Caption)=='')",
+                                    "    this.record.set('text', mainContainer.MICaption_Container);",
+                                    "  else",
+                                    "    this.record.set('text', this.rawData.Caption);",
+                                    "  this.record.commit();",
+                                    "  this.rawData.text=this.rawData.Caption;",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_TextBlockChange",
+                            "designerId": "c45a3b07-c6da-463f-bc72-c1012fa586f7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Показывать рамку контейнера",
+                        "fieldLabel": "",
+                        "hidden": true,
+                        "itemId": "ShowBorder",
+                        "width": 150
+                    },
+                    "name": "MyCheckbox3",
+                    "designerId": "40370553-2f19-47fa-b5ac-0bccc2b2274e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onShowBorderChange",
+                                "implHandler": [
+                                    "    this.rawData.ShowBorder=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onShowBorderChange",
+                            "designerId": "e20865a2-6492-425e-b4d7-8599d1fa2b14"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Способ размещения объектов внутри контейнера",
+                        "hidden": true,
+                        "itemId": "Layout",
+                        "labelWidth": 200,
+                        "readOnly": true,
+                        "readOnlyCls": "x-item-disabled-readonly",
+                        "store": [
+                            "['auto','border','column','fit','hbox','vbox']"
+                        ],
+                        "width": 150
+                    },
+                    "name": "MyComboBox1",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "b593a34e-56d4-4e9b-b66d-92fd0a0931af",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLayoutChange",
+                                "implHandler": [
+                                    "    this.rawData.Layout=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onLayoutChange",
+                            "designerId": "2cc5f522-4e94-4fbe-8d4d-d3d70ae74b98"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "caption",
+                        "editable": false,
+                        "fieldLabel": "Шаблон размещения объектов внутри контейнера",
+                        "itemId": "ComboInputContainerLayouts",
+                        "labelWidth": 200,
+                        "queryMode": "local",
+                        "store": null,
+                        "valueField": "code",
+                        "width": 150
+                    },
+                    "name": "MyComboBox",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "9c6c5d77-9c0b-4dfe-819b-523b9d4b3f1c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLayoutChange1",
+                                "implHandler": [
+                                    "    this.rawData.InputContainerLayouts=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onLayoutChange1",
+                            "designerId": "86b1526d-9610-44db-975f-a1195f9e6805"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.property.Grid",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyBorder": false,
+                "border": null,
+                "itemId": "ContainerProps",
+                "nameColumnWidth": 200,
+                "source": null,
+                "title": "Дополнительные свойства контейнера"
+            },
+            "name": "MyPropertyGrid1",
+            "designerId": "02524e8d-ab73-43b3-aaae-71120c91ff84",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPropertygridBeforeRender1",
+                        "implHandler": [
+                            "var cols = component.getView().getHeaderCt().getGridColumns();",
+                            "cols[0].setText(\"Свойство\");",
+                            "cols[1].setText(\"Значение\");"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onPropertygridBeforeRender1",
+                    "designerId": "3a57d1e7-3b8c-48dc-8beb-a78c7bce79a2"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onControlPropsPropertyChange1",
+                        "implHandler": [
+                            "this.rawData.ContainerProps[recordId]=value;",
+                            "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                            "mainContainer.modified=true;",
+                            ""
+                        ],
+                        "name": "propertychange",
+                        "scope": "me"
+                    },
+                    "name": "onControlPropsPropertyChange1",
+                    "designerId": "938fec70-cbe8-4e86-ad9f-fca130dd1c16"
+                }
+            ]
+        }
+    ]
+}

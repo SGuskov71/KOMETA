@@ -1,0 +1,154 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": null,
+        "designer|userClassName": "GroupParam_PropertyForm",
+        "height": 399,
+        "itemId": "GroupParam_PropertyForm",
+        "layout": "border",
+        "title": "Свойства группы условий запроса",
+        "width": 615
+    },
+    "name": "form_PropertyForm1",
+    "designerId": "6d978874-76b6-4cd5-9c67-430d7b67053e",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData",
+                    "record"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.rawData = rawData;",
+                    "var mainContainer = this.findParentByType('#DesignMainContainer');",
+                    "//this.down('#').setValue(rawData.);",
+                    "this.down('#NOT_GroupCondition').setValue(rawData.NOT_GroupCondition);",
+                    "this.down('#GroupCondition').setValue(rawData.GroupCondition);",
+                    ""
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "99656501-190d-4d26-b9bc-0a392ba783e3"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyPadding": 16,
+                "layout|region": "center",
+                "padding": null,
+                "title": null
+            },
+            "name": "MyForm1",
+            "designerId": "c955a440-2bd2-4050-a5f4-3acd5ae67104",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Операция для связи условий",
+                        "itemId": "GroupCondition",
+                        "labelWidth": 180,
+                        "layout|anchor": "100%",
+                        "store": [
+                            "['and', 'or', 'exists' ]"
+                        ]
+                    },
+                    "name": "MyComboBox1",
+                    "configAlternates": {
+                        "store": "array"
+                    },
+                    "designerId": "15f151bc-a5bc-45c1-9806-f9953d3c988a",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onConditionChange",
+                                "implHandler": [
+                                    " this.rawData.GroupCondition=newValue;",
+                                    "var DesignMainContainer=field. findParentByType('#DesignMainContainer');",
+                                    "            DesignMainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onConditionChange",
+                            "designerId": "d70292c3-a034-48a4-8b55-1528e6ddd82b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Добавить отрицание для группы условий",
+                        "fieldLabel": "",
+                        "itemId": "NOT_GroupCondition",
+                        "labelPad": null,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyCheckbox",
+                    "designerId": "fc64b2f3-d192-49c4-9019-7c3150b3f4bd",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "checkbox",
+                                    "checked"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var GroupParam_PropertyForm = checkbox.findParentByType('#GroupParam_PropertyForm');",
+                                    "GroupParam_PropertyForm.rawData.NOT_GroupCondition=checked;",
+                                    "var DesignMainContainer=checkbox. findParentByType('#DesignMainContainer');",
+                                    "DesignMainContainer.modified=true;",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "1ae5a866-d39c-452c-a4d0-ec1fbd9fb401"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

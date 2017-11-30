@@ -1,0 +1,187 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "VisualPanelDescription": "bhdgfhdhgdgh",
+        "VisualPanelMaket": false,
+        "designer|userClassName": "VisualPanelMaket_H2V2",
+        "height": null,
+        "layout": "border",
+        "width": null
+    },
+    "name": "MyContainer6",
+    "configAlternates": {
+        "VisualPanelMaket": "boolean"
+    },
+    "designerId": "b04f6513-8372-4da9-98f0-4f0a22ab08a3",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "VisualPanelMaket",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "VisualPanelDescription",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "itemId": "Container_Top",
+                "layout": "border",
+                "layout|flex": 1,
+                "layout|region": "north",
+                "layout|split": true
+            },
+            "name": "MyContainer7",
+            "designerId": "f67dd403-ab57-4bd3-8977-be8711a712c8",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "itemId": "Panel_TL",
+                        "layout|flex": 1,
+                        "layout|region": "west",
+                        "layout|split": true,
+                        "title": "My Panel",
+                        "width": null
+                    },
+                    "name": "MyPanel7",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "db18934c-aceb-4b38-b18e-b842fe57d2ed",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "itemId": "Panel_TR",
+                        "layout|flex": 1,
+                        "layout|region": "center",
+                        "layout|split": true,
+                        "title": "My Panel"
+                    },
+                    "name": "MyPanel9",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "8702081f-6057-4557-9620-7c9195553836",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "Container_Bottom",
+                "layout": "border",
+                "layout|flex": 1,
+                "layout|region": "center",
+                "layout|split": true
+            },
+            "name": "MyContainer8",
+            "designerId": "24ff1704-f0bc-41bb-b3a0-1ee8215603c1",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "itemId": "Panel_BL",
+                        "layout|flex": 1,
+                        "layout|region": "west",
+                        "layout|split": true,
+                        "title": "My Panel",
+                        "width": null
+                    },
+                    "name": "MyPanel10",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "e7290912-d03a-443e-b81c-2994d13a64bf",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "itemId": "Panel_BR",
+                        "layout|flex": 1,
+                        "layout|region": "center",
+                        "title": "My Panel"
+                    },
+                    "name": "MyPanel8",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "6b4e9b6c-1009-4620-8ff3-06092792b2ce",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

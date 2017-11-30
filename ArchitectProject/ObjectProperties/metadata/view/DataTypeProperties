@@ -1,0 +1,305 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userClassName": "DataTypeProperties",
+        "height": 274,
+        "title": "Типы данных",
+        "width": 606
+    },
+    "name": "MyForm1",
+    "designerId": "53f243bd-fb45-4197-a7b4-422bc47b87dd",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Условие проверки при вводе",
+                "labelWidth": 120,
+                "layout|anchor": "100%"
+            },
+            "name": "MyTextField4",
+            "designerId": "4dbec04e-a1d7-41c8-82f9-9e2f71172bf6"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Тип данных ExtJS",
+                "labelWidth": 120,
+                "layout|anchor": "100%"
+            },
+            "name": "MyComboBox5",
+            "designerId": "ba6c0da2-06c6-4506-8d25-bb8bd9af5fe6"
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Доступность групповой операции",
+                "fieldLabel": null,
+                "itemId": "IsAvailableGroupOperation",
+                "layout|anchor": "100%"
+            },
+            "name": "MyCheckbox12",
+            "designerId": "b2bd847c-d3c5-4869-b4a9-ffdfcb686752"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Операции для фильра"
+            },
+            "name": "MyFieldSet4",
+            "designerId": "a5085559-e818-4aa6-90c6-b7316fcde24d",
+            "cn": [
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null
+                    },
+                    "name": "MyCheckboxGroup6",
+                    "designerId": "3fd2fef9-a0ac-41c1-8dbc-733fe6bc56e3",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Равно",
+                                "fieldLabel": null,
+                                "itemId": "Equal"
+                            },
+                            "name": "MyCheckbox13",
+                            "designerId": "7c1ed0c7-b798-4a13-be36-f6a6113e113c"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Не равно",
+                                "fieldLabel": null,
+                                "itemId": "NotEqual"
+                            },
+                            "name": "MyCheckbox16",
+                            "designerId": "76f42e98-5469-47d8-9e8a-d7042ceb15d4"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Пусто",
+                                "fieldLabel": null,
+                                "itemId": "Empty"
+                            },
+                            "name": "MyCheckbox15",
+                            "designerId": "192f72b7-8f9b-41ec-9f45-85d55016070a"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Не пусто",
+                                "fieldLabel": null,
+                                "itemId": "NotEmpty"
+                            },
+                            "name": "MyCheckbox14",
+                            "designerId": "6c50844c-906d-47f7-bc15-c44b6c2140bc"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "itemId": "More"
+                    },
+                    "name": "MyCheckboxGroup5",
+                    "designerId": "158ce96a-5451-4661-ab25-5a957ea7cf4e",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Больше",
+                                "fieldLabel": null
+                            },
+                            "name": "MyCheckbox13",
+                            "designerId": "4c02ee00-720f-4c38-8402-89109b6f6ef2"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Больше или равно",
+                                "fieldLabel": null,
+                                "itemId": "MoreOrEqual"
+                            },
+                            "name": "MyCheckbox16",
+                            "designerId": "0cc32e37-683b-421c-83c0-d4479499d654"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Меньше",
+                                "fieldLabel": null,
+                                "itemId": "Less"
+                            },
+                            "name": "MyCheckbox15",
+                            "designerId": "b089c678-e33f-4091-9384-3911b4de0200"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Меньше или равно",
+                                "fieldLabel": null,
+                                "itemId": "LessOrEqual"
+                            },
+                            "name": "MyCheckbox14",
+                            "designerId": "4f75841a-c19a-4dee-91aa-fdf37a9306e2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null
+                    },
+                    "name": "MyCheckboxGroup7",
+                    "designerId": "1831b1db-259d-4f84-aee9-5f4496270dd5",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Содержит",
+                                "fieldLabel": null,
+                                "itemId": "Like"
+                            },
+                            "name": "MyCheckbox13",
+                            "designerId": "68e57eb5-94fa-4eec-969f-58e775d8f6e1"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Не содержит",
+                                "fieldLabel": null,
+                                "itemId": "NotLike"
+                            },
+                            "name": "MyCheckbox16",
+                            "designerId": "e93395b5-3bde-49e6-aa8d-58fe34d7b04f"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Начинается с",
+                                "fieldLabel": null,
+                                "itemId": "Begin"
+                            },
+                            "name": "MyCheckbox15",
+                            "designerId": "f83726ef-f6b0-494c-b243-27d6206b72d9"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Не начинается с",
+                                "fieldLabel": null,
+                                "itemId": "NotBegin"
+                            },
+                            "name": "MyCheckbox14",
+                            "designerId": "29f020a0-c2eb-4b3d-8ae0-37de39eb8ade"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

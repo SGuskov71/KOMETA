@@ -1,0 +1,155 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userClassName": "ObjectOperationProperties",
+        "height": 383,
+        "title": "Операции над объектами",
+        "width": 491
+    },
+    "name": "MyForm1",
+    "designerId": "ec3504f4-ef21-4f6e-9a28-a481b3ecc8af",
+    "cn": [
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDecimals": false,
+                "allowExponential": false,
+                "fieldLabel": "Порядковый номер при отображении",
+                "labelWidth": 230,
+                "layout|anchor": "100%"
+            },
+            "name": "MyNumberField1",
+            "designerId": "871491a1-2514-48d9-8ba7-a5d23b0407ed"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Принадлежность к группе",
+                "labelWidth": 160,
+                "layout|anchor": "100%"
+            },
+            "name": "MyComboBox8",
+            "designerId": "84dd451f-defe-40c5-96c7-737a21908c1c"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Выполняемая команда"
+            },
+            "name": "MyFieldSet5",
+            "designerId": "ec7a1e7a-f4d6-4bcb-9187-885849dd4347",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Код класса",
+                        "labelWidth": 90,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyComboBox6",
+                    "designerId": "022b231b-2ee8-44fc-8c6b-b5e2f793a4d3"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Код функции",
+                        "labelWidth": 90,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyComboBox7",
+                    "designerId": "2c539a83-99da-4261-a3f9-0371827b9f70"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Параметры",
+                        "labelWidth": 90,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "a3ba3eb6-5e94-4055-81f7-e9379f1ecd6b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Стиль кнопки для вызова операции",
+                "layout|anchor": "100%"
+            },
+            "name": "MyTextArea1",
+            "designerId": "2bee2203-9eac-4383-9f7c-b822b16dc95a"
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Доступность при отсутствии данных",
+                "fieldLabel": null,
+                "layout|anchor": "100%"
+            },
+            "name": "MyCheckbox17",
+            "designerId": "0347702e-34e2-4b80-afc5-a16996d04540"
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Является операцией по умолчанию",
+                "fieldLabel": null,
+                "layout|anchor": "100%"
+            },
+            "name": "MyCheckbox18",
+            "designerId": "069a8266-b475-47c4-bb52-6b4f06ef5df0"
+        }
+    ]
+}

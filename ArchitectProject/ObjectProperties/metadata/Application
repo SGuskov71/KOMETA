@@ -1,0 +1,21 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "ObjectProperties",
+        "views": [
+            "MainPanel",
+            "ObjectProperties",
+            "FieldProperties",
+            "DataTypeProperties",
+            "ReferenceProperties",
+            "ObjectOperationProperties"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

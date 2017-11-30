@@ -1,0 +1,439 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "bodyPadding": 10,
+        "designer|userClassName": "paragraph_PropertyForm",
+        "height": null,
+        "title": "Свойства абзаца",
+        "width": 720
+    },
+    "designerId": "ce026b5e-3ba2-4869-a642-77ef69dc9552",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.rawData = rawData;",
+                    "var mainContainer = this.findParentByType('#DesignReportMainContainer');",
+                    "this.down('#LeftMargin').setValue(rawData.LeftMargin);",
+                    "this.down('#RightMargin').setValue(rawData.RightMargin);",
+                    "this.down('#BreakBefore').setValue(rawData.BreakBefore);",
+                    "this.down('#TextIdent').setValue(rawData.TextIdent);",
+                    "this.down('#RB_LEFT').setValue(false);",
+                    "this.down('#RB_CENTER').setValue(false);",
+                    "this.down('#RB_RIGHT').setValue(false);",
+                    "this.down('#RB_JUSTIFY').setValue(false);",
+                    "if((this.rawData.TextAlignment!=undefined)&&(this.rawData.TextAlignment!='')){",
+                    "    this.down('#'+this.rawData.TextAlignment).setValue(true);",
+                    "}else{",
+                    "    this.down('#RB_LEFT').setValue(true);",
+                    "}"
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "210db879-98ac-416a-8ad1-90f34eb31471"
+        },
+        {
+            "type": "Ext.form.RadioGroup",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 1,
+                "columns": [
+                    "4"
+                ],
+                "fieldLabel": "Горизонтальное выравнивание",
+                "height": null,
+                "labelWidth": 190,
+                "maxWidth": 700,
+                "padding": 6
+            },
+            "name": "MyRadioGroup1",
+            "designerId": "87aa4b5b-0f92-472a-af55-9092f686772e",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "По левому краю",
+                        "fieldLabel": null,
+                        "itemId": "RB_LEFT"
+                    },
+                    "name": "MyRadio4",
+                    "designerId": "4ce0c996-e592-4f85-ac50-867300c1100b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRB_LEFTChange1",
+                                "implHandler": [
+                                    "if(newValue==true)",
+                                    "{",
+                                    "    field.ownerCt.down('#RB_CENTER').setValue(false);",
+                                    "    field.ownerCt.down('#RB_RIGHT').setValue(false);",
+                                    "//    field.ownerCt.down('#RB_START').setValue(false);",
+                                    "//    field.ownerCt.down('#RB_END').setValue(false);",
+                                    "    field.ownerCt.down('#RB_JUSTIFY').setValue(false);",
+                                    "    this.rawData.TextAlignment=field.itemId;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRB_LEFTChange1",
+                            "designerId": "cec5965c-4cd0-4437-8c75-44813588327e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "По центру",
+                        "fieldLabel": null,
+                        "itemId": "RB_CENTER",
+                        "margin": null
+                    },
+                    "name": "MyRadio5",
+                    "designerId": "b9039f7d-6977-41f0-9ed0-f759479e69bb",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRB_CENTERChange1",
+                                "implHandler": [
+                                    "if(newValue==true)",
+                                    "{",
+                                    "    field.ownerCt.down('#RB_LEFT').setValue(false);",
+                                    "    field.ownerCt.down('#RB_RIGHT').setValue(false);",
+                                    "    //field.ownerCt.down('#RB_START').setValue(false);",
+                                    "    //field.ownerCt.down('#RB_END').setValue(false);",
+                                    "    field.ownerCt.down('#RB_JUSTIFY').setValue(false);",
+                                    "    this.rawData.TextAlignment=field.itemId;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRB_CENTERChange1",
+                            "designerId": "81a87a9c-bbf5-463b-ad3d-062c46b3bc44"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "По правому краю",
+                        "fieldLabel": null,
+                        "itemId": "RB_RIGHT",
+                        "margin": "0 0 0 -30"
+                    },
+                    "name": "MyRadio6",
+                    "designerId": "88dd1367-afb6-4d28-bd39-4f3e289ada61",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRB_RIGHTChange2",
+                                "implHandler": [
+                                    "if(newValue==true)",
+                                    "{",
+                                    "    field.ownerCt.down('#RB_LEFT').setValue(false);",
+                                    "    field.ownerCt.down('#RB_CENTER').setValue(false);",
+                                    "    //field.ownerCt.down('#RB_START').setValue(false);",
+                                    "    //field.ownerCt.down('#RB_END').setValue(false);",
+                                    "    field.ownerCt.down('#RB_JUSTIFY').setValue(false);",
+                                    "    this.rawData.TextAlignment=field.itemId;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRB_RIGHTChange2",
+                            "designerId": "96cebdff-327d-4c3d-a51d-ffb699fa802f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "По ширине",
+                        "fieldLabel": null,
+                        "itemId": "RB_JUSTIFY",
+                        "margin": "0 0 0 -20"
+                    },
+                    "name": "MyRadio9",
+                    "designerId": "69d5b02a-a9e9-4f94-a200-1bd45ac802c6",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRB_RIGHTChange1111",
+                                "implHandler": [
+                                    "if(newValue==true)",
+                                    "{",
+                                    "    field.ownerCt.down('#RB_LEFT').setValue(false);",
+                                    "    field.ownerCt.down('#RB_CENTER').setValue(false);",
+                                    "    field.ownerCt.down('#RB_RIGHT').setValue(false);",
+                                    "    //field.ownerCt.down('#RB_START').setValue(false);",
+                                    "    //field.ownerCt.down('#RB_END').setValue(false);",
+                                    "    this.rawData.TextAlignment=field.itemId;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRB_RIGHTChange1111",
+                            "designerId": "ba46dcc5-2418-417a-a87f-6cc55ef773db"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "height": null,
+                "layout": "hbox",
+                "title": "Горизонтальные отступы (см)"
+            },
+            "name": "MyFieldSet1",
+            "designerId": "4ef4e295-43e6-4ee3-80ca-c6cbe2b29701",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Слева",
+                        "itemId": "LeftMargin",
+                        "labelWidth": 40,
+                        "layout|flex": 1,
+                        "layout|margins": "6"
+                    },
+                    "name": "MyNumberField2",
+                    "designerId": "38d8e36e-7ff3-4cdb-a94d-a72f483cac68",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLeftMarginChange",
+                                "implHandler": [
+                                    "this.rawData.LeftMargin=newValue;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onLeftMarginChange",
+                            "designerId": "fd099576-aab5-43ac-ad53-6988fbc6d38d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Справа",
+                        "itemId": "RightMargin",
+                        "labelWidth": 50,
+                        "layout|flex": 1,
+                        "layout|margins": "6"
+                    },
+                    "name": "MyNumberField4",
+                    "designerId": "1b8f7f1c-dfd9-4263-b9b9-b012079e3682",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRightMarginChange",
+                                "implHandler": [
+                                    "this.rawData.RightMargin=newValue;",
+                                    "var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "mainContainer.modified = true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRightMarginChange",
+                            "designerId": "d67d493f-db37-4801-b3fc-05001e6e63b1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Первая строка",
+                        "itemId": "TextIdent",
+                        "labelWidth": 95,
+                        "layout|flex": 1,
+                        "margin": 6
+                    },
+                    "name": "MyNumberField5",
+                    "designerId": "0e40eee0-913d-4319-979d-8ca91f7e43a9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTextIdentChange",
+                                "implHandler": [
+                                    "this.rawData.TextIdent=newValue;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onTextIdentChange",
+                            "designerId": "8b39d37f-5249-4853-87a5-ce674ee1d773"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Вставить разрыв перед абзацем",
+                "fieldLabel": "",
+                "itemId": "BreakBefore",
+                "layout|anchor": "100%"
+            },
+            "name": "MyCheckbox",
+            "designerId": "d14a15b5-9ffe-4ea1-82eb-ec8988ba925d",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onBreakBeforeChange",
+                        "implHandler": [
+                            "this.rawData.BreakBefore=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onBreakBeforeChange",
+                    "designerId": "2633928d-8a80-4133-b516-242ccbb2d06d"
+                }
+            ]
+        }
+    ]
+}

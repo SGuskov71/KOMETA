@@ -1,0 +1,303 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "InputInterractiveParams",
+        "header": false,
+        "height": 325,
+        "layout": "fit",
+        "manageHeight": false,
+        "title": "Ввод параметров",
+        "width": 555
+    },
+    "designerId": "2b5a8440-d347-4df6-8133-1fbcd267877e",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "end",
+                "dock": "bottom"
+            },
+            "name": "MyToolbar5",
+            "designerId": "a4340480-6322-46cc-a9fd-82bf31bcd7df",
+            "cn": [
+                {
+                    "type": "Ext.container.ButtonGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columns": 2,
+                        "layout|flex": null,
+                        "title": ""
+                    },
+                    "name": "MyButtonGroup",
+                    "designerId": "22cd7dcc-bcc4-45d1-a2de-a39315e77eb0",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Применить"
+                            },
+                            "name": "MyButton22",
+                            "designerId": "1979a152-1e46-42e6-9017-3dc5ed5f7bad",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var win=button.findParentByType('panel').findParentByType('panel');",
+                                            "var ControlContainer= win.down('#ControlContainer');",
+                                            "var controls= ControlContainer.query('*');",
+                                            "var ResultArrayParamValues={};",
+                                            "var CanClose=true;",
+                                            "Ext.each(controls, function(control) {",
+                                            "  var key=control.ParamCode;",
+                                            "  if(control.ParamTypeInput==1){",
+                                            "    ResultArrayParamValues[key]= Ext.Date.format(control.getValue(), \"Y-m-d\");",
+                                            "  }else{",
+                                            "    ResultArrayParamValues[key]= control.getValue();}",
+                                            "  if(((ResultArrayParamValues[key]==null)||(ResultArrayParamValues[key]==''))&&(control.ParamMandatory==true)){",
+                                            "    control.focus(false, 1000);",
+                                            "    control.markInvalid('Не заполнено обязательное значение');",
+                                            "    CanClose=false;",
+                                            "    return 0;",
+                                            "  }",
+                                            "  if(control.isValid()!=true){",
+                                            "    control.focus(false, 1000);",
+                                            "    control.markInvalid('Не вернные значения');",
+                                            "    CanClose=false;",
+                                            "    return 0;",
+                                            "  }",
+                                            "});",
+                                            "if(CanClose==true)",
+                                            "  win.fireEvent('BtnOk', ResultArrayParamValues);"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "af63df68-02d2-45ab-a7af-a14618f0ae52"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Отмена"
+                            },
+                            "name": "MyButton23",
+                            "designerId": "e612364a-bc6b-41bc-b78f-171497cebb6f",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "CloseWindow(button.findParentByType('window'));"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "b59286f2-1893-47ec-b79e-63d2058be7ad"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "container|align": "stretch",
+                "itemId": "ControlContainer",
+                "layout": "vbox",
+                "title": ""
+            },
+            "name": "MyFieldSet4",
+            "designerId": "4b9b8325-bd08-4187-a918-53b0a1aa7306"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowShow",
+                "implHandler": [
+                    "var ControlContainer = component.down('#ControlContainer');",
+                    "Ext.each(this.ArrayInterractiveParam, function (par) {",
+                    "  if (par.ParamInterractive == true) {",
+                    "    if (par.ParamMandatory == true) {",
+                    "      par.ParamDescr = par.ParamDescr + \" (*)\";",
+                    "    }",
+                    "    var control = null;",
+                    "    switch (par.ParamTypeInput) {",
+                    "      case 0:",
+                    "        control = Ext.create('Ext.form.field.Text', {fieldLabel: par.ParamDescr});",
+                    "        control.ParamCheckInput = par.ParamCheckInput;",
+                    "        control.ParamCheckInputExpression = par.ParamCheckInputExpression;",
+                    "        if (control.ParamCheckInput == true) {",
+                    "          control.validateOnChange = true;",
+                    "          control.validateOnBlur = true;",
+                    "          control.validator = function (v) {",
+                    "            var t = this;",
+                    "            if (!((t.value == undefined) || (t.value == \"\") ||",
+                    "                  (t.ParamCheckInputExpression == undefined) || (t.ParamCheckInputExpression == \"\"))) {",
+                    "              var b = eval(t.ParamCheckInputExpression);",
+                    "              if (b) {",
+                    "                return 'Не вернные значения';",
+                    "              } else",
+                    "                return true;",
+                    "            } else",
+                    "              return true;",
+                    "          };",
+                    "        }",
+                    "        ;",
+                    "        break;",
+                    "      case 1:",
+                    "        par.Value = Ext.Date.parse(par.Value, \"d.m.Y\", false);",
+                    "        control = Ext.create('Ext.form.field.Date', {fieldLabel: par.ParamDescr, format: \"d.m.Y\"});",
+                    "        break;",
+                    "      case 2:",
+                    "        var store = Ext.create('Ext.data.SimpleStore', {",
+                    "          fields: [",
+                    "            {",
+                    "              name: 'id',",
+                    "              type: 'string'",
+                    "            },",
+                    "            {",
+                    "              name: 'name',",
+                    "              type: 'string'",
+                    "            }",
+                    "          ],",
+                    "          autoLoad: false,",
+                    "          proxy: {",
+                    "            type: 'memory',",
+                    "            reader: {",
+                    "              type: 'json'",
+                    "            }",
+                    "          }",
+                    "        });",
+                    "        Common_class.GetComboBoxStore(par.ParamSlv, function (response) {",
+                    "          store.loadData(response.result);",
+                    "          control = Ext.create('Ext.form.field.ComboBox', {fieldLabel: par.ParamDescr,",
+                    "                                                           valueField: 'id',",
+                    "                                                           displayField: 'name',",
+                    "                                                           store: store, queryMode: 'local',",
+                    "                                                           autoSelect: true,",
+                    "                                                           editable: false,",
+                    "                                                           enableKeyEvents: true,",
+                    "                                                           typeAhead: true,",
+                    "                                                           listeners: {",
+                    "                                                             keydown: function (obj, e) {",
+                    "                                                               if ((e.getCharCode() == e.BACKSPACE) && (e.ctrlKey)) {",
+                    "                                                                 e.preventDefault();",
+                    "                                                                 obj.clearValue();",
+                    "                                                                 obj.applyEmptyText();",
+                    "                                                               }",
+                    "                                                             }",
+                    "                                                           }",
+                    "                                                          });",
+                    "          control.ParamTypeInput = par.ParamTypeInput;",
+                    "          control.ParamCode = par.ParamCode;",
+                    "          control.ParamMandatory = par.ParamMandatory;",
+                    "          control.setValue(par.Value);",
+                    "          ControlContainer.add(control);",
+                    "",
+                    "        });",
+                    "        return;",
+                    "      case 3:",
+                    "        control = Ext.create('Ext.form.field.Number', {fieldLabel: par.ParamDescr});",
+                    "        break;",
+                    "      case 6:",
+                    "        control = Ext.create('Ext.form.field.ComboBox',",
+                    "                             {fieldLabel: par.ParamDescr,",
+                    "                              onTriggerClick: function (evnt) {",
+                    "                                var me = this;",
+                    "",
+                    "                                var win = SelectValSlv({sysname: par.ParamSlv, ExtFilterWhereCond: '', object_Caption: 'Выбор объекта', HelpContext: ''});",
+                    "                                win.addListener('ValSlvSelected', function (context, SelID, SelDescr) {",
+                    "                                  Ext.each(SelID, function (val) {",
+                    "                                    me.setValue(val);",
+                    "                                  });",
+                    "                                });",
+                    "                              },",
+                    "                              editable: false,",
+                    "                              triggerCls: 'x-form-search-trigger',",
+                    "                              enableKeyEvents: true,",
+                    "                              listeners: {",
+                    "                                keydown: function (obj, e) {",
+                    "                                  if ((e.getCharCode() == e.BACKSPACE) && (e.ctrlKey)) {",
+                    "                                    e.preventDefault();",
+                    "                                    obj.setValue(null);",
+                    "                                    obj.applyEmptyText();",
+                    "                                  }",
+                    "                                }}",
+                    "                             });",
+                    "        break;",
+                    "    }",
+                    "    if (control) {",
+                    "      control.ParamTypeInput = par.ParamTypeInput;",
+                    "      control.ParamCode = par.ParamCode;",
+                    "      control.ParamMandatory = par.ParamMandatory;",
+                    "      control.setValue(par.Value);",
+                    "      ControlContainer.add(control);",
+                    "    }",
+                    "  }",
+                    "});"
+                ],
+                "name": "render",
+                "scope": "me"
+            },
+            "name": "onWindowShow",
+            "designerId": "dae2aad6-2e73-40db-9ac7-458335e31f1f"
+        }
+    ]
+}

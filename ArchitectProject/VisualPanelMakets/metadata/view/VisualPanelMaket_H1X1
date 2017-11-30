@@ -1,0 +1,121 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "VisualPanelDescription": "Горизонтальный сплит 1Х1",
+        "VisualPanelMaket": null,
+        "container|align": "stretch",
+        "designer|userClassName": "VisualPanelMaket_H1X1",
+        "height": 451,
+        "layout": "hbox",
+        "width": 729
+    },
+    "name": "MyContainer",
+    "configAlternates": {
+        "VisualPanelMaket": "boolean"
+    },
+    "designerId": "1251d932-40a9-4c8c-b6bf-66745c89bde7",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "VisualPanelDescription",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "VisualPanelMaket",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit",
+                "layout|flex": 1
+            },
+            "name": "MyContainer1",
+            "designerId": "9acd35f7-006c-45e1-9561-ef3cd3159e6d",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "itemId": "VisualPanelItem1",
+                        "layout": "fit",
+                        "title": "Выберите представление"
+                    },
+                    "name": "MyPanel",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "d37f23e3-8e30-4081-be34-54ced94e42ba",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit",
+                "layout|flex": 1,
+                "width": ""
+            },
+            "name": "MyContainer2",
+            "designerId": "2b95bbd8-75b4-45ba-856d-d376d1b67784",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "VisualPanelItem": true,
+                        "itemId": "VisualPanelItem2",
+                        "layout": "fit",
+                        "title": "Выберите представление"
+                    },
+                    "name": "MyPanel1",
+                    "configAlternates": {
+                        "VisualPanelItem": "boolean"
+                    },
+                    "designerId": "14182907-7405-462c-8ca6-85aaceddc90c",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "VisualPanelItem",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

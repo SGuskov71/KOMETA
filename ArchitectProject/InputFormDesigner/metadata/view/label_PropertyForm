@@ -1,0 +1,232 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": null,
+        "designer|userClassName": "label_PropertyForm",
+        "height": 441,
+        "id": "label_PropertyForm",
+        "itemId": "label_PropertyForm",
+        "layout": "auto",
+        "title": "Свойства надписи",
+        "width": 615
+    },
+    "name": "container_PropertyForm1",
+    "designerId": "ddbc05eb-9c99-478c-8c66-275e3672b816",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData",
+                    "record"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.needUpdateTree=false; //нужно для отключения переписывания текста в дереве при присвоении значений текста",
+                    "this.rawData = rawData;",
+                    "this.record = record;",
+                    "this.rawData.leaf=true;",
+                    "var mainContainer = this.findParentByType('#DesignMainContainer');",
+                    "this.down('#DefaultValue').setValue(rawData.DefaultValue);",
+                    "this.down('#DataField').setValue(rawData.DataField);",
+                    "var ContainerProps=mainContainer.down('#ContainerProps');",
+                    "if((rawData.LabelProps!=undefined)||(mainContainer.AdditionalLabelDefaultProps!=undefined)){",
+                    "  //При открытии формы ввода добавить в \"Дополнительные свойства\" те которые определены для этого элемента ввода и удалить те которых нет.",
+                    "  var TempObj={};",
+                    "  for(var key in mainContainer.AdditionalLabelDefaultProps){",
+                    "    if((rawData.LabelProps!=undefined)&&(rawData.LabelProps[key]!=undefined)){",
+                    "      TempObj[key]=rawData.LabelProps[key];",
+                    "    }else{",
+                    "      TempObj[key]=mainContainer.AdditionalLabelDefaultProps[key];",
+                    "    }",
+                    "  }",
+                    "  rawData.LabelProps=TempObj;",
+                    "  ContainerProps.setSource(rawData.LabelProps);",
+                    "}else{",
+                    "  ContainerProps.setSource({});",
+                    "}",
+                    "this.needUpdateTree=true;"
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "368fca51-ae31-46a2-8cca-7f82e06bb4bc"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyPadding": 7,
+                "height": 72,
+                "padding": null,
+                "title": null
+            },
+            "name": "MyForm1",
+            "designerId": "85041e26-d4a3-4bb9-89f8-b720129983ee",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Текст надписи",
+                        "itemId": "DefaultValue",
+                        "labelWidth": 95,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "c3f34fc9-64e2-4259-8e80-c6ddf1e4ac9d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_TextBlockChange",
+                                "implHandler": [
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    "",
+                                    "this.rawData.DefaultValue=newValue;",
+                                    "if(this.needUpdateTree==true){",
+                                    "  if(trim(this.rawData.DefaultValue)=='')",
+                                    "    this.record.set('text', mainContainer.MICaption_Label);",
+                                    "  else",
+                                    "    this.record.set('text', this.rawData.DefaultValue);",
+                                    "  this.record.commit();",
+                                    "  this.rawData.text=this.rawData.DefaultValue;",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_TextBlockChange",
+                            "designerId": "00afc39d-087a-4614-a7c5-4348aa83f539"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Код надписи",
+                        "itemId": "DataField",
+                        "labelWidth": 95,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "eb670cee-afa2-423a-be69-39bdb6bdf110",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdt_TextBlockChange1",
+                                "implHandler": [
+                                    "this.rawData.DataField=newValue;",
+                                    "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                                    "mainContainer.modified=true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdt_TextBlockChange1",
+                            "designerId": "16ec22ee-0aa3-42bd-bb52-b913dde4c719"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.property.Grid",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "bodyBorder": false,
+                "border": null,
+                "itemId": "ContainerProps",
+                "nameColumnWidth": 200,
+                "source": null,
+                "title": "Дополнительные свойства надписи"
+            },
+            "name": "MyPropertyGrid1",
+            "designerId": "7d92d816-5d12-4e20-97a0-0f4563651f4b",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPropertygridBeforeRender1",
+                        "implHandler": [
+                            "var cols = component.getView().getHeaderCt().getGridColumns();",
+                            "cols[0].setText(\"Свойство\");",
+                            "cols[1].setText(\"Значение\");"
+                        ],
+                        "name": "beforerender",
+                        "scope": "me"
+                    },
+                    "name": "onPropertygridBeforeRender1",
+                    "designerId": "1e1b0f81-ef51-4e7f-a6a1-42f6dc35108e"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onControlPropsPropertyChange1",
+                        "implHandler": [
+                            "this.rawData.ContainerProps[recordId]=value;",
+                            "var mainContainer = field.ownerCt.findParentByType('#DesignMainContainer');",
+                            "mainContainer.modified=true;",
+                            ""
+                        ],
+                        "name": "propertychange",
+                        "scope": "me"
+                    },
+                    "name": "onControlPropsPropertyChange1",
+                    "designerId": "457a739f-aea0-424d-a1fd-7bec01753a18"
+                }
+            ]
+        }
+    ]
+}

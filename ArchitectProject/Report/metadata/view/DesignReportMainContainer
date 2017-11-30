@@ -1,0 +1,1256 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "anchorSize": null,
+        "designer|initialView": true,
+        "designer|userClassName": "DesignReportMainContainer",
+        "height": 513,
+        "itemId": "DesignReportMainContainer",
+        "layout": "border",
+        "width": 793
+    },
+    "designerId": "87b2bec1-4542-45e2-b5f8-8a152119a07d",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "StructureTree",
+                "layout|region": "west",
+                "title": "Структура",
+                "width": 255
+            },
+            "name": "MyTreePanel",
+            "designerId": "3d7354e3-cf7e-4ff2-a5e5-c034af3c0c31",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "itemId": "StructureToolBar"
+                    },
+                    "name": "MyToolbar3",
+                    "designerId": "3087d526-7a2d-4c56-abca-c777e08963f6",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "cls_add",
+                                "itemId": "BtnAdd",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Добавить",
+                                "width": null
+                            },
+                            "name": "MyButton",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "c3265221-bcdd-4492-86b6-404d9fc46bad",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "menu",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 120
+                                    },
+                                    "name": "MyMenu",
+                                    "designerId": "cca3abba-1cb9-458c-9d3c-4c3e9898beed",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "cls_paragraf",
+                                                "text": "Абзац"
+                                            },
+                                            "name": "MyMenuItem",
+                                            "designerId": "146d99f0-75ee-47e7-85a2-ff110b839062",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.menu.Menu",
+                                                    "reference": {
+                                                        "name": "menu",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "width": ""
+                                                    },
+                                                    "name": "MyMenu1",
+                                                    "designerId": "25857721-6877-4a4f-a7f9-6acca6688ff3",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.menu.Item",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "disabled": true,
+                                                                "itemId": "MI_text",
+                                                                "text": "Блок текста"
+                                                            },
+                                                            "name": "MyMenuItem1",
+                                                            "designerId": "ee796c56-6a68-4321-9e48-b6f9fede9d28",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "fixedfunction",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "designer|params": [
+                                                                            "item",
+                                                                            "e"
+                                                                        ],
+                                                                        "fn": "handler",
+                                                                        "implHandler": [
+                                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                                            "if(Node!= undefined){",
+                                                                            "    Node=Node[0];",
+                                                                            "if((Node!= undefined)&&(Node.raw.ItemType== 'paragraph')){",
+                                                                            "Node.appendChild({text: item.text, leaf:true,  ItemType: 'text', iconCls: 'text',",
+                                                                            "                 DataSource: 'RB_Text'});",
+                                                                            "}}"
+                                                                        ]
+                                                                    },
+                                                                    "name": "handler",
+                                                                    "designerId": "32ec4e5e-75c5-4e59-ba6c-a16bdf311f24"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Ext.menu.Item",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "disabled": true,
+                                                                "itemId": "MI_hyperlink",
+                                                                "text": "Гиперссылка"
+                                                            },
+                                                            "name": "MyMenuItem2",
+                                                            "designerId": "850370d2-4268-4060-ae98-4aa4a219def9",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "fixedfunction",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "designer|params": [
+                                                                            "item",
+                                                                            "e"
+                                                                        ],
+                                                                        "fn": "handler",
+                                                                        "implHandler": [
+                                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                                            "if(Node!= undefined){",
+                                                                            "    Node=Node[0];",
+                                                                            "if((Node!= undefined)&&(Node.raw.ItemType== 'paragraph')){",
+                                                                            "Node.appendChild({text: item.text, leaf:true,  ItemType: 'hyperlink', iconCls: 'hyperlink',",
+                                                                            "                 DataSource: 'RB_Text',",
+                                                                            "                  LinkText:'', LinkURL:'', DBLinkText:'', DBLinkURL:''});",
+                                                                            "}}"
+                                                                        ]
+                                                                    },
+                                                                    "name": "handler",
+                                                                    "designerId": "0ec3163d-b47a-4a21-a908-57bf5be95929"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Ext.menu.Item",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "disabled": true,
+                                                                "itemId": "MI_images",
+                                                                "text": "Графический элемент"
+                                                            },
+                                                            "name": "MyMenuItem3",
+                                                            "designerId": "30f13b7b-46b2-4b11-a954-e4f35f14ce0c",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "fixedfunction",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "designer|params": [
+                                                                            "item",
+                                                                            "e"
+                                                                        ],
+                                                                        "fn": "handler",
+                                                                        "implHandler": [
+                                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                                            "if(Node!= undefined){",
+                                                                            "    Node=Node[0];",
+                                                                            "if((Node!= undefined)&&(Node.raw.ItemType== 'paragraph')){",
+                                                                            "    Node.appendChild({text: item.text, leaf:true,  ItemType: 'image', iconCls: 'image',",
+                                                                            "                      imgHeight: 20, imgWidth: 20, DataSource: 'RB_Text', ImagePath:'', DataField:''});",
+                                                                            "}}"
+                                                                        ]
+                                                                    },
+                                                                    "name": "handler",
+                                                                    "designerId": "306aa450-d599-4548-8c4f-d08f229207c9"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Ext.menu.Item",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "disabled": true,
+                                                                "itemId": "MI_linebreak",
+                                                                "text": "Разрыв строки"
+                                                            },
+                                                            "name": "MyMenuItem4",
+                                                            "designerId": "ba37d790-ec4f-46b4-9a96-d0fcf72510d1",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "fixedfunction",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "designer|params": [
+                                                                            "item",
+                                                                            "e"
+                                                                        ],
+                                                                        "fn": "handler",
+                                                                        "implHandler": [
+                                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                                            "if(Node!= undefined){",
+                                                                            "    Node=Node[0];",
+                                                                            "if((Node!= undefined)&&(Node.raw.ItemType== 'paragraph')){",
+                                                                            "Node.appendChild({text: item.text, leaf:true,  ItemType: 'linebreak', iconCls: 'linebreak'});",
+                                                                            "}}"
+                                                                        ]
+                                                                    },
+                                                                    "name": "handler",
+                                                                    "designerId": "b418f7df-6366-4a4f-88bc-7b7199a12493"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "item",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                            "var RootNode= StructureTree.getRootNode();",
+                                                            "if(RootNode!= undefined){",
+                                                            "    RootNode.appendChild({text: item.text, expanded: true, leaf:false,children: [], ItemType: 'paragraph', iconCls: 'paragraph',",
+                                                            "                          TextAlignment: 'RB_LEFT', LeftMargin: 0, RightMargin: 0, TextIdent: 2, ShowError: true});}"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "5655ba5a-7c5b-4e82-9a7a-ae8f248a5a82"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": null,
+                                                "iconCls": "cls_table",
+                                                "text": "Таблица"
+                                            },
+                                            "name": "MyMenuItem5",
+                                            "configAlternates": {
+                                                "tooltip": "string"
+                                            },
+                                            "designerId": "5dd13070-65b6-49f1-9e75-dbf5676b25d9",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.menu.Menu",
+                                                    "reference": {
+                                                        "name": "menu",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "itemId": "TableMenu",
+                                                        "width": 80
+                                                    },
+                                                    "name": "MyMenu2",
+                                                    "designerId": "3e65aa42-90fa-4270-956e-be7ee9b13170",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.menu.Item",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "disabled": true,
+                                                                "iconCls": "cls_table_column",
+                                                                "itemId": "MI_tableColumn",
+                                                                "text": "Столбец"
+                                                            },
+                                                            "name": "MyMenuItem9",
+                                                            "designerId": "76823c30-51c9-4612-a9ef-4458e01faa37",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "fixedfunction",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "designer|params": [
+                                                                            "item",
+                                                                            "e"
+                                                                        ],
+                                                                        "fn": "handler",
+                                                                        "implHandler": [
+                                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                                            "if(Node!== undefined){",
+                                                                            "    Node=Node[0];",
+                                                                            "    if((Node!== undefined)&&(Node.raw.ItemType== 'table')){",
+                                                                            "        Node.appendChild({text: item.text, leaf:true,  ItemType: 'tableColumn', iconCls: 'tableColumn'});",
+                                                                            "    }}"
+                                                                        ]
+                                                                    },
+                                                                    "name": "handler",
+                                                                    "designerId": "938de996-1918-437a-a1dd-dc2dabd57240"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "item",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                            "var RootNode= StructureTree.getRootNode();",
+                                                            "var tblWidth=RootNode.raw.PageSizeWidth- RootNode.raw.MarginLeft- RootNode.raw.MarginRight;",
+                                                            "if(RootNode!== undefined){",
+                                                            "    var TableNode=RootNode.appendChild({text: item.text, expanded: true, leaf:false,children: [], ItemType: 'table', iconCls: 'table',",
+                                                            "                                        TabelWidth: tblWidth, TableAlignment: 'RB_LEFT', HeaderHeight: 4});",
+                                                            "}"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "d702cbc2-9573-42ad-ac0e-442a18a12aa4"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "cls_list",
+                                                "text": "Список"
+                                            },
+                                            "name": "MyMenuItem7",
+                                            "designerId": "40543909-efe3-438c-8e98-442fc5353e11",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "item",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                            "var RootNode= StructureTree.getRootNode();",
+                                                            "if(RootNode!= undefined){",
+                                                            "    RootNode.appendChild({text: item.text, expanded: true, leaf:false,children: [], ItemType: 'list', iconCls: 'list',",
+                                                            "                          DataSource: 'RB_Text'});}"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "264588c6-3c40-4c05-b27c-ba98d02f068b"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "cls_report_report",
+                                                "text": "Отчет"
+                                            },
+                                            "name": "MyMenuItem8",
+                                            "designerId": "12cc3632-1ab7-4b8a-acd7-b4c181ef576d",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "item",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var StructureTree= item. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                                            "var RootNode= StructureTree.getRootNode();",
+                                                            "if(RootNode!= undefined){",
+                                                            "    var w=  Ext.create(\"Report.view.SelectReportTemplateWindow\", {});",
+                                                            "    w.addEvents('BtnOk');",
+                                                            "    w.show();",
+                                                            "    w.addListener('BtnOk', function(Template_Code, Template_Descr) {",
+                                                            "        RootNode.appendChild({text: item.text, expanded: true, leaf:false,children: [],iconCls:'embedded_report',",
+                                                            "                              ItemType: 'embedded_report',",
+                                                            "                              Template_Code:Template_Code, Template_Descr: Template_Descr});",
+                                                            "        CloseWindow(w);",
+                                                            "    });",
+                                                            "};"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "fe7039c1-84e1-445e-b298-d01119875188"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "cls_del",
+                                "itemId": "BtnDel",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Удалить"
+                            },
+                            "name": "MyButton1",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "b7735aa5-7446-4255-a555-06a2038e3a1b",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var StructureTree= button. findParentByType('#DesignReportMainContainer').down('#StructureTree') ;",
+                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                            "if(Node!= undefined){",
+                                            "    Node=Node[0];",
+                                            "    if((Node!= undefined)&&(Node!=StructureTree.getRootNode())){",
+                                            "        Node.removeAll(true);",
+                                            "        Node.remove(true);",
+                                            "        StructureTree.store.sync();",
+                                            "    }}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "34dd4340-d4ea-41e9-886a-b73f1b5d2c7f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "cls_cut",
+                                "itemId": "BtnCut",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Вырезать"
+                            },
+                            "name": "MyButton2",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "e1550707-3898-4f64-a2ae-3de5ece6d14e",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var mainContainer= button.findParentByType('#DesignReportMainContainer');",
+                                            "var BtnCopy= mainContainer.down('#BtnCopy') ;",
+                                            "var BtnDel= mainContainer.down('#BtnDel') ;",
+                                            "if(BtnCopy.handler(button)==true){",
+                                            "    BtnDel.handler(button);",
+                                            "}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "bb2709aa-7b8a-42bf-873a-19613bad7b74"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "cls_copy",
+                                "itemId": "BtnCopy",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Копировать"
+                            },
+                            "name": "MyButton3",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "bda12826-290a-4071-8769-835de3c85c86",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "function GetConfObj(Node){",
+                                            "    var result= CopyObjectProps(Node.raw);",
+                                            "    if(Node.hasChildNodes( )==true){",
+                                            "        result.children= [];",
+                                            "        Ext.each(Node.childNodes, function (Child) {",
+                                            "            var itm= GetConfObj(Child);",
+                                            "            result.children.push(itm);",
+                                            "        });",
+                                            "    }else result.children=null;",
+                                            "    return result;",
+                                            "}",
+                                            "",
+                                            "var mainContainer= button.findParentByType('#DesignReportMainContainer');",
+                                            "var StructureTree= mainContainer.down('#StructureTree') ;",
+                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                            "if(Node!= undefined){",
+                                            "    Node=Node[0];",
+                                            "    if((Node!= undefined)&&(Node!=StructureTree.getRootNode())){",
+                                            "        Ext.destroy(mainContainer.ClipboardItem);",
+                                            "        mainContainer.ClipboardItem=null;",
+                                            "        mainContainer.ClipboardItem=GetConfObj(Node);",
+                                            "        mainContainer.down('#ClipboardContentsTxt').setText('В буфере: '+mainContainer.ClipboardItem.text);",
+                                            "        return true;",
+                                            "    }}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "83809701-a698-4553-9ffd-67aed03281e0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "cls_paste",
+                                "itemId": "BtnPaste",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Вставить"
+                            },
+                            "name": "MyButton4",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "be031ac7-3664-4e86-96d6-e6590a527545",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var NodeToInsert, IndexInsert;",
+                                            "var mainContainer= button.findParentByType('#DesignReportMainContainer');",
+                                            "var StructureTree= mainContainer.down('#StructureTree') ;",
+                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                            "if(Node!= undefined){",
+                                            "    Node=Node[0];",
+                                            "    if((Node!= undefined)){",
+                                            "        if((mainContainer.ClipboardItem.ItemType=='embedded_report')||",
+                                            "           (mainContainer.ClipboardItem.ItemType=='paragraph')||",
+                                            "           (mainContainer.ClipboardItem.ItemType=='table')||",
+                                            "           (mainContainer.ClipboardItem.ItemType=='list')){",
+                                            "            NodeToInsert= StructureTree.getRootNode();",
+                                            "            if(Node!=StructureTree.getRootNode())",
+                                            "                IndexInsert =Node.parentNode.indexOf(Node)+1;",
+                                            "            else IndexInsert=0;",
+                                            "        }else",
+                                            "            if((mainContainer.ClipboardItem.ItemType=='text')||",
+                                            "               (mainContainer.ClipboardItem.ItemType=='hyperlink')||",
+                                            "               (mainContainer.ClipboardItem.ItemType=='image')||",
+                                            "               (mainContainer.ClipboardItem.ItemType=='linebreak')){",
+                                            "                if(Node.raw.ItemType=='paragraph') {",
+                                            "                    IndexInsert=0;",
+                                            "                    NodeToInsert=Node;",
+                                            "                } else if((Node.raw.ItemType=='text')||",
+                                            "                          (Node.raw.ItemType=='hyperlink')||",
+                                            "                          (Node.raw.ItemType=='image')||",
+                                            "                          (Node.raw.ItemType=='linebreak')){",
+                                            "                    IndexInsert =Node.parentNode.indexOf(Node)+1;",
+                                            "                    NodeToInsert=Node.parentNode;",
+                                            "                }else",
+                                            "                    return;",
+                                            "            }else",
+                                            "                    return;",
+                                            "        var ConfObj= CopyObjectProps(mainContainer.ClipboardItem);",
+                                            "        ConfObj.expanded=false;",
+                                            "        NodeToInsert.insertChild(IndexInsert, ConfObj);",
+                                            "    }else",
+                                            "        return;",
+                                            "}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "98c145ce-19d6-4dfd-ab76-5e4db926a5bc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 5
+                            },
+                            "name": "MySpacer",
+                            "designerId": "0e6dcc2c-1cfb-44be-aab9-f1e0baef2038"
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MySeparator2",
+                            "designerId": "8c8b90b6-c711-42e4-9c0a-04933a7bf568"
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 5
+                            },
+                            "name": "MySpacer1",
+                            "designerId": "97744db1-0e35-4146-ab2d-b8e9604b6432"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "cls_params",
+                                "itemId": "BtnEdtParam",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Редактор параметров",
+                                "width": null
+                            },
+                            "name": "MyButton9",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "ed5e8dfe-f27f-4e7e-a1cd-b5d8e535977a",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var mainContainer = button.findParentByType('#DesignReportMainContainer');",
+                                            "var report_PropertyForm=mainContainer.ArrayOfReportObjectTypes.report;",
+                                            "var w=  Ext.create(\"Params.view.EditParams\", {Params: report_PropertyForm.rawData.ReportParams});",
+                                            "w.mainContainer= mainContainer;",
+                                            "w.addEvents('BtnOk');",
+                                            "w.show();",
+                                            "w.addListener('BtnOk', function(ReportParams) {",
+                                            "    report_PropertyForm.rawData.ReportParams=ReportParams;",
+                                            "    CloseWindow(w);",
+                                            "});",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "54ca1a61-1b95-4aa7-adad-4cbc491ddc08"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "cls_edt_css",
+                                "itemId": "BtnEdtStyle",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Конструктор стилей",
+                                "width": null
+                            },
+                            "name": "MyButton6",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "b01f3430-c295-495b-8a8c-90d5e9ae2dd4",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var mainContainer = button.findParentByType('#DesignReportMainContainer');",
+                                            "var w=  Ext.create(\"Report.view.EditReportStylesWindow\", {});",
+                                            "w.mainContainer= mainContainer;",
+                                            "w.show();"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "148eaac6-4212-48a7-875f-436349d9899b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "iconCls": "cls_preview",
+                                "itemId": "BtnPreview1",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Предпросмотр"
+                            },
+                            "name": "MyButton5",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "a5cee5b1-1591-4043-b799-df6941427fa8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var mainContainer= button.findParentByType('#DesignReportMainContainer');",
+                                            "if (!mainContainer.isNew)",
+                                            "{",
+                                            "    mainContainer.SaveReportTemplate();",
+                                            "    ComposeODTReportByTemplateInteractiveParamInput(",
+                                            "        {code:mainContainer.codeReportTemplate,",
+                                            "         ParamValuesArray:{}",
+                                            "        });",
+                                            "}else",
+                                            "{Ext.MessageBox.alert('Ошибка сохранения','Сначала надо сохранить шаблон');}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "542d1e4e-cbca-4c3e-a5c7-5733bd2b6ddb"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "cls_preview",
+                                "itemId": "BtnPreview",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Предпросмотр",
+                                "width": null
+                            },
+                            "name": "MyButton7",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "734dc52d-9d31-45ad-8d5a-554ffacb2135",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "menu",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 120
+                                    },
+                                    "name": "MyMenu",
+                                    "designerId": "ae15da42-758a-4a9b-b602-fa345583f8d2",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "cls_preview_odt",
+                                                "text": "Отчет"
+                                            },
+                                            "name": "MyMenuItem7",
+                                            "designerId": "ce13a015-a422-45db-9e2e-513c77529003",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "item",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var mainContainer= item.findParentByType('#DesignReportMainContainer');",
+                                                            "if (!mainContainer.isNew)",
+                                                            "{",
+                                                            "    mainContainer.SaveReportTemplate();",
+                                                            "    mainContainer.ReportObject.ComposeReportByTemplateInteractiveParamInput(null,",
+                                                            "                                                                               {param_list:{code:mainContainer.codeReportTemplate,",
+                                                            "         ParamValuesArray:{}",
+                                                            "                                                                               }});",
+                                                            "}else",
+                                                            "{Ext.MessageBox.alert('Ошибка сохранения','Сначала надо сохранить шаблон');}"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "63ae0803-2110-493f-ae1f-9fa11ea8a35c"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "cls_preview_pdf",
+                                                "text": "Отчет PDF"
+                                            },
+                                            "name": "MyMenuItem8",
+                                            "designerId": "80f3026a-a0b9-4980-86a2-cefedc205ba9",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "item",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var mainContainer= item.findParentByType('#DesignReportMainContainer');",
+                                                            "if (!mainContainer.isNew)",
+                                                            "{",
+                                                            "    mainContainer.SaveReportTemplate();",
+                                                            "    mainContainer.ReportObject.ComposePDFReportByTemplateInteractiveParamInput(null,",
+                                                            "                                                                               {param_list:{code:mainContainer.codeReportTemplate,",
+                                                            "                                                                                            ParamValuesArray:{}",
+                                                            "                                                                                           }});",
+                                                            "}else",
+                                                            "{Ext.MessageBox.alert('Ошибка сохранения','Сначала надо сохранить шаблон');}"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "9157c391-cb8b-4ff4-b55f-269202241388"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "cls_preview_html",
+                                                "text": "Отчет HTML"
+                                            },
+                                            "name": "MyMenuItem6",
+                                            "designerId": "c39b7da6-1316-4cba-84d0-dd1079cf4b59",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "item",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var mainContainer= item.findParentByType('#DesignReportMainContainer');",
+                                                            "if (!mainContainer.isNew)",
+                                                            "{",
+                                                            "    mainContainer.SaveReportTemplate();",
+                                                            "    mainContainer.ReportObject.ComposeHTMLReportByTemplateInteractiveParamInput(null,",
+                                                            "                                                                                {param_list:{code:mainContainer.codeReportTemplate,",
+                                                            "         ParamValuesArray:{}",
+                                                            "                                                                                            }});",
+                                                            "}else",
+                                                            "{Ext.MessageBox.alert('Ошибка сохранения','Сначала надо сохранить шаблон');}"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "28249547-0dfd-48b3-8bf1-14fac0e0f4c0"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true
+                    },
+                    "name": "MyTreeView",
+                    "designerId": "c325cdc3-ea15-4a2d-b440-7986e8c6bf2c"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onStructureTreeAfterRender",
+                        "implHandler": [
+                            "component.getView().select(component.getRootNode());"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "name": "onStructureTreeAfterRender",
+                    "designerId": "b0bd7308-158f-4941-9520-02e8beda6398"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "PropPanel",
+                "layout": "fit",
+                "layout|region": "center"
+            },
+            "name": "MyPanel",
+            "designerId": "d1eb9159-528c-40c6-8395-83ba1eba5ba8",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": null,
+                        "header": false,
+                        "height": null,
+                        "itemId": "PropertyContainer",
+                        "layout": "fit",
+                        "title": "Свойства"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "0e70e144-da60-4c66-9913-9c10817ab6ef"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SaveReportTemplate",
+                "implHandler": [
+                    "var mainContainer= this;//button. findParentByType('#DesignReportMainContainer');",
+                    "var StructureTree= mainContainer.down('#StructureTree') ;",
+                    "var RootNode= StructureTree.getRootNode();",
+                    "if(RootNode!= undefined){",
+                    "    var Template=mainContainer.ReportObject.SaveReportNodeToJson(RootNode);",
+                    "    Ext.MessageBox.wait({",
+                    "        msg: 'Выполняется операция. Ждите...',",
+                    "        width: 300,",
+                    "        wait: true,",
+                    "        waitConfig: {interval: 100}",
+                    "    });",
+                    "",
+                    "    var StructureTree= mainContainer.down('#StructureTree') ;",
+                    "    var RootNode= StructureTree.getRootNode();",
+                    "    Template.id_report_template=RootNode.raw.id_report_template;",
+                    "",
+                    "    Report_class.SaveReportTemplate(Template,function(response, options) {",
+                    "        Ext.MessageBox.hide();",
+                    "        var result = response;",
+                    "        if ((result.success === false) && (result.result == 're_connect')) {",
+                    "            Ext.MessageBox.alert('Подключение',result.msg);",
+                    "            window.onbeforeunload = null;    ",
+                    "            findFirstWindow().window.location.href = __first_page;",
+                    "            return;",
+                    "        }",
+                    "        if (result.success) {",
+                    "            if((mainContainer.grid_ListReportTemplate)&&(mainContainer.grid_ListReportTemplate!=undefined)&&",
+                    "               (mainContainer.grid_ListReportTemplate!=null)){",
+                    "                mainContainer.grid_ListReportTemplate.getStore().load();",
+                    "            }",
+                    "            var mainWindow=mainContainer.up('window');",
+                    "            mainWindow.Saved=true;",
+                    "            if (result.result.id_report_template!=undefined) {",
+                    "                var StructureTree= mainContainer.down('#StructureTree') ;",
+                    "                var RootNode= StructureTree.getRootNode();",
+                    "                RootNode.raw.id_report_template = result.result.id_report_template;",
+                    "            }",
+                    "",
+                    "            mainContainer.isNew=false;",
+                    "            mainContainer.codeReportTemplate=Template.Code;",
+                    "            Ext.MessageBox.alert(\"Результат выполнения \", result.msg);",
+                    "        } else {",
+                    "            Ext.MessageBox.alert(\"Ошибка сохранения: \" , result.msg);",
+                    "        }",
+                    "",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "SaveReportTemplate",
+            "designerId": "daa29537-b531-458a-b802-80bc87de8e0a"
+        }
+    ]
+}

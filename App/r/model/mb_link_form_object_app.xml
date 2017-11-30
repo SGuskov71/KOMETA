@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- -->
+<XMLDATA sysname="mb_link_form_object">
+<Id>mb_link_form_object</Id>
+<mb_link_form_objects>
+<mb_link_form_object><sysname>cv_cm_contract</sysname><code_form>frm_cm_contract</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_cm_contract_stage</sysname><code_form>frm_cm_contract_stage</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_cm_enterprise</sysname><code_form>frm_cm_enterprise</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_cm_payment</sysname><code_form>frm_cm_payment</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_cm_contract_payments</sysname><code_form>frm_cm_payment</code_form></mb_link_form_object>
+</mb_link_form_objects>
+</XMLDATA>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- -->
+<XMLDATA sysname="mbo_schema">
+  <Id>mbo_schema</Id>
+  <mbo_schems>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Группы пользователей</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mba_group" SCHEMA_ID="mba_group"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT short_name, code  FROM mba_group " 
+  ROWSTAG="mba_groups" ROWTAG="mba_group"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mba_group</code>
+      <query_after></query_after>
+    </mbo_schema>
+	<mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Схемы выгрузки</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mbo_schema" SCHEMA_ID="mbo_schema"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT id_periodicity ,id_receiver ,full_name,template,code,query_after  FROM mbo_schema " 
+  ROWSTAG="mbo_schems" ROWTAG="mbo_schema"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mbo_schema</code>
+      <query_after></query_after>
+    </mbo_schema>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Формы ввода метабазы</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mb_form" SCHEMA_ID="mb_form"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT mb_object.sysname ,mb_form.code,mb_form.short_name,mb_form.content
+  FROM mb_form join mb_object on mb_form.id_object=mb_object.id_object 
+where mb_object.sysname like 'mb%' 
+" ROWSTAG="mb_forms" ROWTAG="mb_form"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mb_form_sys</code>
+      <query_after></query_after>
+    </mbo_schema>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Формы ввода приложения</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mb_form" SCHEMA_ID="mb_form"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT mb_object.sysname ,mb_form.code,mb_form.short_name,mb_form.content
+  FROM mb_form join mb_object on mb_form.id_object=mb_object.id_object 
+where  Not (mb_object.sysname like 'mb%') 
+" ROWSTAG="mb_forms" ROWTAG="mb_form"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mb_form_app</code>
+      <query_after></query_after>
+    </mbo_schema>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Привязка форм ввода метабазы к представлениям</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mb_link_form_object" SCHEMA_ID="mb_link_form_object"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT mb_object.sysname, mb_form.code as code_form
+FROM mb_link_form_object join  mb_form on mb_link_form_object.id_form = mb_form.id_form join mb_object as o on mb_form.id_object=o.id_object
+  join mb_object on mb_link_form_object.id_object = mb_object.id_object
+    where o.sysname like 'mb%'
+" ROWSTAG="mb_link_form_objects" ROWTAG="mb_link_form_object"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mb_link_form_object_sys</code>
+      <query_after></query_after>
+    </mbo_schema>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Привязка форм ввода приложения к представлениям</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mb_link_form_object" SCHEMA_ID="mb_link_form_object"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT mb_object.sysname, mb_form.code as code_form
+FROM mb_link_form_object join  mb_form on mb_link_form_object.id_form = mb_form.id_form join mb_object as o on mb_form.id_object=o.id_object
+  join mb_object on mb_link_form_object.id_object = mb_object.id_object
+    where not (o.sysname like 'mb%')
+" ROWSTAG="mb_link_form_objects" ROWTAG="mb_link_form_object"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mb_link_form_object_app</code>
+      <query_after></query_after>
+    </mbo_schema>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Права доступа к пунктам системного меню</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mba_grant_task" SCHEMA_ID="grant_task"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT  mba_group.code AS code_group,  mb_task.code AS code_task
+FROM mba_grant_task, mb_task, mba_group
+WHERE mba_grant_task.id_task = mb_task.id_task AND  mba_grant_task.id_group = mba_group.id_group and mb_task.is_sys=1 " 
+  ROWSTAG="grant_tasks" ROWTAG="grant_task"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>grant_task_sys</code>
+      <query_after></query_after>
+    </mbo_schema>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Права доступа к пунктам меню приложения</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mba_grant_task" SCHEMA_ID="grant_task"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT  mba_group.code AS code_group,  mb_task.code AS code_task
+FROM mba_grant_task, mb_task, mba_group
+WHERE mba_grant_task.id_task = mb_task.id_task AND  mba_grant_task.id_group = mba_group.id_group and mb_task.is_sys=0 " 
+  ROWSTAG="grant_tasks" ROWTAG="grant_task"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>grant_task_usr</code>
+      <query_after></query_after>
+    </mbo_schema>
+    <mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Диаграммы</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mbg_diagram_template" SCHEMA_ID="mbg_diagram_template"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT description, contents, code, code_help  FROM mbg_diagram_template" ROWSTAG="mbg_diagram_templates" ROWTAG="mbg_diagram_template"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mbg_diagram_template</code>
+      <query_after></query_after>
+    </mbo_schema>
+	<mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>HTML-отчеты</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mbr_report" SCHEMA_ID="mbr_report"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT short_name, code, is_visible, is_single_object, code_help, contents, full_name  FROM mbr_report" ROWSTAG="mbr_reports" ROWTAG="mbr_report"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mbr_report</code>
+      <query_after></query_after>
+    </mbo_schema>
+	<mbo_schema>
+      <id_periodicity>0</id_periodicity>
+      <id_receiver>0</id_receiver>
+      <full_name>Отчеты OpenOffice</full_name>
+      <template>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;QUERYDATA XMLDATATAG="XMLDATA" sysname="mbr_report_template" SCHEMA_ID="mbr_report_template"&gt;
+&lt;XMLHEADER&gt;
+&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;]]&gt;
+&lt;/XMLHEADER&gt;
+&lt;COMMENT&gt;
+&lt;![CDATA[]]&gt;
+&lt;/COMMENT&gt;
+&lt;QUERY SQLTEXT = "SELECT id_report_template
+      ,description
+      ,contents
+      ,code
+      ,code_help
+  FROM mbr_report_template" ROWSTAG="mbr_report_templates" ROWTAG="mbr_report_template"&gt;
+&lt;/QUERY&gt;
+&lt;/QUERYDATA&gt;</template>
+      <code>mbr_report_template</code>
+      <query_after></query_after>
+    </mbo_schema>
+  </mbo_schems>
+</XMLDATA>

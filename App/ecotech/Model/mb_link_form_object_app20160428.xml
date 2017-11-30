@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- -->
+<XMLDATA sysname="mb_link_form_object">
+<Id>mb_link_form_object</Id>
+<mb_link_form_objects>
+<mb_link_form_object><sysname>cv_et_project</sysname><code_form>form_et_project</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ent_enterprise</sysname><code_form>form_ent_enterprise</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ml_mail_output</sysname><code_form>form_ml_mail_output</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ent_person_for_ent</sysname><code_form>form_ent_person</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ent_person</sysname><code_form>form_ent_person</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_spr_mail_method</sysname><code_form>form_spr_mail_method</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_spr_vid_mail</sysname><code_form>form_spr_vid_mail</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ml_mail</sysname><code_form>frm_ml_mail</code_form></mb_link_form_object>
+<mb_link_form_object><sysname>cv_ml_mail_input</sysname><code_form>form_ml_mail_input</code_form></mb_link_form_object>
+</mb_link_form_objects>
+</XMLDATA>

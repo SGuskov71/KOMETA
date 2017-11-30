@@ -1,0 +1,451 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userClassName": "FieldProperties",
+        "height": 515,
+        "itemId": "FieldProperties",
+        "title": "Поля объектов",
+        "width": 571
+    },
+    "name": "MyForm",
+    "designerId": "7e436bdc-1a31-463c-8063-3167da47ea6e",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Пользовательский тип данных (Domain)",
+                "labelWidth": 250,
+                "layout|anchor": "100%"
+            },
+            "name": "MyComboBox4",
+            "designerId": "3d6a8e96-f779-4691-b4ce-b69e83ec9060"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 77,
+                "itemId": "FieldType",
+                "layout": "border",
+                "title": "Тип поля"
+            },
+            "name": "MyFieldSet",
+            "designerId": "66814127-08b2-4b70-80c4-262ea8721f98",
+            "cn": [
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "fieldLabel": null,
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "layout|region": "west",
+                        "width": 117
+                    },
+                    "name": "MyCheckboxGroup",
+                    "designerId": "d59b4495-33c0-4f6c-8832-6cbe8771725b",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Ключевое",
+                                "fieldLabel": null,
+                                "itemId": "KeyField",
+                                "layout|flex": 1
+                            },
+                            "name": "MyCheckbox",
+                            "designerId": "c419a12e-1ed7-4365-95db-1682c3240fc7"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Архив",
+                                "fieldLabel": null,
+                                "itemId": "Archive",
+                                "layout|flex": 1
+                            },
+                            "name": "MyCheckbox1",
+                            "designerId": "0d4cbe9d-b081-4480-b3c0-cb6247f1834e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "fieldLabel": null,
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "layout|region": "center"
+                    },
+                    "name": "MyCheckboxGroup1",
+                    "designerId": "3b24b7c9-74a4-491e-ba03-0c467a75d523",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Кодовое",
+                                "fieldLabel": null,
+                                "itemId": "CodeField",
+                                "layout|flex": 1
+                            },
+                            "name": "MyCheckbox2",
+                            "designerId": "1957f434-3e26-4a0b-9371-335bd293fa75"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Только для чтения",
+                                "fieldLabel": null,
+                                "itemId": "ReadOnly",
+                                "layout|flex": 1
+                            },
+                            "name": "MyCheckbox3",
+                            "designerId": "03409d5d-9eec-4112-8740-08e5f94f6b31"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "fieldLabel": null,
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "layout|region": "east",
+                        "width": 150
+                    },
+                    "name": "MyCheckboxGroup2",
+                    "designerId": "8bf103fe-ac8b-4866-a44c-16f60a34289c",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Характеризующее",
+                                "fieldLabel": null,
+                                "itemId": "CharacterizeField",
+                                "layout|flex": 1
+                            },
+                            "name": "MyCheckbox4",
+                            "designerId": "5740a402-230b-4dbb-a805-1d2592365dd3"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Для иерархии",
+                                "fieldLabel": null,
+                                "height": 150,
+                                "itemId": "Parent",
+                                "layout|flex": 1
+                            },
+                            "name": "MyCheckbox5",
+                            "designerId": "55ecdc0c-d09e-4a9b-bb20-220a74827755"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Свойства фильтрации"
+            },
+            "name": "MyFieldSet2",
+            "designerId": "29975201-2624-48fc-8aba-76e6cff6cfe7",
+            "cn": [
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "fieldLabel": null,
+                        "layout": "vbox"
+                    },
+                    "name": "MyCheckboxGroup3",
+                    "designerId": "943a5a4e-e0cb-4b46-9797-ccba52411f94",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Признак использования в фильтре",
+                                "fieldLabel": null
+                            },
+                            "name": "MyCheckbox6",
+                            "designerId": "624ca06d-a519-4052-829d-714ce4866e1b"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Возможность множественного выбора",
+                                "fieldLabel": null
+                            },
+                            "name": "MyCheckbox7",
+                            "designerId": "6416cd3c-afa7-4f8f-899c-087bb5d5fc94"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Способ ввода для фильтра",
+                                "labelWidth": 170,
+                                "layout|flex": 1
+                            },
+                            "name": "MyComboBox2",
+                            "designerId": "6841a892-c6c9-43a0-8426-5d5f1ddcf74d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Отображение поля"
+            },
+            "name": "MyFieldSet1",
+            "designerId": "8e6ccf28-8853-4033-a256-fc0b0d3c6ee1",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Способ отображения",
+                        "labelWidth": 160,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyComboBox1",
+                    "designerId": "d7cca8ae-65fe-47de-82e0-e997ea17db49"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Шаблон для отображения",
+                        "labelWidth": 160,
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "4b1d422c-43d1-4d62-9315-1bc7f72a9e03"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Словарный объект",
+                "labelWidth": 130,
+                "layout|anchor": "100%"
+            },
+            "name": "MyComboBox3",
+            "designerId": "41e7b96e-5603-448c-97c0-2335223de840"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Имя поля для стиля",
+                "labelWidth": 130,
+                "layout|anchor": "100%"
+            },
+            "name": "MyTextField2",
+            "designerId": "d8fbf9d9-fe24-4c57-899f-639248f6a9ba"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Доступные групповые операции"
+            },
+            "name": "MyFieldSet3",
+            "designerId": "aa7c3131-d346-417a-a6b4-84cccff387ec",
+            "cn": [
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null
+                    },
+                    "name": "MyCheckboxGroup4",
+                    "designerId": "bcfd6d34-0671-4708-b29b-b40331971180",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Сумма",
+                                "fieldLabel": null,
+                                "itemId": "Sum"
+                            },
+                            "name": "MyCheckbox11",
+                            "designerId": "822c8bf8-d36d-4a27-83a4-6578aed1255d"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Среднее",
+                                "fieldLabel": null,
+                                "itemId": "Average"
+                            },
+                            "name": "MyCheckbox10",
+                            "designerId": "692e8142-f9e8-4809-a064-f8c45af35beb"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Максимум",
+                                "fieldLabel": null,
+                                "itemId": "Maximum"
+                            },
+                            "name": "MyCheckbox8",
+                            "designerId": "15633702-7025-4ed1-a5d7-3d478953f43b"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Минимум",
+                                "fieldLabel": null,
+                                "itemId": "Minimum"
+                            },
+                            "name": "MyCheckbox9",
+                            "designerId": "0a88404f-ee78-41e3-bd8f-6ddbc176c8cb"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

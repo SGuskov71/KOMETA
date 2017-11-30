@@ -1,0 +1,475 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userClassName": "images_PropertyForm",
+        "height": 170,
+        "layout": "vbox",
+        "title": "Свойства графического элемента",
+        "width": 600
+    },
+    "designerId": "a2874461-4136-45f1-b146-042171d4794b",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.rawData = rawData;",
+                    "var mainContainer = this.findParentByType('#DesignReportMainContainer');",
+                    "var Combo = this.down('#ComboReportFieldList');",
+                    "this.down('#EdtImagePath').setValue(rawData.ImagePath);",
+                    "this.down('#EdtimgHeight').setValue(rawData.imgHeight);",
+                    "this.down('#EdtimgWidth').setValue(rawData.imgWidth);",
+                    "this.down('#RB_Text').setValue(false);",
+                    "this.down('#RB_SQL').setValue(false);",
+                    "if((this.rawData.DataSource!=undefined)&&(this.rawData.DataSource!='')){",
+                    "    this.down('#'+this.rawData.DataSource).setValue(true);",
+                    "}else{",
+                    "    this.down('#RB_Text').setValue(true);",
+                    "}",
+                    "Combo.getStore().removeAll();",
+                    "Ext.Array.each(mainContainer.ComboReportFieldListStoreData, function(value) {",
+                    "    Combo.store.add({id: value});",
+                    "});",
+                    "Combo.setValue(rawData.DataField);",
+                    "",
+                    "var Combo = this.down('#ComboDiagram');",
+                    "if (Combo.store === undefined)",
+                    "  Combo.store = new Ext.data.ArrayStore({",
+                    "    fields: ['id','name'],",
+                    "    data: []",
+                    "  });",
+                    "",
+                    "",
+                    "Combo.getStore().removeAll();",
+                    "Ext.Array.each(mainContainer.ComboDiagramStoreData, function(value) {",
+                    "    Combo.store.add( value);",
+                    "});",
+                    "Combo.setValue(rawData.Diagram);",
+                    ""
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "7adda0ba-833b-43bc-b252-500122fd17f7"
+        },
+        {
+            "type": "Ext.form.RadioGroup",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Источник данных",
+                "itemId": "RG_DataSource",
+                "labelWidth": 110,
+                "maxWidth": null,
+                "width": ""
+            },
+            "name": "MyRadioGroup1",
+            "designerId": "1dc2ea71-dd3e-4615-8015-d489e1e3eb58",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Файл",
+                        "checked": true,
+                        "fieldLabel": null,
+                        "itemId": "RB_Text",
+                        "minWidth": null,
+                        "width": 200
+                    },
+                    "name": "MyRadio2",
+                    "designerId": "8e2b590e-2a54-4023-a300-563ff06c570a",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRB_TextChange1",
+                                "implHandler": [
+                                    "if(newValue==true)",
+                                    "{",
+                                    "    this.down('#ComboReportFieldList').hide();",
+                                    "    this.down('#ComboDiagram').hide();",
+                                    "    this.down('#EdtImagePath').show();",
+                                    "    field.ownerCt.down('#RB_SQL').setValue(false);",
+                                    "    field.ownerCt.down('#RB_Diagram').setValue(false);",
+                                    "    this.rawData.DataSource=field.itemId;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "}",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRB_TextChange1",
+                            "designerId": "9652667a-5164-41a2-a3d1-eec537f97ce5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "База данных",
+                        "fieldLabel": null,
+                        "itemId": "RB_SQL",
+                        "margin": "0 0 0 -50"
+                    },
+                    "name": "MyRadio3",
+                    "designerId": "7386d900-ea20-4822-982e-3a7e5674d816",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRB_SQLChange1",
+                                "implHandler": [
+                                    "if(newValue==true)",
+                                    "{",
+                                    "    this.down('#EdtImagePath').hide();",
+                                    "    this.down('#ComboDiagram').hide();",
+                                    "    this.down('#ComboReportFieldList').show();",
+                                    "    field.ownerCt.down('#RB_Text').setValue(false);",
+                                    "    field.ownerCt.down('#RB_Diagram').setValue(false);",
+                                    "    this.rawData.DataSource=field.itemId;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRB_SQLChange1",
+                            "designerId": "f64c670b-9413-40b8-ba7f-8ba33145defb"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Диаграмма",
+                        "fieldLabel": null,
+                        "itemId": "RB_Diagram",
+                        "margin": "0 0 0 -50"
+                    },
+                    "name": "MyRadio10",
+                    "designerId": "31216a6d-cea6-4e2e-84be-506fecf79c25",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRB_SQLChange11",
+                                "implHandler": [
+                                    "if(newValue==true)",
+                                    "{",
+                                    "    this.down('#EdtImagePath').hide();",
+                                    "    this.down('#ComboReportFieldList').hide();",
+                                    "    this.down('#ComboDiagram').show();",
+                                    "    field.ownerCt.down('#RB_SQL').setValue(false);",
+                                    "    field.ownerCt.down('#RB_Text').setValue(false);",
+                                    "    this.rawData.DataSource=field.itemId;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    "",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onRB_SQLChange11",
+                            "designerId": "8aa289d2-026a-419e-8fce-6bf1daa617fc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Путь к файлу изображения",
+                "itemId": "EdtImagePath",
+                "labelWidth": 170
+            },
+            "name": "MyTextField4",
+            "designerId": "e1eb7700-aaca-47f6-af05-f8661ea25a45",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onEdtImagePathChange",
+                        "implHandler": [
+                            "this.rawData.ImagePath=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onEdtImagePathChange",
+                    "designerId": "50e4ce7f-0e9b-4651-bb28-7ed7e5491561"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "id",
+                "editable": false,
+                "fieldLabel": "Поле данных",
+                "forceSelection": true,
+                "hidden": true,
+                "itemId": "ComboReportFieldList",
+                "queryMode": "local",
+                "store": null,
+                "valueField": "id"
+            },
+            "name": "MyComboBox2",
+            "configAlternates": {
+                "store": "array"
+            },
+            "designerId": "5ade79b3-f32c-4e56-9981-29bfd381f9d3",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onComboReportFieldListChange1",
+                        "implHandler": [
+                            "this.rawData.DataField=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onComboReportFieldListChange1",
+                    "designerId": "6857e2cb-65b5-4f8e-9695-ca0e5f7c1238"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "id",
+                "editable": false,
+                "fieldLabel": "Диаграмма",
+                "forceSelection": true,
+                "hidden": true,
+                "itemId": "ComboDiagram",
+                "queryMode": "local",
+                "store": null,
+                "valueField": "id"
+            },
+            "name": "MyComboBox12",
+            "configAlternates": {
+                "store": "array"
+            },
+            "designerId": "6326843a-ff61-48f5-8fee-0d5a1c0ae8f7",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onComboReportFieldListChange11",
+                        "implHandler": [
+                            "this.rawData.Diagram=newValue;",
+                            "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                            "    mainContainer.modified = true;",
+                            ""
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onComboReportFieldListChange11",
+                    "designerId": "4a673838-1005-4a29-9ee2-8077e736b79d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 1,
+                "container|align": "stretch",
+                "frame": false,
+                "layout": "hbox",
+                "padding": null,
+                "title": "Размеры графического элемента в миллиметрах"
+            },
+            "name": "MyFieldSet",
+            "designerId": "d24bad52-aa57-4f20-bbe9-f4c5f982cd8e",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Высота",
+                        "itemId": "EdtimgHeight",
+                        "labelWidth": 50,
+                        "layout|flex": 1,
+                        "padding": 6,
+                        "value": [
+                            "20"
+                        ],
+                        "width": null
+                    },
+                    "name": "MyNumberField",
+                    "designerId": "1e139466-d5f7-458e-bcc5-8325830d15c6",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdtimgHeightChange",
+                                "implHandler": [
+                                    "this.rawData.imgHeight=newValue;",
+                                    "    var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "    mainContainer.modified = true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdtimgHeightChange",
+                            "designerId": "5c23d7f5-ce35-4153-8413-05b6000039a8"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Ширина",
+                        "itemId": "EdtimgWidth",
+                        "labelWidth": 50,
+                        "layout|flex": 1,
+                        "padding": 6,
+                        "value": [
+                            "20"
+                        ],
+                        "width": null
+                    },
+                    "name": "MyNumberField1",
+                    "designerId": "88392b34-148b-4399-851b-53e00c8c3d55",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onEdtimgWidthChange",
+                                "implHandler": [
+                                    "this.rawData.imgWidth=newValue;",
+                                    "var mainContainer = field.findParentByType('#DesignReportMainContainer');",
+                                    "mainContainer.modified = true;",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onEdtimgWidthChange",
+                            "designerId": "96867c4b-7c31-4374-a9b2-15ddca5992c5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

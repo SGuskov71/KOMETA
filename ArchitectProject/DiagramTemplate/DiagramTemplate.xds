@@ -1,0 +1,55 @@
+{
+    "name": "DiagramTemplate",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "displayfield-ExtBox1-1374-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1280-inputEl": "Not Installed",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1113-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1124-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.5.0",
+    "xdsBuild": 279,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "87b2bec1-4542-45e2-b5f8-8a152119a07d",
+            "c0ee282d-e4ef-417c-b188-20d00e124a58",
+            "e90407f6-5ffc-42cb-bfb1-a4022bdac819"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "e7b9eb05-95fa-4a29-ab84-ccad04c8889c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

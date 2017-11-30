@@ -1,0 +1,887 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "DesignMainContainer",
+        "height": 513,
+        "itemId": "DesignMainContainer",
+        "layout": "border",
+        "width": 793
+    },
+    "designerId": "87b2bec1-4542-45e2-b5f8-8a152119a07d",
+    "cn": [
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "StructureTree",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Структура",
+                "width": 186
+            },
+            "name": "MyTreePanel",
+            "designerId": "3d7354e3-cf7e-4ff2-a5e5-c034af3c0c31",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "cdaa1dd3-74d3-4059-bccd-96e295cfcba6",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "cls_add",
+                                "itemId": "BtnAdd",
+                                "layout|flex": null,
+                                "text": null,
+                                "tooltip": "Добавить"
+                            },
+                            "name": "MyButton",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "625e78a3-e786-41d0-aa2e-097f37464849",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "menu",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyMenu",
+                                    "designerId": "1763ae66-d0a5-4b7c-9f5f-0e978f484b11",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "MI_ConditionGroup",
+                                                "text": "Группа условий"
+                                            },
+                                            "name": "MyMenuItem",
+                                            "designerId": "0db26dc2-6ee8-415e-a2dc-b775a216bbcf",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onMI_ConditionGroupClick",
+                                                        "implHandler": [
+                                                            "var DesignMainContainer=item.findParentByType('#DesignMainContainer');",
+                                                            "var StructureTree= item. findParentByType('#DesignMainContainer').down('#StructureTree') ;",
+                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                            "if(Node!= undefined){",
+                                                            "    Node=Node[0];",
+                                                            "    if(Node!= undefined){",
+                                                            "        if(!((Node.raw.ItemType=='Query')||(Node.raw.ItemType=='GroupParam')||(Node.raw.ItemType=='Link'))){",
+                                                            "            Node=Node.parentNode; //если это не группа и не запрос то берем родителя",
+                                                            "        }",
+                                                            "        var Props=DesignMainContainer.AdditionalContainerDefaultProps;",
+                                                            "        var newNode=Node.appendChild({text: item.text, expanded: true, leaf:false,children: [],",
+                                                            "                                      ItemType: 'GroupParam',",
+                                                            "                                      iconCls: 'GroupParam',",
+                                                            "                                      GroupCondition:'and'});",
+                                                            "        DesignMainContainer.modified=true;",
+                                                            "        StructureTree.getView().select(newNode);",
+                                                            "    }",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onMI_ConditionGroupClick",
+                                                    "designerId": "732f22c3-9e01-4680-8c1d-29ea035552af"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "MI_Condition",
+                                                "text": "Условие"
+                                            },
+                                            "name": "MyMenuItem1",
+                                            "designerId": "ff65db42-b505-4871-912b-485dc8897125",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onMI_ConditionClick",
+                                                        "implHandler": [
+                                                            "var DesignMainContainer=item.findParentByType('#DesignMainContainer');",
+                                                            "var StructureTree= DesignMainContainer.down('#StructureTree') ;",
+                                                            "var RootNode= StructureTree.getRootNode();",
+                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                            "if(Node!= undefined){",
+                                                            "    Node=Node[0];",
+                                                            "    if(Node!= undefined){",
+                                                            "        var StoreData= DesignMainContainer.GetMasterObjectFieldListStoreData(Node);",
+                                                            "        var w=  Ext.create(\"QueryBuilder.view.SelectFieldWindow\", {StoreData:StoreData});",
+                                                            "        w.addEvents('BtnOk');",
+                                                            "        w.show();",
+                                                            "        w.addListener('BtnOk', function(SelectedRecords) {",
+                                                            "            Ext.Array.each(SelectedRecords, function (SelectedRecordObj) {",
+                                                            "                var SelectedRecord=SelectedRecordObj.raw;",
+                                                            "                var tempData=DesignMainContainer.GetItemConditionListStoreData(DesignMainContainer.GetMasterObjectNode(Node), SelectedRecord.field_code);",
+                                                            "                var oper= null;",
+                                                            "                if(Object.keys(tempData).length>0)",
+                                                            "                    oper=Ext.Object.getKeys(tempData)[0];",
+                                                            "                var ConfigObject=new Object({text: SelectedRecord.field_descr, expanded: true, leaf:true,children: null,iconCls:'Param',",
+                                                            "                                             ItemType: 'FieldCondition',",
+                                                            "                                             Caption:SelectedRecord.field_descr,",
+                                                            "                                             DataSource: 'RB_Value',",
+                                                            "                                             Operation:oper,",
+                                                            "                                             DataField:SelectedRecord.field_code",
+                                                            "                                            });",
+                                                            "                if((Node.raw.ItemType=='Query')||(Node.raw.ItemType=='GroupParam')||(Node.raw.ItemType=='Link')){",
+                                                            "                    NewNode= Node.appendChild(ConfigObject);",
+                                                            "                }else",
+                                                            "                    if(Node.raw.ItemType=='FieldCondition'){",
+                                                            "                        var ParentNode=Node.parentNode;",
+                                                            "                        var ItemIndex=ParentNode.indexOf(Node);",
+                                                            "                        NewNode=  ParentNode.insertChild(ItemIndex, ConfigObject);",
+                                                            "                    }",
+                                                            "                DesignMainContainer.modified=true;",
+                                                            "            });",
+                                                            "",
+                                                            "            StructureTree.getView().select(NewNode);",
+                                                            "            CloseWindow(w);",
+                                                            "        });",
+                                                            "    };}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onMI_ConditionClick",
+                                                    "designerId": "12bc66cc-9276-40b8-85bf-2f631fcbcb35"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "MI_Limit",
+                                                "text": "Ограничение по связи"
+                                            },
+                                            "name": "MyMenuItem2",
+                                            "configAlternates": {
+                                                "tooltip": "string"
+                                            },
+                                            "designerId": "8185d440-9ce1-434c-9e6c-5a774f79a584",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onMI_LimitClick",
+                                                        "implHandler": [
+                                                            "var DesignMainContainer=item.findParentByType('#DesignMainContainer');",
+                                                            "var id_object=DesignMainContainer.id_object;",
+                                                            "var StructureTree= item. findParentByType('#DesignMainContainer').down('#StructureTree') ;",
+                                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                                            "if(Node!= undefined){",
+                                                            "    Node=Node[0];",
+                                                            "    if(Node!= undefined){",
+                                                            "        if((Node.raw.ItemType=='Query')||(Node.raw.ItemType=='GroupParam')||(Node.raw.ItemType=='Link')){",
+                                                            "            Node=Node;",
+                                                            "        }else if((Node.raw.ItemType=='FieldCondition')){",
+                                                            "            Node=Node.parentNode;",
+                                                            "        }",
+                                                            "",
+                                                            "        var win = SelectValSlv({sysname: 'sv_mb_object_link'",
+                                                            "                                , ExtFilterWhereCond: ' and id_object_parent='+id_object",
+                                                            "                                , object_Caption: 'Выбор объекта для определения ограничения по связи', HelpContext: ''});",
+                                                            "        win.addListener('ValSlvSelected', function (context, SelID, SelDescr) {",
+                                                            "            Common_class.get_link_info(SelID.id_link, function(response){",
+                                                            "                //var sysname =response;",
+                                                            "                var ConfigObject={text: item.text, expanded: true, leaf:false,children: [],",
+                                                            "                                  isMasterObject : true,",
+                                                            "                                  ItemType: 'Link',",
+                                                            "                                  iconCls: 'Link',",
+                                                            "                                  GroupCondition : 'and',",
+                                                            "                                  id_link: SelID.id_link,",
+                                                            "                                  sysname:response.sysname,",
+                                                            "                                  id_objectDescription:response.full_name",
+                                                            "                                 };",
+                                                            "                var NewNode= Node.appendChild(ConfigObject);",
+                                                            "                DesignMainContainer.modified=true;",
+                                                            "                DesignMainContainer.LockTree();",
+                                                            "                DesignMainContainer.MasterObjectCount=1;",
+                                                            "                DesignMainContainer.MasterObjectLoadedCount=0;",
+                                                            "                DesignMainContainer.LoadMasterObjectSettings(NewNode);",
+                                                            "                StructureTree.getView().select(NewNode);",
+                                                            "            }",
+                                                            "                                    );",
+                                                            "        });",
+                                                            "    }",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onMI_LimitClick",
+                                                    "designerId": "332abc5b-7f51-46f7-9f59-9c24b0177550"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "cls_del",
+                                "itemId": "BtnDel",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Удалить"
+                            },
+                            "name": "MyButton1",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "b7735aa5-7446-4255-a555-06a2038e3a1b",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "function removeAllChildContainers(Node){",
+                                            "    NodeChild=Node.firstChild;",
+                                            "    while(NodeChild!=undefined){",
+                                            "        if(NodeChild.hasChildNodes()==true){",
+                                            "            removeAllChildContainers(NodeChild);",
+                                            "        }",
+                                            "        var tempNode=NodeChild;",
+                                            "        NodeChild=NodeChild.nextSibling;",
+                                            "        try {",
+                                            "            tempNode.remove(true);",
+                                            "        } catch (e) {}",
+                                            "    }",
+                                            "}",
+                                            "var DesignMainContainer=button. findParentByType('#DesignMainContainer');",
+                                            "var StructureTree= button. findParentByType('#DesignMainContainer').down('#StructureTree') ;",
+                                            "var Node= StructureTree.getSelectionModel().getSelection();",
+                                            "if(Node!= undefined){",
+                                            "    Node=Node[0];",
+                                            "    if((Node!= undefined)&&(Node!=StructureTree.getRootNode())){",
+                                            "        var Node2Select= Node.previousSibling;",
+                                            "        if(Node2Select==undefined){Node2Select= Node.parentNode;}",
+                                            "        try {",
+                                            "            removeAllChildContainers(Node);",
+                                            "            Node.removeAll(true);",
+                                            "            DesignMainContainer.modified=true;",
+                                            "        } catch (e) {",
+                                            "        } finally {",
+                                            "            try{",
+                                            "                Node.remove(true);",
+                                            "                DesignMainContainer.modified=true;",
+                                            "            } catch (e) {}",
+                                            "        }",
+                                            "        StructureTree.store.sync();",
+                                            "        StructureTree.getSelectionModel().select(Node2Select);",
+                                            "    }}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "34dd4340-d4ea-41e9-886a-b73f1b5d2c7f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 5
+                            },
+                            "name": "MySpacer2",
+                            "designerId": "aedb25e4-e2ce-4cf6-91a4-15c6aa32998d"
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MySeparator1",
+                            "designerId": "c37aa5ed-eb63-40e4-886d-ee0577fb1b67"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "cls_run",
+                                "itemId": "BtnRun",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Выполнить запрос",
+                                "width": null
+                            },
+                            "name": "MyButton5",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "a5cee5b1-1591-4043-b799-df6941427fa8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var mainContainer= button.findParentByType('#DesignMainContainer');",
+                                            "var StructureTree= mainContainer.down('#StructureTree') ;",
+                                            "var RootNode= StructureTree.getRootNode();",
+                                            "if(RootNode!= undefined){",
+                                            "    if (!RootNode.raw.isNew)",
+                                            "    {",
+                                            "        mainContainer.SaveForm(true, function() {",
+                                            "            mainContainer.query_class.GetStoredQueryCondition(mainContainer.Grid,{param_list:{code: RootNode.raw.Code,",
+                                            "                                                                                              ParamValuesArray: {}",
+                                            "                                                                                             }",
+                                            "                                                                                 });",
+                                            "",
+                                            "        });",
+                                            "    }else",
+                                            "    {Ext.MessageBox.alert('Ошибка сохранения','Сначала надо сохранить форму');}}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "542d1e4e-cbca-4c3e-a5c7-5733bd2b6ddb"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "layout|margins": null,
+                                "width": 5
+                            },
+                            "name": "MySpacer",
+                            "designerId": "65e52109-a4f0-4dc0-b767-d184c2f3f3da"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "cls_params",
+                                "itemId": "BtnEditParam",
+                                "layout|flex": null,
+                                "text": "",
+                                "tooltip": "Редактировать параметры запроса"
+                            },
+                            "name": "MyButton7",
+                            "configAlternates": {
+                                "tooltip": "string"
+                            },
+                            "designerId": "6b0c0540-20ca-4b2e-b84e-85168f45081d",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var mainContainer = button.findParentByType('#DesignMainContainer');",
+                                            "var Query_PropertyForm=mainContainer.ArrayOfObjectTypes.Query;",
+                                            "var w=  Ext.create(\"Params.view.EditParams\", {Params: Query_PropertyForm.rawData.QueryParams});",
+                                            "w.mainContainer= mainContainer;",
+                                            "w.addEvents('BtnOk');",
+                                            "w.show();",
+                                            "w.addListener('BtnOk', function(QueryParams) {",
+                                            "    Query_PropertyForm.rawData.QueryParams=QueryParams;",
+                                            "var DesignMainContainer=button. findParentByType('#DesignMainContainer');",
+                                            "            DesignMainContainer.modified=true;",
+                                            "    CloseWindow(w);",
+                                            "});",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "f2a27ede-2a2a-4fa9-8a4f-b7b425c5bf36"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true
+                    },
+                    "name": "MyTreeView",
+                    "designerId": "c325cdc3-ea15-4a2d-b440-7986e8c6bf2c"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onStructureTreeAfterRender",
+                        "implHandler": [
+                            "//component.getView().select(component.getRootNode());",
+                            "var mainContainer= component.findParentByType('#DesignMainContainer');",
+                            "mainContainer.LoadMasterObjectsNodesSettings(component.getRootNode());//загружаю настройки проектирования во все MasterObjectsNode"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "name": "onStructureTreeAfterRender",
+                    "designerId": "88d2a569-c578-4f6c-8d6f-d81ad798ee0d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "PropPanel",
+                "layout": "fit",
+                "layout|flex": 1,
+                "layout|region": "center",
+                "layout|split": false
+            },
+            "name": "MyPanel",
+            "designerId": "d1eb9159-528c-40c6-8395-83ba1eba5ba8",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": null,
+                        "header": false,
+                        "height": null,
+                        "itemId": "PropertyContainer",
+                        "layout": "fit",
+                        "title": "Свойства"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "0e70e144-da60-4c66-9913-9c10817ab6ef"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "ReloadParamStore"
+            },
+            "name": "ReloadParamStore",
+            "designerId": "8c38f208-0da8-44e4-ad24-970764885250"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "находит ветку объекта для которой простроена данная CurNode ветка запроса"
+                ],
+                "designer|params": [
+                    "CurNode"
+                ],
+                "fn": "GetMasterObjectNode",
+                "implHandler": [
+                    "if(CurNode==undefined)return null;",
+                    "if((CurNode.raw.isMasterObject!=undefined)&&(CurNode.raw.isMasterObject==true)){return CurNode;}",
+                    "var tempNode= CurNode.parentNode;",
+                    "while(tempNode){",
+                    "    if((tempNode.raw.isMasterObject!=undefined)&&(tempNode.raw.isMasterObject==true)){return tempNode;}else{",
+                    "        tempNode= tempNode.parentNode;",
+                    "    }}if(tempNode==undefined)return null;"
+                ]
+            },
+            "name": "GetMasterObjectNode",
+            "designerId": "5a822f8e-58da-4add-8d68-8034add8ad50"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "пробегаюсь по дереву и загружаю настройки проектирования во все MasterObjectsNode"
+                ],
+                "designer|params": [
+                    "RootNode"
+                ],
+                "fn": "LoadMasterObjectsNodesSettings",
+                "implHandler": [
+                    "var mainContainer= this;",
+                    "mainContainer.MasterObjectCount=0;",
+                    "mainContainer.MasterObjectLoadedCount=0;",
+                    "mainContainer.LockTree();",
+                    "RootNode.cascadeBy(function(node){",
+                    "    if(node.raw.isMasterObject===true){",
+                    "        mainContainer.MasterObjectCount++;",
+                    "        mainContainer.LoadMasterObjectSettings(node);",
+                    "    }",
+                    "});",
+                    "mainContainer.UnlockTree();"
+                ]
+            },
+            "name": "LoadMasterObjectsNodesSettings",
+            "designerId": "2999d65a-2a02-46b7-aba7-b9ef1c3ffc56"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "загружаю настройки проектирования в Node"
+                ],
+                "designer|params": [
+                    "Node"
+                ],
+                "fn": "LoadMasterObjectSettings",
+                "implHandler": [
+                    "var mainContainer= this;",
+                    "GridFilter_class.GetFieldList(Node.raw.sysname,true, function (response) {",
+                    "    var Res = response;",
+                    "    if ((Res.success === false) && (Res.result == 're_connect')) {",
+                    "        Ext.MessageBox.alert('Подключение',Res.msg);",
+                    "window.onbeforeunload = null;",
+                    "        findFirstWindow().window.location.href = __first_page;",
+                    "        return;",
+                    "    }",
+                    "    else if (Res.success === false) {",
+                    "        Ext.MessageBox.alert('Подключение',Res.msg);",
+                    "        return;",
+                    "    }",
+                    "    FilterSettings = Res.result;",
+                    "    Node.FilterSettings=FilterSettings;",
+                    "    mainContainer.MasterObjectLoadedCount++;",
+                    "    if(mainContainer.MasterObjectCount>1)",
+                    "        mainContainer.UnlockTree();",
+                    "    else",
+                    "        mainContainer.UnlockTree(Node);",
+                    "}",
+                    "",
+                    "                               );"
+                ]
+            },
+            "name": "LoadMasterObjectSettings",
+            "designerId": "ae681622-2e33-4a2b-b145-a0bce149a13c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "разблокирует дерево если количество обработанных узлов равно заданному и выделяет ветку SelNode"
+                ],
+                "designer|params": [
+                    "SelNode"
+                ],
+                "fn": "UnlockTree",
+                "implHandler": [
+                    "var mainContainer= this;",
+                    "var StructureTree= mainContainer.down('#StructureTree') ;",
+                    "if(mainContainer.MasterObjectCount===mainContainer.MasterObjectLoadedCount){",
+                    "    mainContainer.MasterObjectCount=0;",
+                    "    mainContainer.MasterObjectLoadedCount=0;",
+                    "    Ext.MessageBox.hide();",
+                    "    StructureTree.enable();",
+                    "    if(SelNode!==undefined)StructureTree.getView().select(SelNode);",
+                    "    else StructureTree.getView().select(StructureTree.getRootNode());",
+                    "}",
+                    ""
+                ]
+            },
+            "name": "UnlockTree",
+            "designerId": "105adc55-4fae-4c00-ad7d-c289e786f220"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "блокирует дерево пока идет загрузка даннвх в ветку MasterObject"
+                ],
+                "fn": "LockTree",
+                "implHandler": [
+                    "var mainContainer= this;",
+                    "var StructureTree= mainContainer.down('#StructureTree') ;",
+                    "StructureTree.getView().deselect();",
+                    "StructureTree.disable();",
+                    "Ext.MessageBox.wait({",
+                    "    msg: 'Выполняется операция. Ждите...',",
+                    "    width: 300,",
+                    "    wait: true,",
+                    "    waitConfig: {interval: 100}",
+                    "});"
+                ]
+            },
+            "name": "LockTree",
+            "designerId": "6ba6799f-fa1b-46da-8ab8-0f54801fe2fe"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "возвращает данные для хрананилища комбо выбора условия выражения из MasterObject по имени поля оперирующего в выражении"
+                ],
+                "designer|params": [
+                    "MasterObject",
+                    "FieldName"
+                ],
+                "fn": "GetItemConditionListStoreData",
+                "implHandler": [
+                    "var res=[];",
+                    "if(MasterObject==undefined)return res;",
+                    "if(MasterObject.FilterSettings==undefined)return res;",
+                    "Ext.Array.each(MasterObject.FilterSettings, function (Obj) {",
+                    "    if(Obj.field_code===FieldName){",
+                    "        res=Obj.condition_list;",
+                    "        return true;",
+                    "    } ",
+                    "});  ",
+                    "return res;"
+                ]
+            },
+            "name": "GetItemConditionListStoreData",
+            "designerId": "c96ef84e-a518-417c-93fe-fda9215c5d86"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|commentHeader": [
+                    "ищет от Node ветку с MasterObject и из нее возвращает набор данных для store окна выбора поля объекта "
+                ],
+                "designer|params": [
+                    "Node"
+                ],
+                "fn": "GetMasterObjectFieldListStoreData",
+                "implHandler": [
+                    "if(Node==undefined)return [];",
+                    "if((Node.raw.isMasterObject!=undefined)&&(Node.raw.isMasterObject==true)){",
+                    "    return Node.FilterSettings;",
+                    "}else{",
+                    "    var tempNode= Node.parentNode;",
+                    "    while(tempNode){",
+                    "        if((tempNode.raw.isMasterObject!=undefined)&&(tempNode.raw.isMasterObject==true)){",
+                    "            return tempNode.FilterSettings;",
+                    "        }else{",
+                    "            tempNode= tempNode.parentNode;",
+                    "        }",
+                    "    }",
+                    "    if(tempNode==undefined)return [];",
+                    "}"
+                ]
+            },
+            "name": "GetMasterObjectFieldListStoreData",
+            "designerId": "70d02c9f-c737-403c-a08c-dc2a035dd528"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "SuccessSilent",
+                    "callback"
+                ],
+                "fn": "SaveForm",
+                "implHandler": [
+                    "            var mainContainer = this;",
+                    "            var StructureTree = mainContainer.down('#StructureTree');",
+                    "            var RootNode = StructureTree.getRootNode();",
+                    "            if (RootNode != undefined) {",
+                    "              var InputFormTemplate = mainContainer.query_class.SaveQueryNodeToJson(RootNode);",
+                    "              Ext.MessageBox.wait({",
+                    "                msg: 'Выполняется операция. Ждите...',",
+                    "                width: 300,",
+                    "                wait: true,",
+                    "                waitConfig: {interval: 100}",
+                    "              });",
+                    "              InputFormTemplate.id_stored_query = mainContainer.id_stored_query;",
+                    "",
+                    "              QueryBuilder_class.SaveQueryTemplate(InputFormTemplate, function (response, options) {",
+                    "                Ext.MessageBox.hide();",
+                    "                var result = response;",
+                    "                if ((result.success === false) && (result.result == 're_connect')) {",
+                    "                  Ext.MessageBox.alert('Подключение', result.msg);",
+                    "                  findFirstWindow().window.location.href = _URLProjectRoot + 'index.php';",
+                    "                  return;",
+                    "                }",
+                    "                if (result.success) {",
+                    "                  mainContainer.id_stored_query = result.result;",
+                    "                  mainContainer.Grid.ReloadGrid();",
+                    "                  Ext.MessageBox.alert(\"Результат выполнения \", result.msg);",
+                    "                  if(SuccessSilent==true)",
+                    "                            Ext.MessageBox.hide();",
+                    "                        if (callback) {",
+                    "                            callback();",
+                    "                        }",
+                    "                  return true;",
+                    "                } else {",
+                    "                  Ext.MessageBox.alert(\"Ошибка сохранения: \", result.msg);",
+                    "                }",
+                    "              });",
+                    "            }",
+                    ""
+                ]
+            },
+            "name": "SaveForm",
+            "designerId": "1e5e0976-5e6a-42e5-ba03-774523b2a22b"
+        }
+    ]
+}

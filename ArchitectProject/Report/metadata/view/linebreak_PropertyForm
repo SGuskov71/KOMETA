@@ -1,0 +1,39 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "bodyPadding": 10,
+        "designer|userClassName": "linebreak_PropertyForm",
+        "height": 250,
+        "title": "Свойства разрыва строки",
+        "width": 400
+    },
+    "designerId": "e90407f6-5ffc-42cb-bfb1-a4022bdac819",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.rawData=rawData;",
+                    ""
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "b935d3f6-440a-4da8-b0f0-8e8d5304cd60"
+        }
+    ]
+}

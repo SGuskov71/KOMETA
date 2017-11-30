@@ -1,0 +1,770 @@
+
+/*----------------------------------------------------
+    Start Button
+*/
+
+/*.ux-start-button-icon {
+  background-image: url(../images/taskbar/sencha.gif) !important;
+  background-color: transparent;
+}*/
+
+.ux-start-button .x-btn-arrow {
+    background-image: none;
+}
+
+.ux-taskbar {
+    padding-left: 4px !important;
+}
+
+/*
+    Start Button (Black)
+*/
+
+.ux-desktop-black .ux-start-button {
+    height: 28px;
+    padding: 0px;
+    display: block;
+}
+
+.ux-desktop-black .ux-start-button em {
+    margin-top: 5px;
+}
+
+.ux-desktop-black .ux-start-button .x-btn-inner {
+    color: black;
+    font-size:11px;
+    font-weight: bold;
+}
+
+.ux-desktop-black .ux-start-button {
+    background-image: -moz-linear-gradient(center top , #E4F3FF, #D9EDFF 48%, #C2D8F2 52%, #C6DCF6);
+    border-radius: 8px 8px 8px 8px;
+    border-color: #81A4D0;
+}
+
+/*----------------------------------------------------
+    Start Menu
+*/
+
+.ux-start-menu-toolbar .x-btn-inner {
+    text-align: left;
+}
+
+.ux-start-menu-toolbar {
+    padding: 4px !important;
+}
+
+/*----------------------------------------------------
+    TaskBar
+*/
+
+/* Use high specificity selector to override default styling*/
+div.ux-taskbar div.x-toolbar {
+    background: transparent none;
+    border: 0 none;
+    padding: 0;
+}
+
+.ux-desktop-windowbar .x-btn-inner,
+.x-nbr .ux-desktop-windowbar .x-btn-icon-text-left button {
+    text-align: left !important;
+}
+
+/*
+    TaskBar (Black)
+*/
+
+.ux-desktop-black .ux-taskbar {
+    background: transparent url('images/taskbar/taskbar-start-panel-bg.gif') repeat-x left top;
+    border-color: transparent;
+    /*height: 30px;*/
+}
+
+.ux-desktop-black .ux-taskbar .x-splitter {
+    background: transparent url(images/taskbar/black/taskbar-split-h.gif) no-repeat scroll 0 -2px;
+}
+
+.ux-desktop-black .ux-taskbar .x-toolbar-text {
+    color: white !important;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-default-toolbar-small-over {
+    background-color: yellow;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-inner {
+    color: white;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-pressed .x-btn-inner, .ux-taskbar .x-btn-over .x-btn-inner {
+    color: black;
+}
+
+/*----------------------------------------------------
+    Tray Clock
+*/
+
+.ux-desktop-trayclock {
+    text-align: left;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*----------------------------------------------------
+    Desktop DataView
+*/
+
+.ux-wallpaper {
+    background-color: #3d71b8;
+}
+
+.ux-wallpaper-tiled {
+    background-repeat: repeat;
+}
+
+.ux-desktop-shortcut  {
+    text-align: center; 
+    border-radius: 20px; /* Радиус скругления   border-radius:12px; */
+    -moz-border-radius: 20px; 
+    
+    background-image: url('images/background.svg'); /* IE9 */
+    background-image: -moz-linear-gradient(top, #fcfefc 0%, #85a2bb 100%);      /* Older Firefox */
+    background-image: -o-linear-gradient(top, #fcfefc 0%, #85a2bb 100%);       /* Opera */
+    background-image: -webkit-linear-gradient(top, #fcfefc 0%, #85a2bb 100%);   /* Chrome, Safari */
+    background-image: linear-gradient(to bottom, #fcfefc 0%, #85a2bb 100%);     /* Firefox, IE10 */
+
+    box-shadow: 10px 10px 30px #000;
+    -moz-box-shadow: 10px 10px 30px #000;
+
+    font-size: 16px; /* Размер шрифта */
+    /*padding: 10px 20px;*/ /* Поля вокруг текста */
+    /*color: darkblue; /* Цвет текста */
+    border: 1px solid #333; /* Параметры рамки */
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    padding: 8px;
+    margin: 28px;
+    width: 200px;
+    margin-right: 10px;
+    height: 200px;
+}
+
+.ux-desktop-shortcut-icon  {
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto; 
+    background-size: 100% 100%;
+    background-position: center 50%; 
+}
+
+.ux-desktop-shortcut-text {
+    font: normal 20px tahoma,arial,verdana,sans-serif;
+    text-decoration: none;
+    padding-top: 5px; 
+    color: #022655;
+}
+
+.x-view-over .ux-desktop-shortcut-text {
+    text-decoration: underline;
+}
+
+/*----------------------------------------------------
+    Various icon classes
+*/
+
+.info {
+    background-image: url( images/info.png ) !important;
+}
+
+.info-large {
+    background-image: url( images/infoLarge.png ) !important;
+}
+
+.help {
+    background-image: url( images/help.png ) !important;
+}
+
+.help-large {
+    background-image: url( images/helpLarge.png ) !important;
+}
+
+.bogus {
+    background-image: url( images/bogus.png ) !important;
+}
+
+.bogus-large {
+    background-image: url( images/gridLarge.png ) !important;
+}
+.submenu {
+    background-image: url( images/folder.gif ) !important;
+}
+
+.submenu-large {
+    background-image: url( images/folderLarge.png ) !important;
+}
+
+.report {
+    background-image: url( images/report.gif ) !important;
+}
+
+/*.rtf {
+    background-image: url( ../images/rtf.gif ) !important;
+}
+
+.xls {
+    background-image: url( ../images/xls.gif ) !important;
+}
+
+.html {
+    background-image: url( ../images/html.gif ) !important;
+}*/
+
+.report-large {
+    background-image: url( images/reportLarge.png ) !important;
+}
+
+.logout {
+    background-image: url( images/logout.gif ) !important;
+}
+
+.settings {
+    background-image: url( images/settings.png ) !important;
+	background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.query {
+    background-image: url( images/COMMUNIC.bmp ) !important;
+}
+
+.cls_add {
+    background-image: url( images/add.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_del {
+    background-image: url( images/del.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_copy {
+    background-image: url( images/copy.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_cut {
+    background-image: url( images/cut.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+
+.cls_paste {
+    background-image: url( images/paste.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_preview {
+    background-image: url( images/preview.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_preview_pdf {
+    background-image: url( images/pdf.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_preview_odt {
+    background-image: url( images/odt.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_preview_html {
+    background-image: url( images/html.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_run {
+    background-image: url( images/run.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_conditiongroup {
+    background-image: url( images/run.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_condition {
+    background-image: url( images/run.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_limit {
+    background-image: url( images/run.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+/*.cls_save {
+    background-image: url( images/save.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}*/
+
+/*.cls_exit {
+    background-image: url( images/exit.bmp ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}*/
+
+.cls_paragraf {
+    background-image: url( images/paragraf.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_table {
+    background-image: url( images/table.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_table_column {
+    background-image: url( images/table_column.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_list {
+    background-image: url( images/list.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_report_report {
+    background-image: url( images/report_report.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_params {
+    background-image: url( images/param.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_edt_css{
+    background-image: url( images/edt_css.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.cls_edt_obj {
+    background-image: url( images/Edit_Object.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.x-form-color-trigger {
+    background: url(images/color-trigger.gif) ;
+    cursor:pointer;
+}
+
+.cls_fieldset {
+    font-size:24px; 
+}
+
+.embedded_report {
+    background-image: url( images/tabs.gif ) !important;
+}
+
+/*.report {
+    background-image: url( ../images/report.jpg) !important;
+}*/
+
+.paragraph {
+    background-image: url( images/Explain.png ) !important;
+}
+
+.table {
+    background-image: url( images/grid32x32.gif ) !important;
+}
+
+.list {
+    background-image: url( images/Views.png ) !important;
+}
+
+.text {
+    background-image: url( images/text.jpg ) !important;
+}
+
+.hyperlink {
+    background-image: url( images/hyperlink.jpg ) !important;
+}
+
+.image {
+    background-image: url( images/image.jpg ) !important;
+}
+
+.linebreak {
+    background-image: url( images/linebreak.jpg ) !important;
+}
+
+.tableRow {
+    background-image: url( images/table_row.jpg) !important;
+}
+
+/*.embedded_report {
+    background-image: url( ../images/tabs.gif ) !important;
+}*/
+
+/*.report {
+    background-image: url( ../images/report.jpg) !important;
+}
+
+.paragraph {
+    background-image: url( ../images/Explain.png ) !important;
+}
+
+.table {
+    background-image: url( ../images/grid32x32.gif ) !important;
+}*/
+
+/*.list {
+    background-image: url( images/Views.png ) !important;
+}*/
+
+/*.text {
+    background-image: url( ../images/text.jpg ) !important;
+}*/
+
+/*.hyperlink {
+    background-image: url( ../images/hyperlink.jpg ) !important;
+}*/
+/*
+.image {
+    background-image: url( ../images/image.jpg ) !important;
+}*/
+
+/*.linebreak {
+    background-image: url( ../images/linebreak.jpg ) !important;
+}*/
+
+/*.tableRow {
+    background-image: url( ../images/table_row.jpg) !important;
+}*/
+
+.GroupParam {
+    background-image: url( images/Views.png ) !important;
+}
+
+.Param {
+    background-image: url( images/Field.bmp ) !important;
+}
+
+.Link {
+    background-image: url( images/link.bmp ) !important;
+}
+
+/*.query {
+    background-image: url( ../images/COMMUNIC.bmp ) !important;
+}*/
+
+.default_check{
+    background-image: url( images/check.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.default_uncheck{
+    background-image: url( images/uncheck.png ) !important;
+    background-size:16px 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.ObjectEdit{
+    background-image: url( images/op_edit.png ) !important;
+    background-repeat:no-repeat;
+    background-size:18px 18px;
+}
+.ObjectInsert{
+    background-image: url( images/add.png ) !important;
+    background-repeat:no-repeat;
+    background-size:18px 18px;
+}
+
+.ChangeFilter{
+    background-image: url( images/ChangeFilter.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.DeleteFilter{
+    background-image: url( images/DeleteFilter.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.InsertCondition{
+    background-image: url( images/InsertCondition.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.DeleteCondition{
+    background-image: url( images/DeleteCondition.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.ClearFilter{
+    background-image: url( images/ClearFilter.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.SaveSetting{
+    background-image: url( images/SaveSetting.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.ExportToHtml{
+    background-image: url( images/ExportToHtml.png ) !important;
+    background-repeat:no-repeat;
+    background-size:18px 18px;
+}
+.ExportToRtf{
+    background-image: url( images/ExportToRtf.png ) !important;
+    background-repeat:no-repeat;
+    background-size:18px 18px;
+}
+.ExportToExcel{
+    background-image: url( images/ExportToExcel.png ) !important;
+    background-repeat:no-repeat;
+    background-size:18px 18px;
+}
+.table_object{
+    background-image: url( images/table_object.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.view_object{
+    background-image: url( images/view_object.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.proc_object{
+    background-image: url( images/proc_object.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+.link_object_filter{
+    background-image: url( images/link_object_filter.png ) !important;
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+}
+
+.grd_bad
+/*Плохо*/{
+    background-color: #FFB0C4;
+    color:red;
+}
+
+.grd_mid
+/*Средне (предупреждение)*/{
+    font-family: 'Times New Roman',Times,serif;
+    text-align: right;
+    background-color: yellow;
+    vertical-align: top;
+    color: black;
+    text-wrap: normal;
+}
+
+.grd_good
+/*Все хорошо*/{
+    background-color: #B0FFC5;
+    color:green;
+}
+
+.grd_lock
+/*Блокировака для редактирования*/{
+    background-color: #9999ff;
+    color:black;
+}
+
+.op_view
+/*Стиль для просмотра*/{
+    background-image: url( images/op_view.png ) !important;
+    background-position:center;
+    background-size:18px 18px;
+}
+
+.op_edit
+/*Стиль для редактирования*/{
+    background-image: url( images/op_edit.png ) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:18px 18px;
+}
+
+.op_ins
+/*Стиль для добавления*/{
+    background-image: url( images/add.png ) !important;
+    background-size:18px 18px;
+}
+
+.op_del
+/*Стиль для удаления*/{
+    background-image: url( images/del.png ) !important;
+    background-size:18px 18px;
+}
+
+.op_export
+/*Стиль для просмотра*/{
+    background-image: url( images/op_export.png ) !important;
+    background-position:center;
+    background-size:18px 18px;
+}
+
+.op_save_as
+/*Стиль для просмотра*/{
+    background-image: url( images/op_save_as.png ) !important;
+    background-position:center;
+    background-size:18px 18px;
+}
+
+.op_pivot
+/*Стиль для сводной таблицы*/{
+    background-image: url( images/op_pivot.png ) !important;
+    background-size:18px 18px;
+}
+
+/*.op_compare
+Стиль для сравнения{
+    background-image: url( images/op_compare.png ) !important;
+    background-size:18px 18px;
+}*/
+
+.op_reports
+/*Стиль для отчетов(для меню)*/{
+    background-image: url( images/op_reports.png ) !important;
+    background-size:18px 18px;
+}
+
+.op_report
+/*Стиль для отчета*/{
+    background-image: url( images/op_report.png ) !important;
+    background-size:18px 18px;
+}
+
+.op_odt_report
+/*Стиль для отчета*/{
+    background-image: url( images/op_odt_report.png ) !important;
+    background-size:18px 18px;
+}
+
+.op_del_cascade{
+	background-image: url( images/delete_cascade.png ) !important;
+    background-position:center;
+    background-size:18px 18px;
+}
+
+ /*светофор   */
+
+.traffic_light_green{
+    background-image: url( images/traffic_light_green.png )!important;
+    text-align: left !important;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto; 
+    background-size: 100% 100%;
+    background-position: center 50%; 
+}
+
+.traffic_light_yellow{
+    background-image: url( images/traffic_light_yellow.png )!important;
+    text-align: left !important;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto; 
+    background-size: 100% 100%;
+    background-position: center 50%; 
+}
+
+.traffic_light_red{
+    // width:20px;
+    background-image: url( images/traffic_light_red.png ) !important;
+    text-align: left !important;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto; 
+    background-size: 100% 100%;
+    background-position: center 50%; 
+}
+
+.x-item-disabled-readonly .x-form-field,
+.x-item-disabled-readonly .x-form-num-field,
+.x-item-disabled-readonly .x-form-display-field,
+.x-item-disabled-readonly .x-form-trigger {
+  //filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  //  filter: none;
+  background-color: lightgray; background-image: none;
+
+  opacity:0.9;
+  color: black;
+}
+.x-item-disabled-readonly .x-form-item-label,
+.x-item-disabled-readonly .x-form-cb-label
+{
+  //filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  //  filter: none;
+  background-color: white; background-image: none;
+
+  opacity:0.6;
+  color: black;
+} 

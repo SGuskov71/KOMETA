@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "DiagramTemplate",
+        "views": [
+            "DesignDiagramMainContainer",
+            "chart_PropertyForm",
+            "diagram_PropertyForm"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

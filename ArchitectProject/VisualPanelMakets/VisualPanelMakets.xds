@@ -1,0 +1,47 @@
+{
+    "name": "VisualPanelMakets",
+    "settings": {
+        "cmd": {},
+        "projectHasEnabledWebServer": false,
+        "urlPrefix": "",
+        "exportPath": "",
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Small",
+                "builtIn": true,
+                "height": 600,
+                "width": 800
+            }
+        }
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 339,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "1251d932-40a9-4c8c-b6bf-66745c89bde7",
+            "5d8ad270-5860-4b84-9065-cc66aa0088d5",
+            "a5471867-7753-4d7c-b582-0340dcb581cf",
+            "b04f6513-8372-4da9-98f0-4f0a22ab08a3"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "ed72ff1e-9cf4-4099-9989-26d3edbf6022"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

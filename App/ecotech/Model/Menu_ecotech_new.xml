@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<Tasks>
+<Task>
+<ShortName><![CDATA[Просмотр писем]]></ShortName>
+<FullName><![CDATA[Просмотр писем]]></FullName>
+<code>view_mail</code>
+<Order>1</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Входящая почта]]></ShortName>
+<FullName><![CDATA[Входящая почта]]></FullName>
+<code>view_mail_in</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_ml_mail_input"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Исходящая почта]]></ShortName>
+<FullName><![CDATA[Исходящая почта]]></FullName>
+<code>view_mail_out</code>
+<Order>3</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_ml_mail_output"}]]></param_list>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Предприятие]]></ShortName>
+<FullName><![CDATA[Предприятие]]></FullName>
+<code>ent</code>
+<Order>2</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Список предприятий]]></ShortName>
+<FullName><![CDATA[Список предприятий]]></FullName>
+<code>ent_reestr</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_ent_enterprise"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Контактные лица]]></ShortName>
+<FullName><![CDATA[Контактные лица]]></FullName>
+<code>person</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_ent_person_for_ent"}]]></param_list>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Проект]]></ShortName>
+<FullName><![CDATA[Проект]]></FullName>
+<code>project</code>
+<Order>3</Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Перечень проектов]]></ShortName>
+<FullName><![CDATA[Перечень проектов]]></FullName>
+<code>project_reestr</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_et_project"}]]></param_list>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Ведение классификаторов]]></ShortName>
+<FullName><![CDATA[Ведение классификаторов]]></FullName>
+<code>slv_management</code>
+<Order></Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Предприятия]]></ShortName>
+<FullName><![CDATA[Предприятия]]></FullName>
+<code>reestr_ent</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_ent_enterprise"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Контактные лица предприятий]]></ShortName>
+<FullName><![CDATA[Контактные лица предприятий]]></FullName>
+<code>ent_person</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_ent_person_for_ent"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Прочие]]></ShortName>
+<FullName><![CDATA[Прочие]]></FullName>
+<code>other_slv</code>
+<Order></Order>
+<Style>submenu</Style>
+<Task>
+<ShortName><![CDATA[Способ доставки.]]></ShortName>
+<FullName><![CDATA[Способ доставки.]]></FullName>
+<code>mail_method</code>
+<Order>1</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_spr_mail_method"}]]></param_list>
+</Task>
+<Task>
+<ShortName><![CDATA[Направление письма.]]></ShortName>
+<FullName><![CDATA[Направление письма.]]></FullName>
+<code>vid_mail</code>
+<Order>2</Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_spr_vid_mail"}]]></param_list>
+</Task>
+</Task>
+<Task>
+<ShortName><![CDATA[Список персонала]]></ShortName>
+<FullName><![CDATA[Список персонала]]></FullName>
+<code>reestr_personal</code>
+<Order></Order>
+<Style>bogus</Style>
+<func_class_name><![CDATA[Grid_operation]]></func_class_name>
+<func_name><![CDATA[ShowMasterDetailGridWindow]]></func_name>
+<param_list><![CDATA[{"sysname":"cv_et_staff"}]]></param_list>
+</Task>
+</Task>
+<grant_tasks>
+<id>grant_task</id>
+<grant_task>
+<code_task>view_mail</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>view_mail_in</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>view_mail_out</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>view_mail</code_task>
+<code_group>staff</code_group>
+</grant_task>
+<grant_task>
+<code_task>view_mail_in</code_task>
+<code_group>staff</code_group>
+</grant_task>
+<grant_task>
+<code_task>view_mail_out</code_task>
+<code_group>staff</code_group>
+</grant_task>
+<grant_task>
+<code_task>ent</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>ent_reestr</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>person</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>project</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>project_reestr</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>project</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>project_reestr</code_task>
+<code_group>boss</code_group>
+</grant_task>
+<grant_task>
+<code_task>slv_management</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>reestr_ent</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>ent_person</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>other_slv</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>mail_method</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>vid_mail</code_task>
+<code_group>admin</code_group>
+</grant_task>
+<grant_task>
+<code_task>reestr_personal</code_task>
+<code_group>admin</code_group>
+</grant_task>
+</grant_tasks>
+</Tasks>

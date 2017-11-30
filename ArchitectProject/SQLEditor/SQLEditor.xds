@@ -1,0 +1,53 @@
+{
+    "name": "SQLEditor",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "displayfield-ExtBox1-1374-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1280-inputEl": "Not Installed",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1113-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1124-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 339,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "26dc5517-4282-4e0c-8b8d-45d994196410"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "e7b9eb05-95fa-4a29-ab84-ccad04c8889c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

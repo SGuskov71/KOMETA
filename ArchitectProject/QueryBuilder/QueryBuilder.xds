@@ -1,0 +1,55 @@
+{
+    "name": "QueryBuilder",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://127.0.0.1/QueryBuilder/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": true,
+        "lockUrlPrefix": true,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1165-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.5.0",
+    "xdsBuild": 279,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "87b2bec1-4542-45e2-b5f8-8a152119a07d",
+            "2355feb4-5fd3-4b93-b91d-af6551c30819",
+            "6d978874-76b6-4cd5-9c67-430d7b67053e",
+            "213ef9e9-a8f5-45b7-80f9-567f54cb5999",
+            "22deef84-d31f-4dac-9bf9-b96da2fd860e",
+            "f320ced6-8502-44aa-8277-7d314779e3b3"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "5d28a76d-cc1c-45b8-b15b-90f931dc5c62"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

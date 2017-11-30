@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- -->
+<XMLDATA sysname="mba_grant_task">
+<Id>grant_task</Id>
+<grant_tasks>
+<grant_task><code_group>adm</code_group><code_task>rk</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_2</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_3</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>cv_exp_expert</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>cv_exp_expertise1</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_17</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_10</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_19</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_16</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_20</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_26</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_6</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_12</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_13</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_7</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_23</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_24</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_25</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>ent</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>cv_rk_project_offer1</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>cv_rk_docum_of_project</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_15</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_4</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_11</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_14</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_5</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_32</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_35</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_36</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_37</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_38</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_39</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_40</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_41</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_33</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_34</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_8</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_27</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Node_9</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_30</code_task></grant_task>
+<grant_task><code_group>adm</code_group><code_task>Menu Item_31</code_task></grant_task>
+</grant_tasks>
+</XMLDATA>

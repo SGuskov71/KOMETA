@@ -1,0 +1,107 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoScroll": true,
+        "bodyPadding": 10,
+        "designer|userClassName": "embedded_report_PropertyForm",
+        "height": 133,
+        "title": "Свойства вложенного отчета",
+        "width": 484
+    },
+    "designerId": "df9049e7-71eb-46a8-b9ec-32f0b6d9381e",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "rawData"
+                ],
+                "fn": "LoadNodeValues",
+                "implHandler": [
+                    "this.rawData=rawData;",
+                    "this.down('#EdtCode').setValue(rawData.Template_Code);",
+                    "this.down('#EdtDescr').setValue(rawData.Template_Descr);",
+                    "this.down('#ChkShowError').setValue(rawData.ShowError);",
+                    ""
+                ]
+            },
+            "name": "LoadNodeValues",
+            "designerId": "edbd38a6-5ef0-417e-b2dd-def23850542a"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Описание",
+                "itemId": "EdtDescr",
+                "readOnly": true
+            },
+            "name": "MyTextField8",
+            "designerId": "859988ea-b384-4db4-ac01-ad04805da0bb"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Код",
+                "itemId": "EdtCode",
+                "readOnly": true
+            },
+            "name": "MyTextField9",
+            "designerId": "778f6103-e4a2-4071-9e39-8e6fa5f74fc7"
+        },
+        {
+            "type": "Ext.form.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Выводить сообщение об ошибке формирования",
+                "fieldLabel": "",
+                "itemId": "ChkShowError"
+            },
+            "name": "MyCheckbox6",
+            "designerId": "952740b2-214c-4c95-8c87-6dfb878bffee",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onChkShowErrorChange1",
+                        "implHandler": [
+                            "this.rawData.ShowError=newValue;"
+                        ],
+                        "name": "change",
+                        "scope": "me"
+                    },
+                    "name": "onChkShowErrorChange1",
+                    "designerId": "2d8e60c2-c331-4779-b5f4-61b4f492712e"
+                }
+            ]
+        }
+    ]
+}
